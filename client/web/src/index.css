@@ -1,1 +1,22 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme{
+
+    --color-Background:	#F5F3EF;	/* Main app background */
+    --color-Surface:	#FCFAF7;	/* Cards, inputs, navigation */
+    --color-Surface2:	#F0EEE9;	/* Secondary elements */
+    --color-Border:	#DDD9D1;	/* Borders/dividers */
+    --color-Primary-text: #1C1A18;	/* Headings/body */
+    --color-Secondary-text:	#6B6862;	/* Metadata/descriptions */
+    --color-Tertiary-text:	#99958D;	/* Placeholders/subtle text */
+    --color-Accent: #6A1B9A;
+
+    /* Dark */
+    --color-dark-Background: #0B0D0E;
+    --color-dark-Surface: #151718;	
+    --color-dark-Surface2: #1C1F20;	
+    --color-dark-Border: #303335;
+    --color-dark-Primary-text: #F5F5F3; 
+    --color-dark-Secondary-text: #A1A3A3;
+    --color-dark-Tertiary-text:	#707374;
+}
