@@ -3,9 +3,8 @@ import SearchBar from "./SearchBar.tsx"
 
 function Header({children} : {children :ReactNode}) {
   return (
-    <div>
+    <div className="flex flex-col justify-between gap-4 md:flex-row">
         {children}
-        <SearchBar />
     </div>
   )
 }

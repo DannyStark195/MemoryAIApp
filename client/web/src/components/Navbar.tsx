@@ -7,13 +7,15 @@ function Navbar() {
   const [glow, setGlow] = useState(false)
   return (
     <div>
-       {navLinks.map((link)=>(
-          <Link to={`/${link}`}key={link}>
-            <div className={`text-Primary-text capitalize`}>
-              {link}
-            </div>
-          </Link>
-       ))}
+      <div>
+        {navLinks.map((link)=>(
+            <Link to={`/${link}`}key={link}>
+              <div className={`text-Primary-text capitalize`}>
+                {link}
+              </div>
+            </Link>
+        ))}
+      </div>
     </div>
   )
 }
