@@ -1,7 +1,12 @@
+import Header from "../../components/ui/protected/Header"
 
 function Explore() {
   return (
-    <div>Explore</div>
+    <div>
+      <Header >
+        <h1>Explore</h1>
+      </Header>
+    </div>
   )
 }
 

@@ -1,20 +1,19 @@
-import { Link } from "react-router-dom" 
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom" 
 function Navbar() {
-  const navLinks = ["home", "explore", "library", "profile"]
+  const navLinks = ["home", "explore", "library", "profile"];
+  const location = useLocation();
+  const currentPath = location.pathname
+  const [glow, setGlow] = useState(false)
   return (
     <div>
-        <Link to={"/home"}>
-          <div></div>
-        </Link>
-        <Link to={}>
-          <div></div>
-        </Link>
-        <Link to={}>
-          <div></div>
-        </Link>
-        <Link to={}>
-          <div></div>
-        </Link>
+       {navLinks.map((link)=>(
+          <Link to={`/${link}`}key={link}>
+            <div className={`text-Primary-text capitalize`}>
+              {link}
+            </div>
+          </Link>
+       ))}
     </div>
   )
 }

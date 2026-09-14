@@ -1,7 +1,12 @@
+import Header from "../../components/ui/protected/Header"
 
 function Library() {
   return (
-    <div>Library</div>
+    <div>
+      <Header>
+        <h1>Library</h1>
+      </Header>
+    </div>
   )
 }
 

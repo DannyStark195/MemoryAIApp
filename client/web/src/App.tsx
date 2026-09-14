@@ -23,7 +23,7 @@ function App() {
           <Route path='/terms' element={<Terms />}/>
           <Route path='auth' element={<Auth />}/>
 
-          <Route path='/home' element={
+          <Route path='home' element={
             <ProtectedRoute>
                 <Home />
             </ProtectedRoute>
