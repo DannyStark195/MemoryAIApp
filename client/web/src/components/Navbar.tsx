@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom" 
 function Navbar() {
+  const navLinks = ["home", "explore", "library", "profile"]
   return (
     <div>
         <Link to={"/home"}>
