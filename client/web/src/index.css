@@ -10,6 +10,11 @@
     --color-Secondary-text:	#6B6862;	/* Metadata/descriptions */
     --color-Tertiary-text: #99958D;	/* Placeholders/subtle text */
     --color-Accent: #6A1B9A;
+    --color-Accent-hover: #F3EAF7;
+    /* --color-Accent: #E91E63; */
+    /* --color-Accent-hover: #FDE8F0; */
+
+
 
     /* Dark */
     --color-dark-Background: #0B0D0E;
@@ -19,4 +24,6 @@
     --color-dark-Primary-text: #F5F5F3; 
     --color-dark-Secondary-text: #A1A3A3;
     --color-dark-Tertiary-text:	#707374;
+    --color-dark-Accent-hover: #25132D;
+    /* --color-dark-Accent-hover: #35131F; */
 }
