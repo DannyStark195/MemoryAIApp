@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar.tsx"
+import Navbar from "../../components/ui/protected/Navbar.tsx"
 import Layout from "../../components/ui/protected/Layout.tsx"
 import Header from "../../components/ui/protected/Header.tsx"
 import SearchBar from "../../components/ui/protected/SearchBar.tsx"

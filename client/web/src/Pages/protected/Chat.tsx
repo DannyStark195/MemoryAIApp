@@ -1,7 +1,10 @@
-
+import Navbar from "../../components/ui/protected/Navbar"
 function Chat() {
   return (
-    <div>Chat</div>
+    <div>
+      Chat
+       <Navbar />
+    </div>
   )
 }
 
