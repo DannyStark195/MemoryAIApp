@@ -13,7 +13,7 @@ function Home() {
         </div>
         <SearchBar placeHolder="Search your memories..."/>
       </Header>
-      <Navbar />
+      {/* <Navbar /> */}
     </Layout>
   )
 }

@@ -1,9 +1,13 @@
 import { type ReactNode } from "react"
+import Navbar from "./Navbar.tsx"
 
 function Layout({children}: {children: ReactNode}) {
   return (
-    <div className="text-Primary-text px-8 py-10 dark:text-dark-Primary-text">
-        {children}
+    <div className="text-Primary-text dark:text-dark-Primary-text md:flex flex-row-reverse justify-end">
+        <div className="flex-1 px-8 pt-10 pb-6">
+          {children}
+        </div>
+        <Navbar />
     </div>
   )
 }
