@@ -9,7 +9,7 @@ function Home() {
       <Header>
         <div>
           <h1 className="text-2xl md:text-3xl font-medium leading-wider mb-2">Good {getHourOfDay()}, Daniel 👋</h1>
-          <p className="w-45 md:w-full">Your memories, always within reach.</p>
+          <p className="w-45 md:w-full text-md">Your memories, always within reach.</p>
         </div>
         <SearchBar placeHolder="Search your memories..."/>
       </Header>

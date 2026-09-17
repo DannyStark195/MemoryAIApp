@@ -2,17 +2,19 @@ import { Link, useLocation } from "react-router-dom"
 import NavIcon from "./NavIcons.tsx";
 import { PanelLeftCloseIcon,PanelLeftOpenIcon } from "lucide-react";
 import { useState } from "react";
+import Logo from "../Logo.tsx";
 function Navbar() {
   const navLinks = ["home", "explore", "chat", "library", "profile"];
   const location = useLocation();
   const currentPath = location.pathname.slice(1)
-  const [navPanelOpen, setNavPanelOpen] = useState(false);
+  const [navPanelOpen, setNavPanelOpen] = useState(true);
 
   function toggleNavPanel(){
     setNavPanelOpen(prev => !prev)
   }
   return (
     <div>
+
       <div className="flex justify-between p-6 md:hidden">
         {navLinks.map((link)=>(
             <Link to={`/${link}`}key={link}>
@@ -23,8 +25,12 @@ function Navbar() {
             </Link>
         ))}
       </div>
-      <div className={`hidden md:block ${navPanelOpen? 'w-50': '15'} h-screen border-r border-Surface dark:border-dark-Border dark:bg-dark-Surface px-4 py-10 text-md`}>
-        <div onClick={toggleNavPanel} className="mb-8">
+      <div className={`hidden md:block ${navPanelOpen? 'w-50': '15'} h-screen border-r border-Surface dark:border-dark-Border dark:bg-dark-Surface px-4 py-10 text-md text-Primary-text dark:text-dark-Primary-text`}>
+        <div className={`flex items-center gap-2 text-2xl font-semibold`}>
+          <Logo classname="w-11"/>
+          {navPanelOpen ? 'Memory':''}
+        </div>
+        <div onClick={toggleNavPanel} className={`my-6 cursor-pointer text-Primary-text dark:text-dark-Primary-text flex ml-3 ${navPanelOpen? 'justify-end':'justify-start'}`}>
           {navPanelOpen? <PanelLeftOpenIcon size={20} strokeWidth={1.5}/>: <PanelLeftCloseIcon size={20} strokeWidth={1.5}/>}
         </div>
         <div>
