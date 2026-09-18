@@ -29,7 +29,7 @@ function Home() {
             <div className="w-75 md:w-150 h-100 rounded-lg bg-Surface2 dark:bg-dark-Surface2">
               
             </div>
-            <div className="grid gap-4 absolute top-[30%] -right-1 md:-right-22">
+            <div className="grid gap-4 absolute top-[30%] right-0 md:-right-22">
                 <div className="px-2 py-2 rounded-full transition-colors duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2">
                   <ShareNetworkIcon size={30} weight="fill"/>
                 </div>

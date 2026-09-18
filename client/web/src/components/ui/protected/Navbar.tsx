@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <div>
 
-      <div className="flex justify-between p-6 md:hidden absolute bottom-0 left-0">
+      <div className="flex justify-between p-6 md:hidden absolute bottom-0 left-0 right-0">
         {navLinks.map((link)=>(
             <Link to={`/${link}`}key={link}>
               <div className={`capitalize flex flex-col items-center ${currentPath === link? 'text-Accent':'text-Secondary-text dark:text-dark-Secondary-text'}`}>
