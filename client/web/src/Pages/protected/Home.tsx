@@ -1,7 +1,7 @@
 import Layout from "../../components/ui/protected/Layout.tsx"
 import Header from "../../components/ui/protected/Header.tsx"
 import SearchBar from "../../components/ui/protected/SearchBar.tsx"
-import QuickCaptureCard from "../../components/ui/protected/Home/QuickCaptureCard.tsx"
+import QuickCaptureCard from "../../components/ui/protected/Home/AddFile.tsx"
 import { getHourOfDay } from "../../utils/helpers.ts"
 import { Type } from "lucide-react"
 import { 
