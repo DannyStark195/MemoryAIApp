@@ -5,10 +5,9 @@ import QuickCaptureCard from "../../components/ui/protected/Home/AddFile.tsx"
 import { getHourOfDay } from "../../utils/helpers.ts"
 import { Type } from "lucide-react"
 import { 
-  CaretLeftIcon, CaretRightIcon, CameraIcon, FilePdfIcon, 
-  ImageIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
-  TextTIcon, WaveformIcon 
+  CaretLeftIcon, CaretRightIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
 } from "@phosphor-icons/react"
+import AddFile from "../../components/ui/protected/Home/AddFile.tsx"
 
 function Home() {
   
@@ -34,14 +33,15 @@ function Home() {
               
             </div>
             <div className="grid gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
-                <div className="px-2 py-2 rounded-full transition-colors duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2">
+                <div className="px-2 py-2 rounded-full transition-colors duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
                   <ShareNetworkIcon size={30} weight="fill"/>
                 </div>
                 <div className="px-2 py-2 rounded-full transition-colors duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2">
                   <OpenAiLogoIcon size={30} weight="fill"/>
                 </div>
-                <div className="px-2 py-2 rounded-full transition-colors duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2">
+                <div className="relative px-2 py-2 rounded-full transition-colors duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2">
                   <PlusCircleIcon size={30} weight="fill"/>
+                  <AddFile />
                 </div>
             </div>
           </div>
