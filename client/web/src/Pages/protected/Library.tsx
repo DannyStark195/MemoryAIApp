@@ -8,22 +8,27 @@ function Library() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [folders, setFolders] = useState([
     {
+      "id":1,
       "name": "Personal",
       "files":[
         {
+          id: 1,
           name: "file1",
           url: "//Personal"
         },
         {
+          id: 2,
           name: "file2",
           url: "//Personal"
         },
       ],
     },
     {
+      "id":2,
       "name": "School",
       "files":[
         {
+          id: 1,
           name: "file1",
           url: "//School", 
           created_at: "Today",
@@ -31,6 +36,7 @@ function Library() {
           category: "School"
         },
         {
+          id: 2,
           name: "file2",
           url: "//School",
           created_at: "Yesterday",
@@ -38,6 +44,7 @@ function Library() {
           category: "School"
         },
         {
+          id: 3,
           name: "file3",
           url: "//School",
           created_at: "Yesterday",
@@ -72,18 +79,18 @@ function Library() {
                       <h2 className="flex-1">Folders</h2>
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm">+ New</span>
                   </div>
-                  <div className="overflow-y-scroll">
+                  <div className="">
                     {folders.map((folder) =>(
-                          <Folder name={folder.name} files={folder.files}/>
+                          <Folder name={folder.name} files={folder.files} key={folder.id}/>
                       ))}
                   </div>
                 </div>
                 <div className="flex-1 lg:pl-6">
                     <h3 className="mb-2">Recent</h3>
-                    <div className="overflow-y-scroll">
+                    <div className="">
                       <div className="">
                         {folders[1].files.map((file) =>(
-                          <File fileProps={file}/>
+                          <File fileProps={file} key={file.id}/>
                         ))}
                       </div>
                     </div>
