@@ -86,7 +86,7 @@ function Library() {
                       ))}
                   </div>
 
-                  <span className="text-end text-sm cursor-pointer">See all</span>
+                  <span className="text-end text-sm cursor-pointer text-Secondary-text dark:text-dark-Secondary-text">See all</span>
                 </div>
                 <div className="flex-1 lg:pl-6">
                     <h3 className="mb-2">Recent</h3>
