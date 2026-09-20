@@ -67,6 +67,7 @@ function Library() {
                       ${activeCategory===category?'bg-Accent dark:bg-Accent border-Accent text-dark-Primary-text':'border-Border'}
                       `}
                       onClick={() => setActiveCategory(category)}
+                      key={category}
                       >
                       {category}
                     </div>
@@ -74,7 +75,7 @@ function Library() {
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row font-medium justify-between overflow-y-scroll">
-                <div className="flex flex-col gap-4 lg:w-[55%] pr-6 md:h-[70dvh]">
+                <div className="flex flex-col gap-4 lg:w-[50%] pr-6 md:h-[70dvh]">
                   <div className="flex justify-between">
                       <h2 className="flex-1">Folders</h2>
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm">+ New</span>
@@ -84,6 +85,8 @@ function Library() {
                           <Folder name={folder.name} files={folder.files} key={folder.id}/>
                       ))}
                   </div>
+
+                  <span className="text-end text-sm cursor-pointer">See all</span>
                 </div>
                 <div className="flex-1 lg:pl-6">
                     <h3 className="mb-2">Recent</h3>

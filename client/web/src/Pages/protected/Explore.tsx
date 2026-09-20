@@ -19,6 +19,7 @@ function Explore() {
                   ${activeCategory===category?'bg-Accent dark:bg-Accent border-Accent text-dark-Primary-text':'border-Border'}
                   `}
                   onClick={() => setActiveCategory(category)}
+                  key={category}
                   >
                   {category}
                 </div>
