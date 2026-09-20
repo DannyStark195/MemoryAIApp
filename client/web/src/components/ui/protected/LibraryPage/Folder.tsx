@@ -7,13 +7,13 @@ type folderProps = {
 }
 
 function Folder({name, files}: folderProps) {
-    const [folderOptionsOpen, setFolderOptionOpen] = useState(false);
+    const [folderOptionsOpen, setFolderOptionsOpen] = useState(false);
     const menuId = useId();
 
     useEffect(() => {
         const closeOtherMenus = (event: Event) => {
             if ((event as CustomEvent<string>).detail !== menuId) {
-                setFolderOptionOpen(false);
+                setFolderOptionsOpen(false);
             }
         };
 
@@ -23,12 +23,12 @@ function Folder({name, files}: folderProps) {
 
     function toggleFolderOptionsOpen(){
         if (folderOptionsOpen) {
-            setFolderOptionOpen(false);
+            setFolderOptionsOpen(false);
             return;
         }
 
         window.dispatchEvent(new CustomEvent("folder-options-opened", { detail: menuId }));
-        setFolderOptionOpen(true);
+        setFolderOptionsOpen(true);
     }
   return (
     <div className="relative p-2 rounded-md w-full flex justify-between items-center mb-2 transition-all duration-200 cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface2">
