@@ -1,6 +1,6 @@
 import { FolderSimpleIcon, DotsThreeOutlineIcon } from "@phosphor-icons/react"
 import FolderOptions from "./FolderOptions"
-import { useState } from "react"
+import { useEffect, useId, useState } from "react"
 type folderProps = {
     name: string,
     files: {}[]
@@ -8,8 +8,27 @@ type folderProps = {
 
 function Folder({name, files}: folderProps) {
     const [folderOptionsOpen, setFolderOptionOpen] = useState(false);
+    const menuId = useId();
+
+    useEffect(() => {
+        const closeOtherMenus = (event: Event) => {
+            if ((event as CustomEvent<string>).detail !== menuId) {
+                setFolderOptionOpen(false);
+            }
+        };
+
+        window.addEventListener("folder-options-opened", closeOtherMenus);
+        return () => window.removeEventListener("folder-options-opened", closeOtherMenus);
+    }, [menuId]);
+
     function toggleFolderOptionsOpen(){
-        setFolderOptionOpen(prev => !prev)
+        if (folderOptionsOpen) {
+            setFolderOptionOpen(false);
+            return;
+        }
+
+        window.dispatchEvent(new CustomEvent("folder-options-opened", { detail: menuId }));
+        setFolderOptionOpen(true);
     }
   return (
     <div className="relative p-2 rounded-md w-full flex justify-between items-center mb-2 transition-all duration-200 cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface2">
@@ -22,11 +41,18 @@ function Folder({name, files}: folderProps) {
                 <span className="text-sm">{files.length}  memories</span>
             </div>
         </div>
-        <div className="cursor-pointer" onClick={() => {
-            toggleFolderOptionsOpen(name)
-        }}>
+        <button
+            type="button"
+            className="cursor-pointer"
+            aria-label={`Open options for ${name}`}
+            aria-expanded={folderOptionsOpen}
+            onClick={(event) => {
+                event.stopPropagation();
+                toggleFolderOptionsOpen();
+            }}
+        >
             <DotsThreeOutlineIcon size={20} weight="fill" />
-        </div>
+        </button>
 
         <FolderOptions folderName={name} style={`${folderOptionsOpen? '':'hidden'}`}/>
     </div>
