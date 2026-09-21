@@ -12,6 +12,7 @@ import Profile from './Pages/protected/Profile.tsx'
 import ProtectedRoute from './components/ProtectedRoute.tsx'
 import Explore from './Pages/protected/Explore.tsx'
 import Auth from './Pages/Auth.tsx'
+import FolderDetail from './components/ui/protected/LibraryPage/FolderDetail.tsx'
 
 function App() {
     return (
@@ -51,6 +52,11 @@ function App() {
           <Route path='profile' element={
             <ProtectedRoute>
               <Profile />
+            </ProtectedRoute>
+          }/>
+          <Route path='library/folder/:folderId' element={
+            <ProtectedRoute>
+              <FolderDetail/>
             </ProtectedRoute>
           }/>
         </Routes>
