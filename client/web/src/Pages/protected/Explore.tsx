@@ -10,7 +10,7 @@ function Explore() {
         <Header>
           <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">Explore</h1>
         </Header>
-        <main>
+        <main className="overflow-y-scroll max-h-[70dvh]">
           <h2 className="font-medium">Categories</h2>
           <div className="">
             <div className="my-4 flex gap-2 text-sm font-semibold flex-wrap ">

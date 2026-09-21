@@ -5,6 +5,7 @@ import QuickCaptureCard from "../../components/ui/protected/HomePage/AddFile.tsx
 import { getHourOfDay } from "../../utils/helpers.ts"
 import { Type } from "lucide-react"
 import { 
+  BellIcon,
   CaretLeftIcon, CaretRightIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
 } from "@phosphor-icons/react"
 import AddFile from "../../components/ui/protected/HomePage/AddFile.tsx"
@@ -18,18 +19,22 @@ function Home() {
   return (
     <Layout>
       <Header>
-        <div>
-          <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">
-            Good {getHourOfDay()},
-            <span className="text-Accent ml-1">
-            Daniel
-            </span> 👋
-          </h1>
-          <p className="w-45 md:w-full text-sm ml-2">Your memories, always within reach.</p>
+        <div className="flex flex-1 justify-between">
+          <div>
+            <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">
+              Good {getHourOfDay()},
+              <span className="text-Accent ml-1">
+              Daniel
+              </span> 
+            </h1>
+            <p className="w-45 md:w-full text-sm ml-2">Your memories, always within reach.</p>
+          </div>
+          
         </div>
+        
       </Header>
       {/* <Navbar /> */}
-      <main>
+      <main className="overflow-y-scroll max-h-[80dvh]">
         <div className="grid justify-center">
           <div className="relative">
             <div className="w-90 xl:w-180 md:w-150 h-100 md:h-[80dvh] lg:h-[67dvh]  rounded-lg bg-Surface2 dark:bg-dark-Surface2">
