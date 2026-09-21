@@ -18,8 +18,8 @@ function Navbar() {
       <div className="flex justify-between p-4 lg:hidden absolute bottom-2 left-2 right-2 bg-Background dark:bg-dark-Surface rounded-4xl border border-Border dark:border-dark-Border">
         {navLinks.map((link)=>(
             <Link to={`/${link}`}key={link}>
-              <div className={`capitalize flex flex-col items-center ${currentPath === link? 'text-Accent':'text-Secondary-text dark:text-dark-Secondary-text'}`}>
-                <NavIcon icon={link} fill={currentPath===link} size="21" />
+              <div className={`capitalize flex flex-col items-center ${currentPath.includes(link)? 'text-Accent':'text-Secondary-text dark:text-dark-Secondary-text'}`}>
+                <NavIcon icon={link} fill={currentPath.includes(link)} size="21" />
                 {link}
               </div>
             </Link>
@@ -37,8 +37,8 @@ function Navbar() {
         <div>
           {navLinks.map((link)=>(
             <Link to={`/${link}`} key={`${link}2`}>
-              <div className={`flex gap-3 capitalize items-center px-2 py-2 mb-2 rounded-md hover:bg-Accent-hover dark:hover:bg-dark-Accent-hover ${currentPath === link? 'text-Accent':'text-Primary-text dark:text-dark-Primary-text'}`}>
-                <NavIcon icon={link} fill={currentPath===link} size="25" />
+              <div className={`flex gap-3 capitalize items-center px-2 py-2 mb-2 rounded-md hover:bg-Accent-hover dark:hover:bg-dark-Accent-hover ${currentPath.includes(link)? 'text-Accent':'text-Primary-text dark:text-dark-Primary-text'}`}>
+                <NavIcon icon={link} fill={currentPath.includes(link)} size="25" />
                 {navPanelOpen? link: ''}
               </div>
             </Link>
