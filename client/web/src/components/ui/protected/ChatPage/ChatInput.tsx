@@ -13,7 +13,7 @@ function ChatInput() {
     }
   return (
     <form action="">
-        <div className="flex border border-Border dark:border-dark-Surface2 px-2 pt-1 pb-7 rounded-lg min-h-8">
+        <div className="flex border bg-Background dark:bg-dark-Background border-Border dark:border-dark-Surface2 px-2 pt-1 pb-7 rounded-lg min-h-8">
             <textarea 
                 name="" id=""
                 placeholder=""

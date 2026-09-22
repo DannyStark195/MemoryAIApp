@@ -5,16 +5,16 @@ type chatBoxProps = {
 }
 function ChatBox({role, text}:chatBoxProps) {
   return (
-    <div>
+    <>
         {role=="user" && (
-            <div className="rounded-xl px-2 py-2 bg-Accent-hover">
+            <div className="rounded-xl px-4 py-2 bg-Accent text-dark-Primary-text dark:bg-dark-Accent-hover self-end">
                 {text}
             </div>
         )}
         {role ==="ai" && (
-            
+            <div className="w-full px-2 lg:px-30 py-6">{text}</div>
         )}
-    </div>
+    </>
   )
 }
 
