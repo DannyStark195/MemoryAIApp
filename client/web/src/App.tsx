@@ -16,7 +16,7 @@ import FolderDetail from './components/ui/protected/LibraryPage/FolderDetail.tsx
 
 function App() {
     return (
-      <div className='bg-Background dark:bg-dark-Surface text-Surface min-h-screen dark:text-Accent'> 
+      <div className='bg-Background dark:bg-dark-Background text-Surface min-h-screen dark:text-Accent'> 
         <Routes>
           <Route path='/' element={<Landing />}/>
           <Route path='/pricing' element={<Pricing />}/>

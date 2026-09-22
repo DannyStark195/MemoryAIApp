@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <div>
 
-      <div className="flex justify-between p-4 py-3 lg:hidden absolute bottom-2 left-2 right-2 bg-Background dark:bg-dark-Surface rounded-4xl border border-Border dark:border-dark-Border">
+      <div className="flex justify-between p-4 py-3 lg:hidden absolute bottom-2 left-2 right-2 bg-Background dark:bg-dark-Background rounded-4xl border border-Border dark:border-dark-Border">
         {navLinks.map((link)=>(
             <Link to={`/${link}`}key={link}>
               <div className={`capitalize flex flex-col items-center ${currentPath.includes(link)? 'text-Accent':'text-Secondary-text dark:text-dark-Secondary-text'}`}>
@@ -26,7 +26,7 @@ function Navbar() {
         ))}
       </div>
 
-      <div className={`hidden lg:block ${navPanelOpen? 'w-50': '15'} h-screen border-r border-Surface dark:border-dark-Border dark:bg-dark-Surface px-4 py-10 text-md text-Primary-text dark:text-dark-Primary-text`}>
+      <div className={`hidden lg:block ${navPanelOpen? 'w-50': '15'} h-screen border-r border-Surface dark:border-dark-Border dark:bg-dark-Background px-4 py-10 text-md text-Primary-text dark:text-dark-Primary-text`}>
         <div className={`flex items-center gap-2 text-2xl font-semibold`}>
           <Logo classname="w-11"/>
           {navPanelOpen ? 'Memory':''}

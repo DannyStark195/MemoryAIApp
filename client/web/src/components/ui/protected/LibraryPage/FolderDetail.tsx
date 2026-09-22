@@ -3,6 +3,7 @@ import Layout from "../Layout.tsx";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import File from "./File.tsx";
+import BackButton from "../../BackButton.tsx";
 
 type fileProps = {
         id: string,
@@ -62,9 +63,7 @@ function FolderDetail() {
     <Layout>
       <div className="flex justify-between">
         <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">{folderId}</h1>
-        <div className="cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface2 p-2 rounded-full">
-          <ArrowLeftIcon size={20} weight="bold"/>
-        </div>
+        <BackButton />
       </div>
       <main>
           <div className="flex justify-end items-center gap-2 my-4">
