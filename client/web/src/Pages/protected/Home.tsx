@@ -37,7 +37,7 @@ function Home() {
       <main className="overflow-y-scroll max-h-[80dvh]">
         <div className="grid justify-center">
           <div className="relative">
-            <div className="w-90 xl:w-180 md:w-150 h-100 md:h-[80dvh] lg:h-[67dvh]  rounded-lg bg-Surface2 dark:bg-dark-Surface2">
+            <div className="w-82 xl:w-180 md:w-150 h-100 md:h-[80dvh] lg:h-[67dvh]  rounded-lg bg-Surface2 dark:bg-dark-Surface2">
               
             </div>
             <div className="grid gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">

@@ -5,7 +5,7 @@ function AddFile({style}:{style: string}) {
   return (
     <div className={`rounded-lg bg-Background dark:bg-dark-Surface2 flex gap-1 shadow-Border shadow-lg dark:shadow-dark-Surface py-3 px-3 absolute top-[101%] right-0 lg:right-10 z-4 ${style}`}>
       {files.map(file =>(
-        <div key={file} className={`text-md border-Border flex flex-col items-center justify-center gap-2 py-2 px-4 rounded-lg cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface duration-200 transition-colors `}>
+        <div key={file} className={`text-md border-Border flex flex-col items-center justify-center gap-2 py-2 px-2 rounded-lg cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface duration-200 transition-colors `}>
           {file === "Photo" && <div onClick={()=>{console.log(file)}} className="text-blue-500"><CameraIcon size={20} weight="bold"/></div>} 
           {file === "Document" && <div onClick={()=>{console.log(file)}} className="text-red-500"><FilePdfIcon size={20} weight="bold"/></div>}
           {file === "Audio" && <div onClick={()=>{console.log(file)}} className="text-pink-500"><WaveformIcon size={20} weight="bold"/></div>}
