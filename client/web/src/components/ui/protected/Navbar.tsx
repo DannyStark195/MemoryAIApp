@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom" 
 import NavIcon from "./NavIcons.tsx";
 import { PanelLeftCloseIcon,PanelLeftOpenIcon } from "lucide-react";
+import AccountCard from "./AccountCard.tsx";
 import { useState } from "react";
 import Logo from "../Logo.tsx";
 function Navbar() {
@@ -44,6 +45,10 @@ function Navbar() {
             </Link>
           ))}
         </div>
+
+          <div className="mt-35">
+            <AccountCard />
+          </div>
       </div>
     </div>
   )
