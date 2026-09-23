@@ -1,11 +1,8 @@
 import Layout from "../../components/ui/protected/Layout.tsx"
 import Header from "../../components/ui/protected/Header.tsx"
-import SearchBar from "../../components/ui/protected/SearchBar.tsx"
-import QuickCaptureCard from "../../components/ui/protected/HomePage/AddFile.tsx"
 import { getHourOfDay } from "../../utils/helpers.ts"
-import { Type } from "lucide-react"
 import { 
-  BellIcon,
+  // BellIcon,
   CaretLeftIcon, CaretRightIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
 } from "@phosphor-icons/react"
 import AddFile from "../../components/ui/protected/HomePage/AddFile.tsx"

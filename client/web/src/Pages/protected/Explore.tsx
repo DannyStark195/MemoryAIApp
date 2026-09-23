@@ -3,7 +3,8 @@ import Layout from "../../components/ui/protected/Layout.tsx"
 import { useState } from "react"
 
 function Explore() {
-  const [categories, setCategories]= useState<string[]>(["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"]);
+  // const [categories, setCategories]= useState<string[]>(["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"]);
+  const categories = ["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"];
   const [activeCategory, setActiveCategory] = useState("All");
   return (
     <Layout>

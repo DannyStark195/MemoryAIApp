@@ -6,6 +6,7 @@ type folderOptionsProps ={
 }
 
 function FolderOptions({folderName, style}: folderOptionsProps) {
+    console.log(folderName)
   return (
     // <div className={"bg-transparent h-screen fixed z-10"}>
         <div className={`absolute rounded-md shadow-lg shadow-Border dark:shadow-dark-Surface p-2 ${style} right-0 top-[80%] z-50 bg-Background dark:bg-dark-Surface2 font-medium text-Accent`}>

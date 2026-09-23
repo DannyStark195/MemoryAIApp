@@ -1,4 +1,4 @@
-import { HeartIcon, FileIcon, CaretRightIcon } from "@phosphor-icons/react"
+import { FileIcon, CaretRightIcon } from "@phosphor-icons/react"
 
 type fileProps = {
         id: string,

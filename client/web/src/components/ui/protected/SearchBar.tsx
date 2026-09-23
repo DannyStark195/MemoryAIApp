@@ -17,7 +17,7 @@ function SearchBar({placeHolder, func}:searchProps) {
         <div className="absolute top-2.5 left-3">
           <MagnifyingGlassIcon size={18}/>
         </div>
-        <form action="">
+        <form action="" onSubmit={func}>
           <input type="text" className="dark:text-dark-Secondary-text px-4 pl-10 py-2 text-sm rounded-lg w-full outline-Accent md:w-55" placeholder={placeHolder}/>
         </form>
       </div>

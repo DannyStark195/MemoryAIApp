@@ -1,44 +1,107 @@
 import Header from "../../components/ui/protected/Header"
 import Layout from "../../components/ui/protected/Layout.tsx"
-import File from "../../components/ui/protected/LibraryPage/File.tsx";
+// import File from "../../components/ui/protected/LibraryPage/File.tsx";
 import Folder from "../../components/ui/protected/LibraryPage/Folder.tsx";
 import { useState } from "react";
 function Library() {
-  const [categories, setCategories]= useState<string[]>(["All", "Favourites"]);
+  // const [categories, setCategories]= useState<string[]>(["All", "Favourites"]);
+  const categories = ["All", "Favourites"];
   const [activeCategory, setActiveCategory] = useState("All");
-  const [folders, setFolders] = useState([
+  // const [folders, setFolders] = useState([
+  //   {
+  //     "id":1,
+  //     "name": "Personal",
+  //     "files":[
+  //       {
+  //         id: 1,
+  //         name: "file1",
+  //         url: "//Personal"
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "file2",
+  //         url: "//Personal"
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "file3",
+  //         url: "//Personal"
+  //       },
+  //       {
+  //         id: 4,
+  //         name: "file4",
+  //         url: "//Personal"
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     "id":2,
+  //     "name": "School",
+  //     "files":[
+  //       {
+  //         id: 1,
+  //         name: "file1",
+  //         url: "//School", 
+  //         created_at: "Today",
+  //         favourite: false,
+  //         category: "School"
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "file2",
+  //         url: "//School",
+  //         created_at: "Yesterday",
+  //         favourite: true,
+  //         category: "School"
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "file3",
+  //         url: "//School",
+  //         created_at: "Yesterday",
+  //         favourite: true,
+  //         category: "School"
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     "id":3,
+  //     "name": "Work",
+  //     "files":[
+  //       {
+  //         id: 1,
+  //         name: "file1",
+  //         url: "//Work", 
+  //         created_at: "Today",
+  //         favourite: false,
+  //         category: "Work"
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "file2",
+  //         url: "//Work",
+  //         created_at: "Yesterday",
+  //         favourite: true,
+  //         category: "Work"
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "file3",
+  //         url: "//Work",
+  //         created_at: "Yesterday",
+  //         favourite: true,
+  //         category: "Work"
+  //       },
+  //     ],
+  //   }
+  // ]);
+  const folders = [
     {
-      "id":1,
-      "name": "Personal",
-      "files":[
-        {
-          id: 1,
-          name: "file1",
-          url: "//Personal"
-        },
-        {
-          id: 2,
-          name: "file2",
-          url: "//Personal"
-        },
-        {
-          id: 3,
-          name: "file3",
-          url: "//Personal"
-        },
-        {
-          id: 4,
-          name: "file4",
-          url: "//Personal"
-        },
-      ],
-    },
-    {
-      "id":2,
+      "id":'2',
       "name": "School",
       "files":[
         {
-          id: 1,
+          id: '1',
           name: "file1",
           url: "//School", 
           created_at: "Today",
@@ -46,7 +109,7 @@ function Library() {
           category: "School"
         },
         {
-          id: 2,
+          id: '2',
           name: "file2",
           url: "//School",
           created_at: "Yesterday",
@@ -54,7 +117,7 @@ function Library() {
           category: "School"
         },
         {
-          id: 3,
+          id: '3',
           name: "file3",
           url: "//School",
           created_at: "Yesterday",
@@ -64,11 +127,11 @@ function Library() {
       ],
     },
     {
-      "id":3,
+      "id":'3',
       "name": "Work",
       "files":[
         {
-          id: 1,
+          id: '1',
           name: "file1",
           url: "//Work", 
           created_at: "Today",
@@ -76,7 +139,7 @@ function Library() {
           category: "Work"
         },
         {
-          id: 2,
+          id: '2',
           name: "file2",
           url: "//Work",
           created_at: "Yesterday",
@@ -84,7 +147,7 @@ function Library() {
           category: "Work"
         },
         {
-          id: 3,
+          id: '3',
           name: "file3",
           url: "//Work",
           created_at: "Yesterday",
@@ -93,7 +156,7 @@ function Library() {
         },
       ],
     }
-  ]);
+  ]
   return (
     <Layout>
             <Header>
@@ -128,7 +191,7 @@ function Library() {
 
                   {/* <span className="text-end text-sm cursor-pointer text-Secondary-text dark:text-dark-Secondary-text">See all</span> */}
                 </div>
-                <div className="flex-1 lg:pl-6 pb-4 hidden">
+                {/* <div className="flex-1 lg:pl-6 pb-4 hidden">
                     <h3 className="mb-2">Recent</h3>
                     <div className="overflow-y-scroll max-h-[40dvh]">
                       <div className="">
@@ -137,7 +200,7 @@ function Library() {
                         ))}
                       </div>
                     </div>
-                </div>
+                </div> */}
               </div>
             </main>
         </Layout>

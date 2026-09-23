@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { ArrowElbowDownLeftIcon, PaperPlaneIcon } from "@phosphor-icons/react"
+import {PaperPlaneIcon } from "@phosphor-icons/react"
 
 function ChatInput() {
     const textareaRef = useRef<HTMLTextAreaElement>(null)

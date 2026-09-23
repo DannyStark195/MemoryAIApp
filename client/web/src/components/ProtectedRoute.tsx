@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom"
-
-function ProtectedRoute({children}) {
+import React from "react"
+function ProtectedRoute({children}: { children: React.ReactNode }) {
     const isAuthenticated = true
     if(!isAuthenticated){
         return <Navigate to={'/auth'} replace/>

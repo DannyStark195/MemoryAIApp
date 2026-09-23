@@ -1,5 +1,4 @@
-import { FolderSimpleIcon, DotsThreeOutlineIcon, CaretRightIcon } from "@phosphor-icons/react"
-import { useEffect, useId, useState } from "react"
+import { FolderSimpleIcon } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
 type folderProps = {
     name: string,
