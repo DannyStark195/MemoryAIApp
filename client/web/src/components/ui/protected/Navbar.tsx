@@ -47,7 +47,7 @@ function Navbar() {
         </div>
 
           <div className="mt-35">
-            <AccountCard />
+            <AccountCard open={navPanelOpen}/>
           </div>
       </div>
     </div>
