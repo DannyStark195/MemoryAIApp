@@ -24,7 +24,7 @@ function Home() {
               Daniel
               </span> 
             </h1>
-            <p className="w-45 md:w-full text-sm ml-2">Your memories, always within reach.</p>
+            {/* <p className="w-45 md:w-full text-sm">Your memories, always within reach.</p> */}
           </div>
           
         </div>

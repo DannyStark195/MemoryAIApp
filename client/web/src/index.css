@@ -27,3 +27,10 @@
     --color-dark-Accent-hover: #25132D;
     /* --color-dark-Accent-hover: #35131F; */
 }
+
+@utility no-scrollbar {
+  scrollbar-width: none;         /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;               /* Safari and Chrome */
+  }
+}
