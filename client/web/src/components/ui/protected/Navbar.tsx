@@ -5,7 +5,7 @@ import AccountCard from "./AccountCard.tsx";
 import { useState } from "react";
 import Logo from "../Logo.tsx";
 function Navbar() {
-  const navLinks = ["home", "explore", "chat", "library", "profile"];
+  const navLinks = ["home", "explore", "chat", "library", "settings"];
   const location = useLocation();
   const currentPath = location.pathname.slice(1)
   const [navPanelOpen, setNavPanelOpen] = useState(true);

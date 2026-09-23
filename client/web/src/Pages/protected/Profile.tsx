@@ -5,7 +5,7 @@ import Navbar from "../../components/ui/protected/Navbar.tsx"
 function Profile() {
   return (
     <Layout>
-        <h1>Settings</h1>
+        <h1>Profile</h1>
     </Layout>
   )
 }

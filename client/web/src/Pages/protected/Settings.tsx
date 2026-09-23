@@ -1,7 +1,9 @@
-
+import Layout from "../../components/ui/protected/Layout.tsx"
 function Settings() {
   return (
-    <div>Settings</div>
+     <Layout>
+            <h1>Settings</h1>
+      </Layout>
   )
 }
 
