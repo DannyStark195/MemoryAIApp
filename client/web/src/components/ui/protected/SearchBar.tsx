@@ -13,7 +13,7 @@ function SearchBar({placeHolder, func}:searchProps) {
           <NotificationBell />
       </div>
 
-      <div className="relative text-Secondary-text">
+      <div className="relative text-Secondary-text flex-1">
         <div className="absolute top-2.5 left-3">
           <MagnifyingGlassIcon size={18}/>
         </div>
