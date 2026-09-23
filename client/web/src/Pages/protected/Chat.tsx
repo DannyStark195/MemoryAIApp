@@ -1,5 +1,5 @@
 import Layout from "../../components/ui/protected/Layout.tsx"
-import Header from "../../components/ui/protected/Header.tsx"
+// import Header from "../../components/ui/protected/Header.tsx"
 // import { OpenAiLogoIcon } from "@phosphor-icons/react"
 import ChatInput from "../../components/ui/protected/ChatPage/ChatInput.tsx"
 import ChatBox from "../../components/ui/protected/ChatPage/ChatBox.tsx"
