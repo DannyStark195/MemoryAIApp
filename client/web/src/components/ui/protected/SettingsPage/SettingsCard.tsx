@@ -10,7 +10,7 @@ function SettingsCard({icon, text, link}:settingsCardPProps) {
   return (
     <div className="">
         <Link to={`${link}`}>
-            <div className="flex justify-between w-full cursor-pointer border border-Surface2 dark:border-dark-Surface2 px-2 py-4">
+            <div className="flex justify-between w-full cursor-pointer hover:bg-Surface dark:hover:bg-dark-Surface duration-300 transition-all py-4 px-1 rounded-md">
                 <div className="flex gap-2 ">
                     <div className="text-Accent">
                         {icon}
@@ -18,7 +18,7 @@ function SettingsCard({icon, text, link}:settingsCardPProps) {
                     {text}
                 </div>
                 <div className="">
-                    <CaretRightIcon size={12}/>
+                    {/* <CaretRightIcon size={12}/> */}
                 </div>
             </div>
         </Link>

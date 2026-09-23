@@ -12,7 +12,7 @@ function ChatBox({role, text}:chatBoxProps) {
             </div>
         )}
         {role ==="ai" && (
-            <div className="w-full px-2 lg:px-30 py-6">{text}</div>
+            <div className="w-full px-2 lg:px-10 py-6 leading-8">{text}</div>
         )}
     </>
   )

@@ -17,7 +17,7 @@ function Explore() {
             <div className="my-4 flex gap-2 text-sm font-semibold flex-wrap ">
               {categories.map((category) =>(
                 <div className={`px-5 py-2 rounded-lg border cursor-pointer 
-                  ${activeCategory===category?'bg-Accent dark:bg-Accent border-Accent text-dark-Primary-text':'border-Border'}
+                  ${activeCategory===category?'bg-Accent dark:bg-Accent border-Accent text-dark-Primary-text':'border-Surface2 dark:border-dark-Surface2'}
                   `}
                   onClick={() => setActiveCategory(category)}
                   key={category}
