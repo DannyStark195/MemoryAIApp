@@ -1,4 +1,4 @@
-import { CaretRightIcon } from "@phosphor-icons/react"
+// import { CaretRightIcon } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
 
 type settingsCardPProps ={
