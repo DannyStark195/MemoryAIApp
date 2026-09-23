@@ -33,7 +33,7 @@ function Settings() {
                  }/>
                 </div>
               </div>
-              <div className="mb-8">
+              <div className="mb-12">
                 <h2 className="text-md font-medium">Support</h2>
                 <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 [&>:last-child]:border-0 my-4 bg-Surface dark:bg-dark-Surface">
                  <SettingsCard text="Help & Feedback" icon={
