@@ -26,7 +26,7 @@ function ChatInput() {
             </textarea>
             <button
                 type="button"
-                className="absolute bottom-1 right-2 rounded-lg p-2 bg-Accent  transition-all cursor-pointer text-dark-Primary-text"
+                className="absolute bottom-1.5 right-2 rounded-lg p-2 bg-Accent hover:scale-105 transition-all cursor-pointer text-dark-Primary-text"
             >
                 {/* <ArrowElbowDownLeftIcon size={15} weight="bold" /> */}
                 <PaperPlaneIcon size={12} weight="fill" />
