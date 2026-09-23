@@ -1,7 +1,17 @@
 
 function Auth() {
   return (
-    <div>Auth</div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <img src="" alt="" />
+            <h2>Memorie</h2>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
   )
 }
 

@@ -30,7 +30,7 @@ function Navbar() {
       <div className={`hidden lg:block ${navPanelOpen? 'w-50': '15'} h-screen border-r border-Surface dark:border-dark-Border dark:bg-dark-Background px-4 py-10 text-md text-Primary-text dark:text-dark-Primary-text`}>
         <div className={`flex items-center gap-2 text-2xl font-semibold`}>
           <Logo classname="w-11"/>
-          {navPanelOpen ? 'Memory':''}
+          {navPanelOpen ? 'Memorii':''}
         </div>
         <div onClick={toggleNavPanel} className={`my-6 cursor-pointer text-Primary-text dark:text-dark-Primary-text flex ml-3 ${navPanelOpen? 'justify-end':'justify-start'}`}>
           {navPanelOpen? <PanelLeftOpenIcon size={20} strokeWidth={1.5}/>: <PanelLeftCloseIcon size={20} strokeWidth={1.5}/>}
