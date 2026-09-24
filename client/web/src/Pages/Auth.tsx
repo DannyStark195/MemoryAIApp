@@ -27,7 +27,7 @@ function Auth() {
           </div>
           <div className="lg:flex-1 flex items-center justify-center ">
             <div>
-              <div className="relative mb-8 flex gap-20 rounded-lg border border-Border dark:border-dark-Border py-3 px-12 lg:border-0">
+              <div className="relative mb-8 flex justify-between gap-5 rounded-lg border border-Border dark:border-dark-Border py-3 px-12 lg:border-0">
                 <h2
                   onClick={openLoginTab}
                   className={`text-lg lg:text-2xl font-medium cursor-pointer relative z-1 lg:pb-1 ${loginTabOpen?'text-dark-Primary-text':'text-Primary-text dark:text-dark-Primary-text'} lg:text-Primary-text dark:lg:text-dark-Primary-text`}
@@ -41,7 +41,7 @@ function Auth() {
                 >
                   Sign up
                 </h2>
-                <div className={` h-13 w-35 lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-15'} transition-all duration-300`}>
+                <div className={` h-13 w-40 lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'} transition-all duration-900`}>
                 </div>
               </div>
               <div className="w-100">
