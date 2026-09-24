@@ -13,6 +13,13 @@ import ProtectedRoute from './components/ProtectedRoute.tsx'
 import Explore from './Pages/protected/Explore.tsx'
 import Auth from './Pages/Auth.tsx'
 import FolderDetail from './components/ui/protected/LibraryPage/FolderDetail.tsx'
+import AccountInfo from './components/ui/protected/SettingsPage/AccountInfo.tsx'
+import About from './components/ui/protected/SettingsPage/About.tsx'
+import BackUpData from './components/ui/protected/SettingsPage/BackUpData.tsx'
+import Help from './components/ui/protected/SettingsPage/Help.tsx'
+import ImportExport from './components/ui/protected/SettingsPage/ImportExport.tsx'
+import PasswordSecurity from './components/ui/protected/SettingsPage/PasswordSecurity.tsx'
+import Preferences from './components/ui/protected/SettingsPage/Preferences.tsx'
 
 function App() {
     return (
@@ -57,6 +64,41 @@ function App() {
           <Route path='library/folder/:folderId' element={
             <ProtectedRoute>
               <FolderDetail/>
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/account-info' element={
+            <ProtectedRoute>
+              <AccountInfo />
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/about' element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/backup-data' element={
+            <ProtectedRoute>
+              <BackUpData />
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/help' element={
+            <ProtectedRoute>
+              <Help />
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/import-export' element={
+            <ProtectedRoute>
+              <ImportExport />
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/password-security' element={
+            <ProtectedRoute>
+              <PasswordSecurity />
+            </ProtectedRoute>
+          }/>
+          <Route path='settings/preferences' element={
+            <ProtectedRoute>
+              <Preferences />
             </ProtectedRoute>
           }/>
         </Routes>

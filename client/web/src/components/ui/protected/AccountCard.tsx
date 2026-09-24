@@ -22,7 +22,7 @@ function AccountCard({open}:{open:boolean}) {
         </div>
 
         <div className={`absolute -top-28 -right-48 w-42 py-3 px-3 rounded-md bg-Background dark:bg-dark-Surface shadow-Border shadow-lg dark:shadow-none ${accountCardOpen? '': 'hidden'}`}>
-            <Link to={"/settings"}>
+            <Link to={"/settings/account-info"}>
                 <div className='flex gap-2 border-b p-2 border-Surface2 dark:border-dark-Surface2 hover:bg-Surface2 dark:hover:bg-dark-Surface2 transion-all duration-200 rounded-md'>
                     <div className="">
                         <img src={profile} alt="profile picture" className='w-8 h-8 rounded-full'/>
