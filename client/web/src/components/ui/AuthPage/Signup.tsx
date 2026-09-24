@@ -1,5 +1,5 @@
 import { LockIcon, MailboxIcon, UserIcon } from "@phosphor-icons/react"
-import { MailIcon } from "lucide-react"
+
 
 function Signup() {
   return (
