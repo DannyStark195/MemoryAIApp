@@ -21,7 +21,7 @@ function Auth() {
               <div>
                 <Logo classname="w-20 lg:w-50"/>
               </div>
-              <h2 className="text-xl lg:text-6xl font-semibold mt-1 lg:mb-2">Memorii</h2>
+              <h2 className="text-xl lg:text-5xl font-semibold mt-1 lg:mb-2">Memorii</h2>
               <p className="lg:text-lg">Your memories organized beautifully.</p>
             </div>
           </div>
