@@ -3,8 +3,9 @@ import Logo from "../components/ui/Logo"
 import Login from "../components/ui/AuthPage/Login.tsx"
 import Signup from "../components/ui/AuthPage/Signup.tsx"
 import Layout from "../components/ui/Layout.tsx"
-import GoogleButton from "./protected/GoogleButton.tsx"
-import FacebookButton from "./protected/FacebookButton.tsx"
+import GoogleButton from "../components/ui/AuthPage/GoogleButton.tsx"
+import FacebookButton from "../components/ui/AuthPage/FacebookButton.tsx"
+import AppleButton from "../components/ui/AuthPage/AppleButton.tsx"
 
 function Auth() {
   const [loginTabOpen, setLoginTabOpen] = useState(true)
@@ -51,9 +52,10 @@ function Auth() {
                  <div className="text-center text-sm text-Secondary-text my-4 relative before:absolute before:top-[50%] before:left-0 before:w-[35%] before:h-0.5 before:bg-Surface2 dark:before:bg-dark-Surface2 before:content-[''] after:absolute after:top-[50%] after:right-0 after:w-[35%] after:h-0.5 after:bg-Surface2 dark:after:bg-dark-Surface2 after:content-['']">
                     or continue with
                   </div>
-                  <div>
+                  <div className="flex justify-center gap-2">
                     <GoogleButton/>
                     <FacebookButton />
+                    <AppleButton />
                   </div>
 
                    
