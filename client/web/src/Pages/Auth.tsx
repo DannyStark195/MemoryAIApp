@@ -46,7 +46,9 @@ function Auth() {
               </div>
               <div className="w-100">
                 {loginTabOpen? <Login />:<Signup/>}
-                 <div className="text-Secondary-text my-4">or continue with</div>
+                 <div className="text-center text-Secondary-text my-4 relative before:absolute before:top-[50%] before:left-0 before:w-[35%] before:h-0.5 before:bg-Surface2 before:dark:bg-dark-Surface2 before:content-[''] after:absolute after:top-[50%] after:right-0 after:w-[35%] after:h-0.5 after:bg-Surface2 before:dark:bg-dark-Surface2 after:content-['']">
+                    or continue with
+                  </div>
                   <div>
                     <button></button>
                     <button></button>
