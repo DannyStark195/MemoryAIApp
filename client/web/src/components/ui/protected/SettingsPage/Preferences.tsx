@@ -1,6 +1,6 @@
 import Layout from "../Layout.tsx"
 import BackButton from "../../BackButton.tsx"
-import { DeviceMobileSpeakerIcon, RadioButtonIcon } from "@phosphor-icons/react"
+import { RadioButtonIcon } from "@phosphor-icons/react"
 import { useTheme } from "../../../../context/ThemeContext.tsx"
 function Preferences() {
   const {theme, changeTheme} = useTheme();
