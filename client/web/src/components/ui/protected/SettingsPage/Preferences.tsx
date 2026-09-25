@@ -1,6 +1,6 @@
 import Layout from "../Layout.tsx"
 import BackButton from "../../BackButton.tsx"
-import { CaretRightIcon, RadioButtonIcon } from "@phosphor-icons/react"
+import { RadioButtonIcon } from "@phosphor-icons/react"
 import { useTheme } from "../../../../context/ThemeContext.tsx"
 import MemoriesPerDayBtn from "../MemoriesPerDayBtn.tsx";
 import { useState } from "react";
