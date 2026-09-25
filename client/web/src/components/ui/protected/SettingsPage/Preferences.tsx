@@ -4,6 +4,7 @@ import { CaretRightIcon, RadioButtonIcon } from "@phosphor-icons/react"
 import { useTheme } from "../../../../context/ThemeContext.tsx"
 import MemoriesPerDayBtn from "../MemoriesPerDayBtn.tsx";
 import { useState } from "react";
+import ResurfacingScheduleButton from "../ResurfacingScheduleButton.tsx";
 function Preferences() {
   const {theme, changeTheme} = useTheme();
   // const root = document.documentElement
@@ -53,10 +54,7 @@ function Preferences() {
               <div className="my-4">
                 <div className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
                   <p>When you'd like to recieve reminders</p>
-                  <div className="flex items-center bg-Accent-hover dark:bg-dark-Accent-hover py-2 px-4 rounded-lg">
-                    Automatic (AI mode)
-                    <CaretRightIcon />
-                  </div>
+                  <ResurfacingScheduleButton />
                 </div>
               </div>
             </div>
@@ -67,8 +65,8 @@ function Preferences() {
                   <p>Resurfacing reminders</p>
                   <div className="flex items-center gap-6">
                     <span className="font-medium">{resurfacingOn? 'on' : 'off'}</span>
-                    <div className={`relative w-14 h-7.5  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
-                      <div className={`absolute  top-0.75 ${resurfacingOn?'right-1.5': 'left-1.5'} transition-all duration-500 p-3 bg-Background rounded-full`}></div>
+                    <div className={`relative w-14 h-7  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
+                      <div className={`absolute  top-0.5 ${resurfacingOn?'right-1.5': 'left-1.5'} transition-all duration-500 p-3 bg-Background rounded-full`}></div>
                     </div>
                   </div> 
                 </div>
