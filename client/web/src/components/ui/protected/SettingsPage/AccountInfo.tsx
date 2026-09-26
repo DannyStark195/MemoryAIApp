@@ -31,8 +31,8 @@ function AccountInfo() {
 
   return (
     <Layout>
-        <div className="flex justify-between mb-8">
-            <h1 className="text-xl md:text-xl font-medium leading-wider mb-4">Account Info</h1>
+        <div className="flex justify-end mb-8">
+            {/* <h1 className="text-xl md:text-xl font-medium leading-wider mb-4">Account Info</h1> */}
             <BackButton />
         </div>
         <main>

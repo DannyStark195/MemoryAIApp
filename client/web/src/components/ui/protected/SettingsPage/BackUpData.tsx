@@ -1,7 +1,10 @@
+import Layout from "../Layout.tsx"
 
 function BackUpData() {
   return (
-    <div>BackUpData</div>
+   <Layout>
+      <main></main>
+   </Layout>
   )
 }
 

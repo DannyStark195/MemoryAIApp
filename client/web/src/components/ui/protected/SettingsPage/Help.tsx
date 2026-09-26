@@ -1,7 +1,10 @@
+import Layout from "../Layout.tsx"
 
 function Help() {
   return (
-    <div>Help</div>
+     <Layout>
+      <main></main>
+   </Layout>
   )
 }
 

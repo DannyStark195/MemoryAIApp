@@ -1,7 +1,10 @@
+import Layout from "../Layout.tsx"
 
 function ImportExport() {
   return (
-    <div>ImportExport</div>
+    <Layout>
+      <main></main>
+   </Layout>
   )
 }
 

@@ -16,7 +16,7 @@ function Preferences() {
                 <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">Preferences</h1>
                 <BackButton />
           </div>
-          <main>
+          <main className="mt-8 overflow-y-auto max-h-[78dvh] no-scrollbar">
             <div>
               <h2 className="font-medium">Appearance</h2>
               <div className="my-4 flex gap-4">
@@ -65,8 +65,8 @@ function Preferences() {
                   <p>Resurfacing reminders</p>
                   <div className="flex items-center gap-6">
                     <span className="font-medium">{resurfacingOn? 'on' : 'off'}</span>
-                    <div className={`relative w-14 h-7  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
-                      <div className={`absolute  top-0.5 ${resurfacingOn?'right-1.5': 'left-1.5'} transition-all duration-500 p-3 bg-Background rounded-full`}></div>
+                    <div className={`relative w-11 h-6.5  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
+                      <div className={`absolute  top-0.75 ${resurfacingOn?'right-1': 'left-1'} transition-all duration-500 p-2.5 bg-Background rounded-full`}></div>
                     </div>
                   </div> 
                 </div>
