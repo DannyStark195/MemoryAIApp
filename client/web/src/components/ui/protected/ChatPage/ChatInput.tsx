@@ -13,11 +13,11 @@ function ChatInput() {
     }
   return (
     <form action="">
-        <div className="flex border bg-Background dark:bg-dark-Background border-Border dark:border-dark-Surface2 px-2 pt-1 pb-7 rounded-lg min-h-8">
+        <div className="flex border bg-Background dark:bg-dark-Background border-Border dark:border-dark-Surface2 px-2 pt-1 pb-4 rounded-lg min-h-8">
             <textarea 
                 name="" id=""
                 placeholder=""
-                className="max-h-50 text-sm overflow-y-auto flex-1 resize-none outline-none"
+                className="max-h-50 text-sm overflow-y-auto resize-none outline-none w-[95%]"
                 onInput={handleChatInput}
                 ref={textareaRef}
                 rows={1}
@@ -26,7 +26,7 @@ function ChatInput() {
             </textarea>
             <button
                 type="button"
-                className="absolute bottom-1.5 right-2 rounded-lg p-2 bg-Accent hover:scale-105 transition-all cursor-pointer text-dark-Primary-text"
+                className="absolute bottom-1.5 right-2 rounded-lg p-1.5 bg-Accent hover:scale-105 transition-all cursor-pointer text-dark-Primary-text"
             >
                 {/* <ArrowElbowDownLeftIcon size={15} weight="bold" /> */}
                 <PaperPlaneIcon size={12} weight="fill" />
