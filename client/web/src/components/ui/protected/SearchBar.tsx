@@ -9,7 +9,7 @@ type searchProps ={
 function SearchBar({placeHolder, func}:searchProps) {
   return (
     <div className="flex gap-2">
-      <div className="mt-1 text-Secondary-text">
+      <div className="mt-1 text-Secondary-text hidden">
           <NotificationBell />
       </div>
 

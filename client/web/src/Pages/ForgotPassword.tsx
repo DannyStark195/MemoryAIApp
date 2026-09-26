@@ -44,7 +44,7 @@ function ForgotPassword() {
                       </div>
                       <button type="button" onClick={sendCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Send Code</button>
                     </form>
-                    <p className="mt-4">Remember your password? <Link to={"/auth"} className="text-Accent font-medium">Log in</Link></p>
+                    <p className="mt-4 text-sm">Remember your password? <Link to={"/auth"} className="text-Accent font-medium">Log in</Link></p>
                   </div>
                 ):(
                   <div>
