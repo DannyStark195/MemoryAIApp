@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom" 
 import NavIcon from "./NavIcons.tsx";
-import { PanelLeftCloseIcon,PanelLeftOpenIcon } from "lucide-react";
+import { PanelRightIcon,PanelLeftIcon } from "lucide-react";
 import AccountCard from "./AccountCard.tsx";
 import { useState } from "react";
 import Logo from "../Logo.tsx";
@@ -33,7 +33,12 @@ function Navbar() {
           {navPanelOpen ? 'Memorii':''}
         </div>
         <div onClick={toggleNavPanel} className={`my-6 cursor-pointer text-Primary-text dark:text-dark-Primary-text flex ml-3 ${navPanelOpen? 'justify-end':'justify-start'}`}>
-          {navPanelOpen? <PanelLeftOpenIcon size={20} strokeWidth={1.5}/>: <PanelLeftCloseIcon size={20} strokeWidth={1.5}/>}
+          {navPanelOpen? 
+            <PanelLeftIcon size={20} strokeWidth={1} color=""/>
+            
+            : 
+            <PanelRightIcon size={20} strokeWidth={1} color=""/>
+          }
         </div>
         <div>
           {navLinks.map((link)=>(

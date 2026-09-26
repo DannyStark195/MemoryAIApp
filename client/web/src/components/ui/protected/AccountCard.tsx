@@ -13,7 +13,7 @@ function AccountCard({open}:{open:boolean}) {
         className='relative hover:bg-Surface2 dark:hover:bg-dark-Surface transition-all duration-300 rounded-lg p-2 cursor-pointer'>
         <div className='flex gap-2'>
             <div className="">
-                <img src={profile} alt="profile picture" className='w-10 h-10 rounded-full'/>
+                <img src={profile} alt="profile picture" className='w-8 h-8 rounded-full'/>
             </div>
             <div className={`${open?"":"hidden"}`}>
                 <p className='text-sm'>Daniel Okafor</p>
