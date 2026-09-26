@@ -20,6 +20,7 @@ import Help from './components/ui/protected/SettingsPage/Help.tsx'
 import ImportExport from './components/ui/protected/SettingsPage/ImportExport.tsx'
 import PasswordSecurity from './components/ui/protected/SettingsPage/PasswordSecurity.tsx'
 import Preferences from './components/ui/protected/SettingsPage/Preferences.tsx'
+import ForgotPassword from './Pages/ForgotPassword.tsx'
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='/privacy' element={<Privacy />}/>
           <Route path='/terms' element={<Terms />}/>
           <Route path='auth' element={<Auth />}/>
+          <Route path='auth/forgot-password' element={<ForgotPassword/> }/>
 
           <Route path='home' element={
             <ProtectedRoute>

@@ -179,11 +179,11 @@ function Library() {
               </div>
               <div className="flex flex-col lg:flex-row font-medium justify-between">
                 <div className="flex flex-col gap-4 w-full md:pr-6">
-                  <div className="flex justify-between">
+                  <div className="flex justify-between mb-2">
                       <h2 className="flex-1">Folders</h2>
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm">+ New Folder</span>
                   </div>
-                  <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                  <div className="flex flex-col gap-8 md:flex-row">
                     {folders.map((folder) =>(
                           <Folder name={folder.name} files={folder.files} key={folder.id}/>
                       ))}

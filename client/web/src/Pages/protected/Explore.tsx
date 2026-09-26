@@ -26,6 +26,9 @@ function Explore() {
                 </div>
               ))}
             </div>
+            <div>
+              <p className="mt-8 text-Secondary-text dark:text-dark-Secondary-text">No memories yet</p>
+            </div>
           </div>
         </main>
     </Layout>
