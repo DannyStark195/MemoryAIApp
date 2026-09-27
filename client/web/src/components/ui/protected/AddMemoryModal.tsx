@@ -1,10 +1,12 @@
 import { XIcon } from "@phosphor-icons/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-function AddMemoryModal() {
-    const textareaRef = useRef<HTMLTextAreaElement>(null)
+function AddMemoryModal({classname}:{classname: string}) {
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
+    // const [addMemoryModalOpen, setAddMemoryModalOpen] = useState(true);
     function closeAddMemoryModal(){
-        
+        // setAddMemoryModalOpen(false)
+        classname = 'hidden'
     }
     function handleChatInput (){
         const textarea = textareaRef.current
@@ -14,11 +16,11 @@ function AddMemoryModal() {
         textarea.style.height = `${Math.min(textarea.scrollHeight, 180)}px`
     }
   return (
-     <div className="fixed top-0 left-0 right-0 z-999 h-full bg-black/80 w-full flex justify-center items-end pb-8">
+     <div onClick={closeAddMemoryModal} className={`fixed top-0 left-0 right-0 z-999 h-full bg-black/80 w-full flex justify-center items-end pb-8 ${classname==='hidden'?'hidden':''}`}>
         <div className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-6 w-150">
           <div className="mb-6 text-center relative">
             <h3 className="text-xl">New Memorii</h3>
-            <div className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></div>
+            <div onClick={closeAddMemoryModal} className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></div>
           </div>
           <form action="">
              <div className="relative mb-4">
