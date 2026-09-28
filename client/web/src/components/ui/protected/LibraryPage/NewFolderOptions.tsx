@@ -5,10 +5,9 @@ import { useState } from "react";
 
 type NewFolderOptionsProps = {
   style?: string;
-  onAddMemory?: () => void;
 };
 
-function NewFolderOptions({ style, onAddMemory }: NewFolderOptionsProps) {
+function NewFolderOptions({ style}: NewFolderOptionsProps) {
   const files:string[] = ["Create Folder", "Add Folder"] 
   const [addFolderModalOpen, setAddFolderModalOpen]  = useState(false);
   const [createFolderModalOpen, setCreateFolderModalOpen]  = useState(false)
