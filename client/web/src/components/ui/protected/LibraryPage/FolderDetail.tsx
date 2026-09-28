@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import File from "./File.tsx";
 import BackButton from "../../BackButton.tsx";
+import AddMemoryFlow from "../HomePage/AddMemoryFlow.tsx";
 
 type fileProps = {
         id: string,
@@ -58,7 +59,11 @@ function FolderDetail() {
     )
 
   }, [])
-  console.log(folderId)
+  // console.log(folderId)
+  const [addFilePanelOpen, setAddFilePanelOpen] = useState(false);
+   function toggleAddFilePanel(){
+     setAddFilePanelOpen(prev => !prev)
+   } 
   return (
     <Layout>
       <div className="flex justify-between">
@@ -66,8 +71,9 @@ function FolderDetail() {
         <BackButton />
       </div>
       <main>
-          <div className="flex justify-end items-center gap-2 my-4">
-            <span className="cursor-pointer text-xl hover:bg-Surface2 dark:hover:bg-dark-Surface2 px-2 py-1 rounded-full">+</span>
+          <div className="relative flex justify-end items-center gap-2 my-4">
+            <span onClick={toggleAddFilePanel} className="cursor-pointer text-xl hover:bg-Surface2 dark:hover:bg-dark-Surface2 px-2 py-1 rounded-full">+</span>
+            <AddMemoryFlow style={addFilePanelOpen? 'flex':'hidden'}/>
             <span className="cursor-pointer text-lg hover:bg-Surface2 dark:hover:bg-dark-Surface2 px-2 py-1 rounded-full">
               <PencilSimpleIcon size={18}/>
             </span>
