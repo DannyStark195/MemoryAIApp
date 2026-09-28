@@ -1,9 +1,9 @@
 import Header from "../../components/ui/protected/Header"
 import Layout from "../../components/ui/protected/Layout.tsx"
-import AddFolderModal from "../../components/ui/protected/LibraryPage/AddFolderModal.tsx";
 // import File from "../../components/ui/protected/LibraryPage/File.tsx";
 import Folder from "../../components/ui/protected/LibraryPage/Folder.tsx";
 import { useState } from "react";
+import NewFolderOptions from "../../components/ui/protected/LibraryPage/NewFolderOptions.tsx";
 function Library() {
   // const [categories, setCategories]= useState<string[]>(["All", "Favourites"]);
   const categories = ["All", "Favourites"];
@@ -158,7 +158,10 @@ function Library() {
       ],
     }
   ]
-  const [addFolderModalOpen, setAddFolderModalOpen] = useState(false)
+  const [newFolderOptionsOpen, setNewFolderOptionsOpen] = useState(false)
+  function toggleNewFolderOptions(){
+    setNewFolderOptionsOpen(prev => !prev)
+  }
   return (
     <Layout>
             <Header>
@@ -183,7 +186,10 @@ function Library() {
                 <div className="flex flex-col gap-4 w-full md:pr-6">
                   <div className="flex justify-between mb-2">
                       <h2 className="flex-1">Folders</h2>
-                      <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={()=> setAddFolderModalOpen(true)}>+ New Folder</span>
+                      <div className="relative">
+                        <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
+                        <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
+                      </div>
                   </div>
                   <div className="flex flex-col gap-4 md:flex-row">
                     {folders.map((folder) =>(
@@ -201,9 +207,6 @@ function Library() {
                       </div>
                     </div>
                 </div> */}
-                {addFolderModalOpen?
-                  <AddFolderModal onClose={() => setAddFolderModalOpen(false)}/>:''
-              }
               </div>
             </main>
         </Layout>
