@@ -5,7 +5,7 @@ import {
   // BellIcon,
   CaretLeftIcon, CaretRightIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
 } from "@phosphor-icons/react"
-import AddFile from "../../components/ui/protected/HomePage/AddFile.tsx"
+import AddMemoryFlow from "../../components/ui/protected/HomePage/AddMemoryFlow.tsx"
 import { useState } from "react"
 
 function Home() {
@@ -46,7 +46,7 @@ function Home() {
                 <div onClick={toggleAddFilePanel} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
                   <PlusCircleIcon size={30} weight="fill"/>
                 </div>
-                <AddFile style={`${addFilePanelOpen? 'flex': 'hidden'}`}/>
+                <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} />
             </div>
           </div>
           <div className="hidden mt-4 gap-6 lg:flex justify-center">

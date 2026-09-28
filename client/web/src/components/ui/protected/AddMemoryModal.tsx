@@ -1,13 +1,12 @@
 import { XIcon } from "@phosphor-icons/react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-function AddMemoryModal({classname}:{classname: string}) {
+type AddMemoryModalProps = {
+  onClose: () => void;
+};
+
+function AddMemoryModal({ onClose }: AddMemoryModalProps) {
     const textareaRef = useRef<HTMLTextAreaElement>(null);
-    // const [addMemoryModalOpen, setAddMemoryModalOpen] = useState(true);
-    function closeAddMemoryModal(){
-        // setAddMemoryModalOpen(false)
-        classname = 'hidden'
-    }
     function handleChatInput (){
         const textarea = textareaRef.current
         if(!textarea) return
@@ -16,11 +15,11 @@ function AddMemoryModal({classname}:{classname: string}) {
         textarea.style.height = `${Math.min(textarea.scrollHeight, 180)}px`
     }
   return (
-     <div onClick={closeAddMemoryModal} className={`fixed top-0 left-0 right-0 z-999 h-full bg-black/80 w-full flex justify-center items-end pb-8 ${classname==='hidden'?'hidden':''}`}>
-        <div className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-6 w-150">
+     <div onClick={onClose} className="fixed inset-0 z-[999] bg-black/80 flex justify-center items-end pb-8">
+        <div onClick={(event) => event.stopPropagation()} className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-6 w-150">
           <div className="mb-6 text-center relative">
             <h3 className="text-xl">New Memorii</h3>
-            <div onClick={closeAddMemoryModal} className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></div>
+            <button type="button" onClick={onClose} aria-label="Close add memory modal" className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></button>
           </div>
           <form action="">
              <div className="relative mb-4">
@@ -44,8 +43,10 @@ function AddMemoryModal({classname}:{classname: string}) {
                 <p className="text-sm my-1 ml-2 text-Secondary-text dark:text-dark-Secondary-text">Optional (if empty AI chooses automatically)</p>
 
             </div>
-            <div></div>
-            <button type="button" className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Save Memorii</button>
+            <div className="flex gap-3">
+              <button type="button" onClick={onClose} className="border border-Surface2 dark:border-dark-Surface2 font-semibold py-2 px-4 rounded-lg cursor-pointer w-full">Cancel</button>
+              <button type="button" className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Save Memorii</button>
+            </div>
           </form>
         </div>
       </div>
