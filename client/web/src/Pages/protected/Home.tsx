@@ -5,7 +5,7 @@ import {
   // BellIcon,
   CaretLeftIcon, CaretRightIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
 } from "@phosphor-icons/react"
-import AddMemoryFlow from "../../components/ui/protected/HomePage/AddMemoryFlow.tsx"
+import AddMemoryFlow from "../../components/ui/protected/AddMemoryFlow.tsx"
 import { useState } from "react"
 
 function Home() {

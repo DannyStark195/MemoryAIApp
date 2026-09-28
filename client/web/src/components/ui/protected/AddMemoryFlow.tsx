@@ -1,6 +1,6 @@
 import { useState } from "react";
-import AddMemoryModal from "../AddMemoryModal";
-import AddFile from "./AddFile";
+import AddMemoryModal from "./AddMemoryModal";
+import AddFile from "./HomePage/AddFile";
 
 type AddMemoryFlowProps = {
   style: string;

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import File from "./File.tsx";
 import BackButton from "../../BackButton.tsx";
-import AddMemoryFlow from "../HomePage/AddMemoryFlow.tsx";
+import AddMemoryFlow from "../AddMemoryFlow.tsx";
 
 type fileProps = {
         id: string,

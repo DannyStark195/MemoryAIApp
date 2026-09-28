@@ -1,5 +1,6 @@
 import Header from "../../components/ui/protected/Header"
 import Layout from "../../components/ui/protected/Layout.tsx"
+import AddFolderModal from "../../components/ui/protected/LibraryPage/AddFolderModal.tsx";
 // import File from "../../components/ui/protected/LibraryPage/File.tsx";
 import Folder from "../../components/ui/protected/LibraryPage/Folder.tsx";
 import { useState } from "react";
@@ -157,6 +158,7 @@ function Library() {
       ],
     }
   ]
+  const [addFolderModalOpen, setAddFolderModalOpen] = useState(false)
   return (
     <Layout>
             <Header>
@@ -181,15 +183,13 @@ function Library() {
                 <div className="flex flex-col gap-4 w-full md:pr-6">
                   <div className="flex justify-between mb-2">
                       <h2 className="flex-1">Folders</h2>
-                      <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm">+ New Folder</span>
+                      <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={()=> setAddFolderModalOpen(true)}>+ New Folder</span>
                   </div>
-                  <div className="flex flex-col gap-8 md:flex-row">
+                  <div className="flex flex-col gap-4 md:flex-row">
                     {folders.map((folder) =>(
                           <Folder name={folder.name} files={folder.files} key={folder.id}/>
                       ))}
                   </div>
-
-                  {/* <span className="text-end text-sm cursor-pointer text-Secondary-text dark:text-dark-Secondary-text">See all</span> */}
                 </div>
                 {/* <div className="flex-1 lg:pl-6 pb-4 hidden">
                     <h3 className="mb-2">Recent</h3>
@@ -201,6 +201,9 @@ function Library() {
                       </div>
                     </div>
                 </div> */}
+                {addFolderModalOpen?
+                  <AddFolderModal onClose={() => setAddFolderModalOpen(false)}/>:''
+              }
               </div>
             </main>
         </Layout>
