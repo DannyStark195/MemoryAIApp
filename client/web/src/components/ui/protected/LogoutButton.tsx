@@ -6,7 +6,7 @@ function LogoutButton() {
     }
   return (
     <button
-        className="flex gap-1 items-center w-full justify-center cursor-pointer"
+        className="flex gap-1 items-center justify-center cursor-pointer"
         onClick={logOut}
         type="button"
         aria-label="logout"
