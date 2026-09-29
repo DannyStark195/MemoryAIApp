@@ -105,7 +105,6 @@ function App() {
             </ProtectedRoute>
           }/>
         </Routes>
-        <Toaster />
       </div>
     )
 }

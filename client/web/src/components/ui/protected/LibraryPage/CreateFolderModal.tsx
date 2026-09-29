@@ -1,10 +1,11 @@
 import { XIcon } from "@phosphor-icons/react";
+import { useToast } from "../../../../context/ToastContext";
 type createFolderModalProps = {
   onClose: () => void;
 };
 
 function createFolderModal({ onClose }: createFolderModalProps) {
-
+  const {showToast} = useToast();
   return (
      <div onClick={onClose} className="fixed inset-0 z-999 bg-black/80 flex justify-center items-end pb-40 lg:pb-12">
         <div onClick={(event) => event.stopPropagation()} className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-8 w-[90%] lg:w-180">
@@ -19,7 +20,9 @@ function createFolderModal({ onClose }: createFolderModalProps) {
             </div>
             
             <div className="flex gap-3">
-              <button onClick={} type="button" className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Create Folder</button>
+              <button onClick={()=> {
+                onClose()
+                showToast({type: "error", message:"Folder created!"})}} type="button" className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Create Folder</button>
             </div>
           </form>
         </div>
