@@ -1,5 +1,4 @@
 import { XIcon } from "@phosphor-icons/react";
-
 type createFolderModalProps = {
   onClose: () => void;
 };
@@ -20,7 +19,7 @@ function createFolderModal({ onClose }: createFolderModalProps) {
             </div>
             
             <div className="flex gap-3">
-              <button type="button" className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Create Folder</button>
+              <button onClick={} type="button" className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Create Folder</button>
             </div>
           </form>
         </div>
