@@ -20,24 +20,24 @@ function Preferences() {
             <div>
               <h2 className="font-medium">Appearance</h2>
               <div className="my-4 flex gap-4">
-                <div  onClick={()=> changeTheme("light")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <button aria-label="light mode"  onClick={()=> changeTheme("light")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
                   Light
                   <div className="text-Accent">
                       <RadioButtonIcon size={32} weight={theme==="light"?"fill":"thin"} />
                     </div>
-                </div>
-                <div  onClick={()=> changeTheme("dark")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                </button>
+                <button aria-label="dark mode" onClick={()=> changeTheme("dark")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
                   Dark
                   <div className="text-Accent">
                       <RadioButtonIcon size={32} weight={theme==="dark"?"fill":"thin"}  />
                     </div>
-                </div>
-                <div  onClick={()=> changeTheme("system")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                </button>
+                <button aria-label="system default" onClick={()=> changeTheme("system")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
                   System
                   <div className="text-Accent">
                       <RadioButtonIcon size={32} weight={theme==="system"?"fill":"thin"}  />
                     </div>
-                </div>
+                </button>
               </div>
             </div>
             <div>
@@ -65,9 +65,9 @@ function Preferences() {
                   <p>Resurfacing reminders</p>
                   <div className="flex items-center gap-6">
                     <span className="font-medium">{resurfacingOn? 'on' : 'off'}</span>
-                    <div className={`relative w-11 h-6.5  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
+                    <button className={`relative w-11 h-6.5  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
                       <div className={`absolute  top-0.75 ${resurfacingOn?'right-1': 'left-1'} transition-all duration-500 p-2.5 bg-Background rounded-full`}></div>
-                    </div>
+                    </button>
                   </div> 
                 </div>
                 

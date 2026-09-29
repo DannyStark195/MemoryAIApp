@@ -171,14 +171,16 @@ function Library() {
               <div className="">
                 <div className="my-4 mb-4 flex gap-2 text-sm font-semibold flex-wrap ">
                   {categories.map((category) =>(
-                    <div className={`px-5 py-2 rounded-lg border cursor-pointer 
+                    <button className={`px-5 py-2 rounded-lg border cursor-pointer 
                       ${activeCategory===category?'bg-Accent dark:bg-Accent border-Accent text-dark-Primary-text':'border-Surface2 dark:border-dark-Surface2'}
                       `}
+                      aria-pressed={activeCategory === category}
+                      type="button"
                       onClick={() => setActiveCategory(category)}
                       key={category}
                       >
                       {category}
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -187,7 +189,7 @@ function Library() {
                   <div className="flex justify-between mb-2">
                       <h2 className="flex-1">Folders</h2>
                       <div className="relative">
-                        <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
+                        <button className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</button>
                         <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                       </div>
                   </div>
@@ -197,16 +199,6 @@ function Library() {
                       ))}
                   </div>
                 </div>
-                {/* <div className="flex-1 lg:pl-6 pb-4 hidden">
-                    <h3 className="mb-2">Recent</h3>
-                    <div className="overflow-y-scroll max-h-[40dvh]">
-                      <div className="">
-                        {folders[1].files.map((file) =>(
-                          <File fileProps={file} key={file.id}/>
-                        ))}
-                      </div>
-                    </div>
-                </div> */}
               </div>
             </main>
         </Layout>

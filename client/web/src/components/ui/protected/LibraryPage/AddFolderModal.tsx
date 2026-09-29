@@ -7,11 +7,15 @@ type AddFolderModalProps = {
 function AddFolderModal({ onClose }: AddFolderModalProps) {
     
   return (
-     <div onClick={onClose} className="fixed inset-0 z-999 bg-black/80 flex justify-center items-end pb-40 lg:pb-12">
+     <div 
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="add-new-memory-folder"
+        onClick={onClose} className="fixed inset-0 z-999 bg-black/80 flex justify-center items-end pb-40 lg:pb-12">
         <div onClick={(event) => event.stopPropagation()} className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-8 w-[90%] lg:w-180">
           <div className="mb-6 text-center relative">
-            <h3 className="text-xl">New Folder</h3>
-            <button type="button" onClick={onClose} aria-label="Close add memory modal" className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></button>
+            <h3 className="text-xl" id="add-new-memory-folder">New Folder</h3>
+            <button type="button" onClick={onClose} aria-label="Close add memory folder modal" className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></button>
           </div>
             
            <div>

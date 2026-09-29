@@ -5,13 +5,15 @@ function LogoutButton() {
         
     }
   return (
-    <div
-        className="flex gap-1 items-center"
+    <button
+        className="flex gap-1 items-center w-full justify-center cursor-pointer"
         onClick={logOut}
+        type="button"
+        aria-label="logout"
     >
         <SignOutIcon size={16} weight="bold" />
         Log out
-    </div>
+    </button>
   )
 }
 

@@ -17,8 +17,8 @@ function NewFolderOptions({ style}: NewFolderOptionsProps) {
       <div className={`rounded-lg gap-1 bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none py-3 px-3 w-55 justify-between absolute top-[101%] right-0 lg:right-10 z-4 ${style}`}>
         {files.map(file =>(
           <div key={file} className={``}>
-            {file === "Create Folder" && <div onClick={() => setCreateFolderModalOpen(true)} className="text-sm border-Border flex flex-col items-center justify-center gap-2 py-2 px-2 rounded-lg cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface duration-200 transition-colors"><FolderIcon size={20} weight="bold"/>{file}</div>}
-            {file === "Add Folder" && <div onClick={() => setAddFolderModalOpen(true)} className="text-sm border-Border flex flex-col items-center justify-center gap-2 py-2 px-2 rounded-lg cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface duration-200 transition-colors"><FolderPlusIcon size={20} weight="bold"/>{file}</div>}
+            {file === "Create Folder" && <button onClick={() => setCreateFolderModalOpen(true)} className="text-sm border-Border flex flex-col items-center justify-center gap-2 py-2 px-2 rounded-lg cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface duration-200 transition-colors"><FolderIcon size={20} weight="bold"/>{file}</button>}
+            {file === "Add Folder" && <button onClick={() => setAddFolderModalOpen(true)} className="text-sm border-Border flex flex-col items-center justify-center gap-2 py-2 px-2 rounded-lg cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface duration-200 transition-colors"><FolderPlusIcon size={20} weight="bold"/>{file}</button>}
           </div>
         ))}
       </div>

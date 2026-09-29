@@ -13,9 +13,9 @@ function MemoriesPerDayBtn() {
   }
   return (
     <div className="flex items-center text-xl gap-2">
-        <div onClick={() => decreaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">-</div>
+        <button aria-label="decrease memories per day" onClick={() => decreaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">-</button>
             <div>{memoriesPerDay}</div>
-        <div  onClick={() => increaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">+</div>
+        <button aria-label="increase memories per day" onClick={() => increaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">+</button>
     </div>
   )
 }
