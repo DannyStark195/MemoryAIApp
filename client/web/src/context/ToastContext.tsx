@@ -22,11 +22,11 @@ export function ToastProvider({children}: {children: ReactNode}){
         setCurrentToast(null)
     }
 
-    // useEffect(()=>{
-    //     const timeout = setTimeout(hideToast, 5000)
+    useEffect(()=>{
+        const timeout = setTimeout(hideToast, 5000)
 
-    //     return () => clearTimeout(timeout)
-    // }, [currentToast])
+        return () => clearTimeout(timeout)
+    }, [currentToast])
     return (
         <ToastContext.Provider value={{showToast,hideToast}}>
             {children}
