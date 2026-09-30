@@ -21,6 +21,7 @@ import ImportExport from './components/ui/protected/SettingsPage/ImportExport.ts
 import PasswordSecurity from './components/ui/protected/SettingsPage/PasswordSecurity.tsx'
 import Preferences from './components/ui/protected/SettingsPage/Preferences.tsx'
 import ForgotPassword from './Pages/ForgotPassword.tsx'
+import NotFound from './Pages/NotFound.tsx'
 
 function App() {
     return (
@@ -103,6 +104,8 @@ function App() {
               <Preferences />
             </ProtectedRoute>
           }/>
+
+          <Route path="*" element={<NotFound />}/>
         </Routes>
       </div>
     )
