@@ -10,7 +10,7 @@ type toastContextType ={
     showToast: (toast:toastProps) => void,
     hideToast: () => void
 }
-export const ToastContext = createContext<toastContextType>(null)
+export const ToastContext = createContext<toastContextType| null>(null)
 
 export function ToastProvider({children}: {children: ReactNode}){
     const [currentToast, setCurrentToast] = useState<toastProps|null>();
@@ -36,7 +36,7 @@ export function ToastProvider({children}: {children: ReactNode}){
     )
 }
 
-export function useToast(){
+export function useToast():toastContextType{
     const toastContext = useContext(ToastContext);
     if (!toastContext) {
        throw new Error("CreateFolderModal must be used within ToastProvider");
