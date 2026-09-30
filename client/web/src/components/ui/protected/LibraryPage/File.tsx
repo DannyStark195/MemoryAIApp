@@ -1,16 +1,7 @@
 import { FileIcon, CaretRightIcon } from "@phosphor-icons/react"
+import { type Memory } from "../../../../types/model"
 
-type fileProps = {
-        id: string,
-        name: string,
-        url?: string,
-        category: "Personal" | "Work" | "School",
-        created_at: string,
-        fileType?: string,
-        file?: {}
-        favourite: boolean
-    }
-function File({fileProps}: {fileProps:fileProps}) {
+function File({fileProps}: {fileProps:Memory}) {
   return (
     <div className="flex justify-between py-4 px-2 rounded-md cursor-pointer items-center mb-2 transition-all duration-300  hover:bg-Surface2 dark:hover:bg-dark-Surface2">
         <div className="flex gap-3 items-center">

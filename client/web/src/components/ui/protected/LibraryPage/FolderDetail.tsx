@@ -5,21 +5,11 @@ import { useEffect, useState } from "react";
 import File from "./File.tsx";
 import BackButton from "../../BackButton.tsx";
 import AddMemoryFlow from "../AddMemoryFlow.tsx";
-
-type fileProps = {
-        id: string,
-        name: string,
-        url?: string,
-        category: "Personal" | "Work" | "School",
-        created_at: string,
-        fileType?: string,
-        file?: {}
-        favourite: boolean
-    }
+import { type Memory } from "../../../../types/model.ts";
 
 function FolderDetail() {
   const { folderId } = useParams();
-  const [folder, setFolder] = useState<fileProps[]>([]);
+  const [folder, setFolder] = useState<Memory[]>([]);
   useEffect(() =>{
     setFolder(
       [
@@ -59,7 +49,6 @@ function FolderDetail() {
     )
 
   }, [])
-  // console.log(folderId)
   const [addFilePanelOpen, setAddFilePanelOpen] = useState(false);
    function toggleAddFilePanel(){
      setAddFilePanelOpen(prev => !prev)

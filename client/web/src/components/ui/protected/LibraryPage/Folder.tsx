@@ -1,11 +1,8 @@
 import { FolderSimpleIcon } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
-type folderProps = {
-    name: string,
-    files: {}[]
-}
+import { type FolderType } from "../../../../types/model.ts"
 
-function Folder({name, files}: folderProps) {
+function Folder({name, files}: FolderType) {
   return (
     <Link to={`folder/${name}`}>
       <div className="relative px-6 py-4 rounded-md w-full flex justify-between items-center mb-2 transition-all duration-300 cursor-pointer hover:bg-Surface2 dark:hover:bg-dark-Surface2">

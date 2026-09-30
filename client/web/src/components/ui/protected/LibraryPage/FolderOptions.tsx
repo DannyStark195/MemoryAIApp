@@ -8,7 +8,6 @@ type folderOptionsProps ={
 function FolderOptions({folderName, style}: folderOptionsProps) {
     console.log(folderName)
   return (
-    // <div className={"bg-transparent h-screen fixed z-10"}>
         <div className={`absolute rounded-md shadow-lg shadow-Border dark:shadow-dark-Surface p-2 ${style} right-0 top-[80%] z-50 bg-Background dark:bg-dark-Surface2 font-medium text-Accent`}>
             <div className="flex gap-1 items-center p-1 rounded-md hover:bg-Accent-hover dark:hover:bg-dark-Accent-hover cursor-pointer">
                 <FilePlusIcon size={16} weight="fill"/>
@@ -23,7 +22,6 @@ function FolderOptions({folderName, style}: folderOptionsProps) {
                 Delete folder
             </div>
         </div>
-    // </div>
   )
 }
 
