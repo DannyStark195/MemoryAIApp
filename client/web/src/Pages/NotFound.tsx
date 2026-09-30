@@ -1,12 +1,10 @@
 import Layout from "../components/ui/Layout"
 import { Link } from "react-router-dom"
-import Logo from "../components/ui/Logo"
 function NotFound() {
   return (
     <Layout>
-      <Logo classname="w-11 fixed z-10 left-2 top-2 md:top-4 md:left-4"/>
-      <div className="text-Tertiary-text text-center dark:text-dark-Tertiary-text/50 font-extrabold flex flex-col items-center lg:justify-center h-screen ">
-        <div className="text-[50px] md:text-[400px] lg:text-[460px] leading-tight">404</div>
+      <div className="text-Tertiary-text text-center dark:text-dark-Tertiary-text/50 font-extrabold flex flex-col items-center lg:justify-center h-[80dvh] md:h-screen">
+        <div className="text-[40px] md:text-[400px] lg:text-[460px] leading-tight">404</div>
       </div>
       <div className="fixed top-0 w-full h-full bg-black/70 flex items-center justify-center">
         <div className="bg-Background dark:bg-dark-Background px-6 py-6 rounded-lg">
