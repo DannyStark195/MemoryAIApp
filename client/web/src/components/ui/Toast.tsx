@@ -1,4 +1,6 @@
 import { CheckCircleIcon, WarningIcon, XIcon } from "@phosphor-icons/react"
+import { motion } from "framer-motion"
+import { useIsMobile } from "../../hooks/useIsMobile.ts"
 
 type toastProps = {
     type: "success" | "warning" | "error",
@@ -6,8 +8,13 @@ type toastProps = {
 }
 
 function Toast({toastProps}: {toastProps:toastProps}) {
+    const isMobile = useIsMobile();
   return (
-    <div className="fixed z-1000 bottom-[90%] right-[25%] md:bottom-10 md:right-20 flex gap-1 items-center bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none rounded-lg px-6 py-2 text-Primary-text dark:text-dark-Primary-text">
+    <motion.div 
+        initial={{opacity: 0, y: isMobile? -20:20}}
+        animate={{opacity: 1, y:0}}
+        exit={{opacity: 0,  y: isMobile? -20:20}}
+        className="fixed z-1000 bottom-[90%] right-[25%] md:bottom-10 md:right-20 flex gap-1 items-center bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none rounded-lg px-6 py-2 text-Primary-text dark:text-dark-Primary-text">
         {toastProps.type==="success" && (
             <div className="text-Accent"><CheckCircleIcon size={30} weight="fill"/></div>
         )}
@@ -18,7 +25,7 @@ function Toast({toastProps}: {toastProps:toastProps}) {
             <div className="text-red-600"><XIcon size={30} weight="bold"/></div>
         )}
         <p className="text-lg">{toastProps.message}</p>
-    </div>
+    </motion.div>
   )
 }
 

@@ -23,7 +23,7 @@ export function ToastProvider({children}: {children: ReactNode}){
     }
 
     useEffect(()=>{
-        const timeout = setTimeout(hideToast, 5000)
+        const timeout = setTimeout(hideToast, 3000)
 
         return () => clearTimeout(timeout)
     }, [currentToast])
