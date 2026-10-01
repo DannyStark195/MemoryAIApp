@@ -1,6 +1,7 @@
 import { WarningIcon } from "@phosphor-icons/react"
 import { RefreshCcwIcon } from "lucide-react"
 import { useNavigate } from 'react-router-dom'
+import BackButton from "./ui/BackButton"
 
 type errorProps = {
     title: string,
@@ -16,10 +17,13 @@ function ErrorState({errorProps}:{errorProps:errorProps}) {
             <div className="text-red-600">
                 <WarningIcon size={70}/>
             </div>
-            <p className="text-3xl">{errorProps.title}</p>
+            <p className="text-3xl mb-1">{errorProps.title}</p>
             <p className="text-lg">{errorProps.error}</p>
             <div className="flex gap-6 mt-6 items-center">
-                <button className="px-4 py-3 rounded-lg transition-all duration-300 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface" onClick={()=> navigate(-1)}>Go back</button>
+                <button className="flex gap-2 px-4 py-3 rounded-lg transition-all duration-300 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface" onClick={()=> navigate(-1)}>
+                    <BackButton/>
+                    Go back
+                </button>
                 <button onClick={errorProps.action} className="flex gap-2 bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-3 px-4 rounded-lg cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
                     <RefreshCcwIcon />
                     Try Again
