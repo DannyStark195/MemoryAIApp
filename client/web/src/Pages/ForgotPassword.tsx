@@ -51,7 +51,7 @@ function ForgotPassword() {
                     <h2 className="text-3xl font-bold mb-2">Change password</h2>
                     <p className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter a new password</p>
                     <div>
-                      <ChangePassword />
+                      <ChangePassword email="dannystark195@gmail.com"/>
                     </div>
                   </div>
                 )}
