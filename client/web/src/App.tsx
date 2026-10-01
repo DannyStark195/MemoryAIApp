@@ -22,6 +22,7 @@ import PasswordSecurity from './components/ui/protected/SettingsPage/PasswordSec
 import Preferences from './components/ui/protected/SettingsPage/Preferences.tsx'
 import ForgotPassword from './Pages/ForgotPassword.tsx'
 import NotFound from './Pages/NotFound.tsx'
+import VerifyOtp from './Pages/VerifyOtp.tsx'
 
 function App() {
     return (
@@ -33,7 +34,7 @@ function App() {
           <Route path='/terms' element={<Terms />}/>
           <Route path='auth' element={<Auth />}/>
           <Route path='auth/forgot-password' element={<ForgotPassword/> }/>
-
+          <Route path='auth/verify-otp' element={<VerifyOtp/> }/>
           <Route path='home' element={
             <ProtectedRoute>
                 <Home />
