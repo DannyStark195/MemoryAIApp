@@ -6,6 +6,7 @@ import NewFolderOptions from "../../components/ui/protected/LibraryPage/NewFolde
 import { getFolders } from "../../api/getFolders.ts";
 import { type FolderType } from "../../types/model.ts";
 import LoadingState from "../../components/ui/LoadingState.tsx";
+import ErrorState from "../../components/ErrorState.tsx";
 
 function Library() {
   // const [categories, setCategories]= useState<string[]>(["All", "Favourites"]);
@@ -13,12 +14,17 @@ function Library() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [folders, setFolders] = useState<FolderType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] =useState(false)
   useEffect(()=>{
       try{
         getFolders().then(setFolders)
+        if(folders){
+          throw new Error("Folders not found!")
+        }
       }
       catch(error){
         console.log(error)
+        setError(true)
       }
       finally{
         setLoading(false)
@@ -31,8 +37,12 @@ function Library() {
   }
   return (
     <>
+      
       {
-        loading? <LoadingState />
+        error? <ErrorState errorProps={{
+          title: "Error",
+          error: "Folders not found!"
+        }} />: loading? <LoadingState />
         :
       <Layout>
               <Header>
@@ -72,7 +82,7 @@ function Library() {
                   </div>
                 </div>
               </main>
-        </Layout>
+      </Layout>
     }
     </>
   )
