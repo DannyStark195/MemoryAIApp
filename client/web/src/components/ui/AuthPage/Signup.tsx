@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 function Signup() {
   const navigate = useNavigate()
   const {showToast} = useToast()
-  function handleSignUp(e){
+  function handleSignUp(e: React.FormEvent<HTMLFormElement>){
     e.preventDefault()
     navigate('verify-otp')
     showToast({type:"success", message: "A verification link has been sent to your email!"})
