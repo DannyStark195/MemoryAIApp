@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Foundation } from "@expo/vector-icons";
+import { Foundation, Ionicons} from "@expo/vector-icons";
 
 export default function TabLayout() {
   return (
@@ -44,9 +44,9 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: "Explore",
-        //   tabBarIcon: ({ color }) => (
-        //     <Ionicons name="search" size={24} color={color} />
-        //   ),
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="search" size={24} color={color} />
+          ),
         }}
       />
 
