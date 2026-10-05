@@ -1,6 +1,6 @@
 import Layout from "../../components/ui/protected/Layout.tsx"
 import Header from "../../components/ui/protected/Header.tsx"
-import { getHourOfDay } from "@client/shared/utils/helpers.ts"
+import { getHourOfDay } from "../../utils/helpers.ts"
 // import NewFolderOptions from "../../components/ui/protected/LibraryPage/NewFolderOptions.tsx"
 import { 
   // BellIcon,

@@ -1,7 +1,11 @@
 import { Tabs } from "expo-router";
-import { Foundation, Ionicons} from "@expo/vector-icons";
+import { Foundation, Ionicons, AntDesign, FontAwesome6} from "@expo/vector-icons";
+import { useColorScheme } from "nativewind";
+import { colors } from "@/theme/colors";
 
 export default function TabLayout() {
+  const {colorScheme} = useColorScheme()
+  const theme = colorScheme==="dark"? colors.dark:colors.light
   return (
     <Tabs
       screenOptions={{
@@ -12,21 +16,21 @@ export default function TabLayout() {
           bottom: 12,
           left: 14,
           right: 14,
-          height: 60,
-          borderRadius: 40,
+          height: 68,
+          borderRadius: 32,
           borderWidth: 1,
-          borderColor: "#333",
-          backgroundColor: "#0d0e0f",
+          borderColor: theme.Border,
+          backgroundColor: theme.Background,
           elevation: 0,
           justifyContent: "flex-start",
           gap:50,
         },
 
-        tabBarActiveTintColor: "#8B2BE2",
-        tabBarInactiveTintColor: "#888",
+        tabBarActiveTintColor: theme["Accent"],
+        tabBarInactiveTintColor: theme["Secondary-text"],
 
         tabBarLabelStyle: {
-          fontSize: 14,
+          fontSize: 16,
         },
       }}
     >
@@ -35,7 +39,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <Foundation name="home" size={24} color={color} />
+            <Foundation name="home" size={21} color={color} />
           ),
         }}
       />
@@ -45,7 +49,7 @@ export default function TabLayout() {
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="search" size={24} color={color} />
+            <Ionicons name="search" size={20} color={color} />
           ),
         }}
       />
@@ -54,9 +58,9 @@ export default function TabLayout() {
         name="chat"
         options={{
           title: "Chat",
-        //   tabBarIcon: ({ color }) => (
-        //     <Ionicons name="chatbubble-outline" size={24} color={color} />
-        //   ),
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="open-ai" size={18} color={color} />
+          ),
         }}
       />
 
@@ -64,9 +68,9 @@ export default function TabLayout() {
         name="library"
         options={{
           title: "Library",
-        //   tabBarIcon: ({ color }) => (
-        //     <Ionicons name="folder-outline" size={24} color={color} />
-        //   ),
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="folder-open" size={18} color={color} />
+          ),
         }}
       />
 
@@ -74,9 +78,9 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
-        //   tabBarIcon: ({ color }) => (
-        //     <Ionicons name="person-outline" size={24} color={color} />
-        //   ),
+          tabBarIcon: ({ color }) => (
+            <FontAwesome6 name="user-gear" size={18} color={color} />
+          ),
         }}
       />
     </Tabs>
