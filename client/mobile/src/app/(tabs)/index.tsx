@@ -4,7 +4,7 @@ import {Link, router} from "expo-router"
 import { useColorScheme } from "nativewind";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import Header from "@/components/ui/Header";
-
+import {Ionicons} from '@expo/vector-icons';
 export default function HomeScreen() {
   return (
     <ScreenLayout>
@@ -26,17 +26,20 @@ export default function HomeScreen() {
         <View className="overflow-y-scroll max-h-[84dvh]">
                 <View className="grid justify-center">
                   <View className="relative">
-                    <View className="w-100 h-100 rounded-lg bg-Surface2 dark:bg-dark-Surface2">
-                    </View>
+                    {/* <View className=" rounded-lg bg-Surface2 dark:bg-dark-Surface2"> */}
+                      <Image source={require("../../../assets/images/profile.png")} className="!w-[200px] !h-[200px] rounded-xl" />
+                    {/* </View> */}
                     {/* <View className="relative">
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
                     <View className="grid gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
-                        <Pressable className="px-2 py-2 rounded-full transition-all duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                          {/* <ShareNetworkIcon size={30} weight="fill"/> */}
-                        </Pressable>
-                        <Pressable className="px-2 py-2 rounded-full transition-all duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
+                        <View>
+                          <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
+                            <Ionicons name="share-social" size={24} color="" />
+                          </Pressable>
+                        </View>
+                        <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
                           {/* <OpenAiLogoIcon size={30} weight="fill"/> */}
                         </Pressable>
                         {/* <Pressable onClick={toggleAddFilePanel} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2"> */}
@@ -46,10 +49,10 @@ export default function HomeScreen() {
                     </View>
                   </View>
                   <View className="hidden mt-4 gap-6 lg:flex justify-center">
-                    <Pressable className="py-2 px-2 rounded-full hover:bg-Surface2 dark:hover:bg-dark-Surface2 transition-all duration-200 cursor-pointer hover:scale-110">
+                    <Pressable className="py-2 px-2 rounded-full hover:bg-Surface2 dark:hover:bg-dark-Surface2  cursor-pointer hover:scale-110">
                       {/* <CaretLeftIcon size={20} weight="regular"/> */}
                     </Pressable>
-                    <Pressable className="py-2 px-2 rounded-full hover:bg-Surface2 dark:hover:bg-dark-Surface2 transition-all duration-200 cursor-pointer hover:scale-110">
+                    <Pressable className="py-2 px-2 rounded-full hover:bg-Surface2 dark:hover:bg-dark-Surface2  cursor-pointer hover:scale-110">
                       {/* <CaretRightIcon size={20} weight="regular"/> */}
                     </Pressable>
                   </View>
