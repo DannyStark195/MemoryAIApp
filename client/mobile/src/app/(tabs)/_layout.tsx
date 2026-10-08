@@ -14,16 +14,20 @@ export default function TabLayout() {
         tabBarStyle: {
           position: "absolute",
           bottom: 12,
-          left: 14,
-          right: 14,
+          left: 8,
+          right: 8,
           height: 68,
           borderRadius: 32,
           borderWidth: 1,
           borderColor: theme.Border,
           backgroundColor: theme.Background,
           elevation: 0,
-          justifyContent: "flex-start",
+          // justifyContent: "flex-start",
           gap:50,
+          // paddingInline: 16,
+          paddingBlock: 16,
+          display: "flex",
+          justifyContent: "space-between",
         },
 
         tabBarActiveTintColor: theme["Accent"],
@@ -31,7 +35,14 @@ export default function TabLayout() {
 
         tabBarLabelStyle: {
           fontSize: 16,
+          fontWeight: 400,
         },
+          tabBarItemStyle: {
+            borderRadius: 20,
+            padding: 1,
+            display:"flex"
+          },
+        
       }}
     >
       <Tabs.Screen

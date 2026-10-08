@@ -4,11 +4,11 @@ import {Link, router} from "expo-router"
 import { useColorScheme } from "nativewind";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import Header from "@/components/ui/Header";
-import {Ionicons} from '@expo/vector-icons';
+import {Ionicons, AntDesign, FontAwesome6} from '@expo/vector-icons';
 export default function HomeScreen() {
   return (
     <ScreenLayout>
-      <View>
+      {/* <View> */}
         <Header>
           <View className="flex flex-1 justify-between">
           <View>
@@ -18,33 +18,27 @@ export default function HomeScreen() {
               Daniel
               </Text> 
             </Text>
-            {/* <p className="w-45 md:w-full text-sm">Your memories, always within reach.</p> */}
-          </View>
-          
+          </View> 
         </View>
         </Header>
-        <View className="overflow-y-scroll max-h-[84dvh]">
-                <View className="grid justify-center">
-                  <View className="relative">
-                    {/* <View className=" rounded-lg bg-Surface2 dark:bg-dark-Surface2"> */}
-                      <Image source={require("../../../assets/images/profile.png")} className="!w-[200px] !h-[200px] rounded-xl" />
-                    {/* </View> */}
+        <View className="">
+                <View className="overflow-y-scroll max-h-[84dvh]">
+                  <View className="flex flex-col justif-center items-center">
+                      <Image source={require("../../../assets/images/profile.png")} className="!w-[340px] !h-[480px] rounded-lg object-center overflow-hidden" />
                     {/* <View className="relative">
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
-                    <View className="grid gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
-                        <View>
+                    <View className="flex flex-col gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
                           <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
                             <Ionicons name="share-social" size={24} color="" />
                           </Pressable>
-                        </View>
                         <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                          {/* <OpenAiLogoIcon size={30} weight="fill"/> */}
+                          <AntDesign name="open-ai" size={24} color="black" />
                         </Pressable>
-                        {/* <Pressable onClick={toggleAddFilePanel} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2"> */}
-                          {/* <PlusCircleIcon size={30} weight="fill"/> */}
-                        {/* </Pressable> */}
+                        <Pressable className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
+                          <FontAwesome6 name="circle-plus" size={24} color="black" />
+                        </Pressable>
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
                     </View>
                   </View>
@@ -58,7 +52,7 @@ export default function HomeScreen() {
                   </View>
                 </View>
               </View>
-      </View>
+      {/* </View> */}
     </ScreenLayout>
   );
 }
