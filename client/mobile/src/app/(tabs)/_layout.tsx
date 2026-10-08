@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Foundation, Ionicons, AntDesign, FontAwesome6} from "@expo/vector-icons";
+import { Foundation, Ionicons, AntDesign, FontAwesome6, EvilIcons} from "@expo/vector-icons";
 import { useColorScheme } from "nativewind";
 import { colors } from "@/theme/colors";
 
@@ -13,10 +13,10 @@ export default function TabLayout() {
         tabBarLabelPosition: "below-icon",
         tabBarStyle: {
           position: "absolute",
-          bottom: 12,
+          bottom: 8,
           left: 8,
           right: 8,
-          height: 68,
+          height: 70,
           borderRadius: 32,
           borderWidth: 1,
           borderColor: theme.Border,
@@ -39,7 +39,7 @@ export default function TabLayout() {
         },
           tabBarItemStyle: {
             borderRadius: 20,
-            padding: 1,
+            paddingBlock: 3,
             display:"flex"
           },
         
@@ -60,7 +60,8 @@ export default function TabLayout() {
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="search" size={20} color={color} />
+            // <Ionicons name="search" size={20} color={color} />
+            <EvilIcons name="search" size={26} color={color} />
           ),
         }}
       />
@@ -70,7 +71,7 @@ export default function TabLayout() {
         options={{
           title: "Chat",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="open-ai" size={18} color={color} />
+            <AntDesign name="open-ai" size={20} color={color} />
           ),
         }}
       />
