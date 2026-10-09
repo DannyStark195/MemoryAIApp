@@ -32,15 +32,15 @@ export default function HomeScreen() {
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
-                    <View className="flex flex-col gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
+                    <View className="flex flex-col gap-5 absolute top-[30%] right-7 md:right-1 lg:-right-20">
                           <Pressable onPress={() => changeTheme("dark")} className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                            <Ionicons name="share-social" size={24} color="" className="text-Primary-text dark:text-dark-Primary-text"/>
+                            <Ionicons name="share-social" size={25} color="" className="text-Primary-text dark:text-dark-Primary-text"/>
                           </Pressable>
                         <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                          <AntDesign name="open-ai" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
+                          <AntDesign name="open-ai" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         <Pressable className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
-                          <FontAwesome6 name="circle-plus" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
+                          <FontAwesome6 name="circle-plus" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
                     </View>
