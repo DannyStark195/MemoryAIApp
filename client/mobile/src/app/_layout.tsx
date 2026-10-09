@@ -1,18 +1,21 @@
 import { Stack } from "expo-router";
 import "../global.css";
-import { useColorScheme } from "nativewind";
+import { ThemeProvider } from "@/context/ThemeContext";
 export default function RootLayout() {
-  const {setColorScheme} = useColorScheme();
-  setColorScheme('dark')
-  return <Stack 
-            screenOptions={
-              {
-                headerShown: false,
-                contentStyle: {
-                backgroundColor: "#your-background",
-              },
-              }
-              
-            }
-          />;
+  
+  return (
+      <ThemeProvider>
+        <Stack 
+          screenOptions={
+            {
+              headerShown: false,
+              contentStyle: {
+              backgroundColor: "#your-background",
+                  },
+                  }
+                  
+                }
+              />
+      </ThemeProvider>
+  )      
 }

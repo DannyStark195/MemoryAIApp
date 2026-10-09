@@ -5,7 +5,10 @@ import { useColorScheme } from "nativewind";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import Header from "@/components/ui/Header";
 import {Ionicons, AntDesign, FontAwesome6} from '@expo/vector-icons';
+import {useTheme} from "@/context/ThemeContext";
 export default function HomeScreen() {
+  const {changeTheme} = useTheme()
+  // changeTheme("system")
   return (
     <ScreenLayout>
       {/* <View> */}
@@ -30,14 +33,14 @@ export default function HomeScreen() {
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
                     <View className="flex flex-col gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
-                          <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                            <Ionicons name="share-social" size={24} color="" />
+                          <Pressable onPress={() => changeTheme("dark")} className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
+                            <Ionicons name="share-social" size={24} color="" className="text-Primary-text dark:text-dark-Primary-text"/>
                           </Pressable>
                         <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                          <AntDesign name="open-ai" size={24} color="black" />
+                          <AntDesign name="open-ai" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         <Pressable className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
-                          <FontAwesome6 name="circle-plus" size={24} color="black" />
+                          <FontAwesome6 name="circle-plus" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
                     </View>
