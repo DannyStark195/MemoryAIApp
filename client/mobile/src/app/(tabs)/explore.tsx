@@ -9,7 +9,7 @@ function explore() {
     { id: "3", title: "Project ideas" },
   ];
   // const [categories, setCategories]= useState<string[]>(["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"]);
-  const categories = ["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"];
+  const categories = [""];
   const [activeCategory, setActiveCategory] = useState("All");
   return (
    <ScreenLayout>
