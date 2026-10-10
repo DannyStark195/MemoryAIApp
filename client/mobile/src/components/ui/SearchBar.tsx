@@ -1,4 +1,4 @@
-import { Foundation, Ionicons, AntDesign, FontAwesome6, EvilIcons} from "@expo/vector-icons";
+import { Feather} from "@expo/vector-icons";
 import {View, Text, Image, Pressable, TextInput} from "react-native";
 
 
@@ -13,9 +13,9 @@ function SearchBar({placeHolder, func}:searchProps) {
           {/* <NotificationBell /> */}
       </View>
 
-      <View className="relative text-Tertiary-text flex-1">
-        <View className="absolute top-1.5 left-2">
-          <EvilIcons name="search" size={24} className="dark:text-dark-Tertiary-text"/>
+      <View className="relative text-Tertiary-text flex-1 ml-0.5">
+        <View className="absolute top-2 left-3">
+          <Feather name="search" size={18} className="dark:text-dark-Tertiary-text"/>
         </View>
         <TextInput
                 // value={title}

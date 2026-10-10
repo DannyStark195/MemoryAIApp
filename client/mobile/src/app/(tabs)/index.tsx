@@ -15,7 +15,7 @@ export default function HomeScreen() {
         <Header>
           <View className="flex flex-1 justify-between">
           <View>
-            <Text className="text-xl md:text-xl font-medium leading-wider mb-2 dark:bg-dark-Background text-Primary-text dark:text-dark-Primary-text">
+            <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">
               Good evening,
               <Text className="text-Accent ml-1">
               Daniel
@@ -44,14 +44,6 @@ export default function HomeScreen() {
                         </Pressable>
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
                     </View>
-                  </View>
-                  <View className="hidden mt-4 gap-6 lg:flex justify-center">
-                    <Pressable className="py-2 px-2 rounded-full hover:bg-Surface2 dark:hover:bg-dark-Surface2  cursor-pointer hover:scale-110">
-                      {/* <CaretLeftIcon size={20} weight="regular"/> */}
-                    </Pressable>
-                    <Pressable className="py-2 px-2 rounded-full hover:bg-Surface2 dark:hover:bg-dark-Surface2  cursor-pointer hover:scale-110">
-                      {/* <CaretRightIcon size={20} weight="regular"/> */}
-                    </Pressable>
                   </View>
                 </View>
               </View>
