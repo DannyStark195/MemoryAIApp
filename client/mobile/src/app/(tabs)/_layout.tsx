@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { Foundation, Ionicons, AntDesign, FontAwesome6, EvilIcons} from "@expo/vector-icons";
+import { Foundation,  AntDesign, FontAwesome6, EvilIcons} from "@expo/vector-icons";
 import { useColorScheme } from "nativewind";
 import { colors } from "@/theme/colors";
 
@@ -62,6 +62,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             // <Ionicons name="search" size={20} color={color} />
             <EvilIcons name="search" size={26} color={color} />
+            // <Feather name="search" size={21} color={color} />
           ),
         }}
       />

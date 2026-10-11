@@ -3,13 +3,9 @@ import ScreenLayout from "@/components/ui/ScreenLayout";
 import { View, Text, TextInput, Pressable, Image, ScrollView, FlatList } from "react-native";
 import {useState} from "react"
 function explore() {
-  const memories = [
-    { id: "1", title: "React Native notes" },
-    { id: "2", title: "Clothing inspiration" },
-    { id: "3", title: "Project ideas" },
-  ];
+  const memories: { id: string; title: string }[] = [];
   // const [categories, setCategories]= useState<string[]>(["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"]);
-  const categories = [""];
+  const categories = ["All", "Favourites", "Notes", "Quotes", "School", "Work", "Books", "Coding"];
   const [activeCategory, setActiveCategory] = useState("All");
   return (
    <ScreenLayout>
@@ -47,7 +43,7 @@ function explore() {
       }
       ListEmptyComponent={
          <View>
-          <Text className="mt-8 text-Secondary-text dark:text-dark-Secondary-text">No memories yet</Text>
+          <Text className="mt-5 text-Secondary-text dark:text-dark-Secondary-text text-[1rem]">No memories yet</Text>
         </View>
       }
     />
