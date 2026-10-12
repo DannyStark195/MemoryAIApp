@@ -1,13 +1,31 @@
 import Header from "@/components/ui/Header"
 import ScreenLayout from "@/components/ui/ScreenLayout"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pressable, Text, View } from "react-native"
+import Folder from "@/components/ui/LibraryScreen/Folder"
+import { type FolderType } from "@/types/model"
+import { getFolders } from "@/api/getFolders";
 function library() {
   const categories = ["All", "Favourites"];
   const [activeCategory, setActiveCategory] = useState("All");
-  // const [folders, setFolders] = useState<FolderType[]>([]);
+  const [folders, setFolders] = useState<FolderType[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] =useState(false)
+  useEffect(()=>{
+      try{
+        getFolders().then(setFolders)
+        if(folders){
+          throw new Error("Folders not found!")
+        }
+      }
+      catch(error){
+        console.log(error)
+        setError(true)
+      }
+      finally{
+        setLoading(false)
+      }
+  }, [])
   return (
     <ScreenLayout>
       <Header>
@@ -25,15 +43,17 @@ function library() {
           </Pressable>
         ))}
       </View>
-      <View className="flex-row justify-between mb-2">
+      <View className="flex-row justify-between mb-4">
           <Text className="flex-1 text-Primary-text dark:text-dark-Primary-text text-[1rem] font-medium">Folders</Text>
                         <div className="relative">
                           <Pressable ><Text className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm font-medium">+ New Folder</Text></Pressable>
                           {/* <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/> */}
                         </div>
       </View>
-      <View className="flex gap-4">
-        
+      <View className="flex flex-col gap-4">
+        {folders.map((folder) => (
+          <Folder key={folder.name} {...folder} />
+        ))}
       </View>
     </ScreenLayout>
   )
