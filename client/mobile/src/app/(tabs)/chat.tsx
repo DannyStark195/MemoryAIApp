@@ -40,10 +40,17 @@ The goal is to help you actually revisit and get value from the things you alrea
     role: "user",
     text: `Summarize this memory.`
   },
+  {
+    id: "7",
+    role: "ai",
+    text: `Imagine this:
+You have an app where you can save screenshots, notes, PDFs, links, images and other useful information. Instead of everything sitting there forgotten, the app periodically brings selected items back to you — for example, once in the morning and once later in the day. It could show you something you saved weeks or months ago, give you a short summary of a longer piece of information, or turn useful material into small learning/review cards. 
+The goal is to help you actually revisit and get value from the things you already chose to save.`
+  }
 ]
   return (
     <ScreenLayout>
-     <View className="flex-1">
+     <View className="h-[520px]">
               <View className="flex gap-2 ">
               <Text className="text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Chat</Text>
                 {/* <OpenAiLogoIcon size={30}/> */}
