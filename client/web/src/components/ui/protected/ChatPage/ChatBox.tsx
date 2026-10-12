@@ -7,7 +7,7 @@ function ChatBox({role, text}:chatBoxProps) {
   return (
     <>
         {role=="user" && (
-            <div className="rounded-xl px-4 py-2 bg-Accent text-dark-Primary-text dark:bg-dark-Accent-hover self-end">
+            <div className="my-4 rounded-3xl px-4 py-2 bg-Accent text-dark-Primary-text dark:bg-dark-Accent-hover self-end">
                 {text}
             </div>
         )}

@@ -22,8 +22,8 @@ function Chat() {
             {/* <h2 className="text-md text-Secondary-text dark:text-dark-Secondary-text">Recall AI</h2> */}
           </div>
           <div>
-            <div className="max-h-70  no-scrollbar pb-10 overflow-y-auto w-full flex mt-8 flex-col">
-              <ChatBox role="user" text="What is this memory about"/>
+            <div className="max-h-85  no-scrollbar pb-10 overflow-y-auto w-full flex mt-8 flex-col">
+              <ChatBox role="user" text="What is this memory about."/>
               <ChatBox role="ai" text={`Imagine this:
 You have an app where you can save screenshots, notes, PDFs, links, images and other useful information.
 
