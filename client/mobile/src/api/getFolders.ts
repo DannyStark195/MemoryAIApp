@@ -1,6 +1,36 @@
 import  {type FolderType } from "@/types/model";
 
 const folders:FolderType[] =  [
+     {
+      "id":'1',
+      "name": "Tech",
+      "files":[
+        {
+          id: '1',
+          name: "file1",
+          url: "//School", 
+          created_at: "Today",
+          favourite: false,
+          category: "School"
+        },
+        {
+          id: '2',
+          name: "file2",
+          url: "//School",
+          created_at: "Yesterday",
+          favourite: true,
+          category: "School"
+        },
+        {
+          id: '3',
+          name: "file3",
+          url: "//School",
+          created_at: "Yesterday",
+          favourite: true,
+          category: "School"
+        },
+      ],
+    },
     {
       "id":'2',
       "name": "School",

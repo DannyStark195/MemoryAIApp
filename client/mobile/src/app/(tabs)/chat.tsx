@@ -52,7 +52,7 @@ The goal is to help you actually revisit and get value from the things you alrea
     <ScreenLayout>
      <View className="h-[520px]">
               <View className="flex gap-2 ">
-              <Text className="text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Chat</Text>
+                <Text className="text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Chat</Text>
                 {/* <OpenAiLogoIcon size={30}/> */}
               </View>
         <FlatList
