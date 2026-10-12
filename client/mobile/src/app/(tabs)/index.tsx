@@ -1,12 +1,9 @@
 import { View, Text, TextInput, Pressable, Image, ScrollView, FlatList } from "react-native";
-import { useState } from "react";
-import {Link, router} from "expo-router"
-import { useColorScheme } from "nativewind";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import Header from "@/components/ui/Header";
 import {Ionicons, AntDesign, FontAwesome6} from '@expo/vector-icons';
 import {useTheme} from "@/context/ThemeContext";
-export default function HomeScreen() {
+export default function index() {
   const {changeTheme} = useTheme()
   // changeTheme("system")
   return (
