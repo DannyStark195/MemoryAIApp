@@ -15,13 +15,13 @@ function SearchBar({placeHolder, func}:searchProps) {
 
       <View className="relative text-Tertiary-text flex-1 ml-0.5">
         <View className="absolute top-2 left-3">
-          <Feather name="search" size={18} className="dark:text-dark-Tertiary-text"/>
+          <Feather name="search" size={18} className="text-Tertiary-text dark:text-dark-Tertiary-text"/>
         </View>
         <TextInput
                 // value={title}
                 onChangeText={func}
                 placeholder={placeHolder}
-                className="dark:text-dark-Tertiary-text px-4 pl-10 py-2 text-sm rounded-lg flex-1 w-[95%] outline-Accent md:w-full"
+                className="text-Tertiary-text dark:text-dark-Tertiary-text px-4 pl-10 py-2 text-sm rounded-lg flex-1 w-[95%] outline-Accent md:w-full"
                 />
       </View>
       
