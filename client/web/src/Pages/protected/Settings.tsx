@@ -9,7 +9,7 @@ function Settings() {
             <main className="mt-8 overflow-y-auto max-h-[78dvh] no-scrollbar">
               <div className="mb-8">
                 <h2 className="text-md font-medium">Account</h2>
-                <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 [&>:last-child]:border-0 my-4 ">
+                <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 my-4 ">
                  <SettingsCard text="Account Information" link="account-info" icon={
                   <UserIcon size={20}/>
                  }
@@ -25,7 +25,7 @@ function Settings() {
               </div>
               <div className="mb-8">
                 <h2 className="text-md font-medium">Data</h2>
-                <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 [&>:last-child]:border-0 my-4 ">
+                <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 my-4 ">
                  <SettingsCard text="Back up data" link="backup-data" icon={
                     <UploadSimpleIcon size={20}/>
                  }/>
@@ -36,7 +36,7 @@ function Settings() {
               </div>
               <div className="mb-12">
                 <h2 className="text-md font-medium">Support</h2>
-                <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 [&>:last-child]:border-0 my-4 ">
+                <div className="rounded-lg [&>:nth-child(1)]:border-x-0 [&>:nth-child(1)]:border-t-0 my-4 ">
                  <SettingsCard text="Help & Feedback" link="help" icon={
                     <QuestionIcon size={20}/>
                  }/>

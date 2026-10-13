@@ -96,6 +96,12 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="folder-detail/[name]"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }

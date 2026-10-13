@@ -1,11 +1,11 @@
-import { View, Text, Pressable } from "react-native"
+import { View, Text, Pressable, FlatList } from "react-native"
 import { useLocalSearchParams } from "expo-router";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import { useEffect, useState } from "react";
 import { Memory } from "@/types/model";
 import Octicons from "@expo/vector-icons/build/Octicons";
 import BackButton from "@/components/ui/BackButton";
-
+import File from "@/components/ui/LibraryScreen/File";
 function FolderDetail() {
   const { name } = useLocalSearchParams<{name: string}>();
   const [addFilePanelOpen, setAddFilePanelOpen] = useState(false);
@@ -63,6 +63,14 @@ function FolderDetail() {
         <Pressable className="cursor-pointer text-lg hover:bg-Surface2 dark:hover:bg-dark-Surface2 px-2 py-1 rounded-full">
              <Octicons name="pencil" size={17} className="text-Primary-text dark:text-dark-Primary-text"/>
         </Pressable>
+      </View>
+      <View className="overflow-y-scroll max-h-[90dvh] flex w-full gap-x-4">
+          <FlatList 
+            data={folder}
+            renderItem={({ item }) => (
+              <File fileProps={item} key={item.id} />
+            )}
+          />
       </View>
     </ScreenLayout>
   )
