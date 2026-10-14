@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Pressable, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 
 function MemoriesPerDayBtn() {
   const [memoriesPerDay, setMemoiresPerDay] = useState(3);
@@ -13,10 +13,14 @@ function MemoriesPerDayBtn() {
     setMemoiresPerDay(prev => prev-1)
   }
   return (
-    <View className="flex items-center text-xl gap-2">
-        <Pressable aria-label="decrease memories per day" onPress={() => decreaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">-</Pressable>
-            <View>{memoriesPerDay}</View>
-        <Pressable aria-label="increase memories per day" onPress={() => increaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">+</Pressable>
+    <View className="flex-row items-center text-xl gap-2">
+        <Pressable aria-label="decrease memories per day" onPress={() => decreaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">
+          <Text className="text-Primary-text dark:text-dark-Primary-text text-xl">-</Text>
+        </Pressable>
+            <Text className="text-Primary-text dark:text-dark-Primary-text text-xl">{memoriesPerDay}</Text>
+        <Pressable aria-label="increase memories per day" onPress={() => increaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">
+          <Text className="text-Primary-text dark:text-dark-Primary-text text-xl">+</Text>
+        </Pressable>
     </View>
   )
 }

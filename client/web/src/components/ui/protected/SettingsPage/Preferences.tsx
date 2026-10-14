@@ -64,9 +64,9 @@ function Preferences() {
               <div className="my-4">
                 <div className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
                   <p>Resurfacing reminders</p>
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-4">
                     <span className="font-medium">{resurfacingOn? 'on' : 'off'}</span>
-                    <button className={`relative w-11 h-6.5  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
+                    <button className={`relative w-11 h-6.5 cursor-pointer rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onClick={()=> setResurfacingOn(prev => !prev)}>
                       <div className={`absolute  top-0.75 ${resurfacingOn?'right-1': 'left-1'} transition-all duration-500 p-2.5 bg-Background rounded-full`}></div>
                     </button>
                   </div> 

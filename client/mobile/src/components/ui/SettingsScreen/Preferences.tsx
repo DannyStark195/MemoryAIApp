@@ -14,68 +14,70 @@ function Preferences() {
 
   return (
     <ScreenLayout>
-         <View className="flex justify-between mb-8">
-                <Text className="text-xl md:text-xl font-medium leading-wider mb-2">Preferences</Text>
+         <View className="flex-row justify-between mb-8">
+                <Text className="text-xl md:text-xl font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text leading-wider mb-2">Preferences</Text>
                 <BackButton />
           </View>
-          <main className="mt-8 overflow-y-auto max-h-[78dvh] no-scrollbar">
-            <View>
-              <Text className="font-medium">Appearance</Text>
-              <View className="my-4 flex gap-4">
-                <Pressable aria-label="light mode"  onPress={()=> changeTheme("light")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text>Light</Text>
-                  <View className="text-Accent">
-                      <Ionicons name={`radio-button-${theme === "light" ? "on" : "off"}`} size={24} color="black" />
+          <View className="no-scrollbar">
+            <View className="mb-2">
+              <Text className="font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text">Appearance</Text>
+              <View className="my-4 flex-row gap-4">
+                <Pressable aria-label="light mode"  onPress={()=> changeTheme("light")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Light</Text>
+                  <View>
+                      <Ionicons name={`radio-button-${theme === "light" ? "on" : "off"}`} size={24} className="text-Accent" />
                     </View>
                 </Pressable>
-                <Pressable aria-label="dark mode" onPress={()=> changeTheme("dark")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text>Dark</Text>
-                  <View className="text-Accent">
-                      <Ionicons name={`radio-button-${theme === "dark" ? "on" : "off"}`} size={24} color="black" />
+                <Pressable aria-label="dark mode" onPress={()=> changeTheme("dark")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Dark</Text>
+                  <View>
+                      <Ionicons name={`radio-button-${theme === "dark" ? "on" : "off"}`} size={24} className="text-Accent" />
                     </View>
                 </Pressable>
-                <Pressable aria-label="system default" onPress={()=> changeTheme("system")} className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text>System</Text>
-                  <View className="text-Accent">
-                      <Ionicons name={`radio-button-${theme === "system" ? "on" : "off"}`} size={24} color="black" />
+                <Pressable aria-label="system default" onPress={()=> changeTheme("system")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">System</Text>
+                  <View>
+                      <Ionicons name={`radio-button-${theme === "system" ? "on" : "off"}`} size={24} className="text-Accent" />
                     </View>
                 </Pressable>
               </View>
             </View>
-            <View>
-              <Text className="font-medium">Memories per day</Text>
+            <View className="mb-2">
+              <Text className="font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text">Memories per day</Text>
               <View className="my-4">
-                <View className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text>Number of memories to resurface daily</Text>
+                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem] leading-6">Number of memories to resurface daily</Text>
                   <MemoriesPerDayBtn />
                 </View>
               </View>
             </View>
-            <View>
-              <Text className="font-medium">Resurfacing Schedule</Text>
+            <View className="mb-2">
+              <Text className="font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text">Resurfacing Schedule</Text>
               <View className="my-4">
-                <View className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text>When you'd like to recieve reminders</Text>
+                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem] leading-6">When you'd like to receive reminders</Text>
                   <ResurfacingScheduleButton />
                 </View>
               </View>
             </View>
-             <View>
-              <Text className="font-medium">Notifications</Text>
+             <View className="mb-2">
+              <Text className="font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text">Notifications</Text>
               <View className="my-4">
-                <View className="flex items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text>Resurfacing reminders</Text>
-                  <View className="flex items-center gap-6">
-                    <span className="font-medium">{resurfacingOn? 'on' : 'off'}</span>
-                    <Pressable className={`relative w-11 h-6.5  rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} onPress={()=> setResurfacingOn(prev => !prev)}>
-                      <View className={`absolute  top-0.75 ${resurfacingOn?'right-1': 'left-1'} transition-all duration-500 p-2.5 bg-Background rounded-full`}></View>
+                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Resurfacing reminders</Text>
+                  <View className="flex-row items-center gap-4">
+                    <Text className="font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text">{resurfacingOn? 'on' : 'off'}</Text>
+                    <Pressable onPress={()=> setResurfacingOn(prev => !prev)}>
+                      <View className={`relative !w-[46px] !h-[24px] rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} >
+                        <View className={`absolute top-1 ${resurfacingOn?'right-1': 'left-1'} transition-all duration-500 p-2 bg-Background rounded-full`}></View>
+                      </View>
                     </Pressable>
                   </View> 
                 </View>
                 
               </View>
             </View>
-          </main>
+          </View>
        </ScreenLayout>
   )
 }
