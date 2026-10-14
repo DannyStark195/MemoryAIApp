@@ -1,10 +1,13 @@
-import Layout from "../Layout.tsx"
+import ScreenLayout from "@/components/ui/ScreenLayout"
+import { View } from "react-native"
 
 function BackUpData() {
   return (
-   <Layout>
-      <main></main>
-   </Layout>
+   <ScreenLayout>
+      <View>
+        
+      </View>
+   </ScreenLayout>
   )
 }
 

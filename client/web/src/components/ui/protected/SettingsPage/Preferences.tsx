@@ -2,9 +2,10 @@ import Layout from "../Layout.tsx"
 import BackButton from "../../BackButton.tsx"
 import { RadioButtonIcon } from "@phosphor-icons/react"
 import { useTheme } from "../../../../context/ThemeContext.tsx"
-import MemoriesPerDayBtn from "../MemoriesPerDayBtn.tsx";
+import MemoriesPerDayBtn from "./MemoriesPerDayBtn.tsx";
 import { useState } from "react";
-import ResurfacingScheduleButton from "../ResurfacingScheduleButton.tsx";
+import ResurfacingScheduleButton from "./ResurfacingScheduleButton.tsx";
+
 function Preferences() {
   const {theme, changeTheme} = useTheme();
   // const root = document.documentElement

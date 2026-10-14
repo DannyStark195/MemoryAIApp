@@ -1,10 +1,11 @@
-import Layout from "../Layout.tsx"
+import { View } from "react-native"
+import ScreenLayout from "@/components/ui/ScreenLayout"
 
 function Help() {
   return (
-     <Layout>
-      <main></main>
-   </Layout>
+     <ScreenLayout>
+      <View></View>
+   </ScreenLayout>
   )
 }
 
