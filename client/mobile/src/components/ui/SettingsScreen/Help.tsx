@@ -6,8 +6,8 @@ import {AntDesign, EvilIcons, Feather, MaterialIcons, Octicons} from "@expo/vect
 function Help() {
   return (
      <ScreenLayout>
-      <View className="flex-row justify-between mb-2">
-        <Text className="font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text text-xl">Help & FeedBack</Text>
+      <View className="flex-row justify-between mb-4">
+        <Text className="font-medium leading-wider text-Primary-text dark:text-dark-Primary-text text-xl">Help & FeedBack</Text>
         <BackButton />
       </View>
       <View className="mt-8 overflow-y-auto max-h-[78dvh] no-scrollbar">
@@ -15,7 +15,7 @@ function Help() {
           <Text className="font-medium text-Primary-text dark:text-dark-Primary-text text-lg">Help</Text>
             <View className="my-4">
               <Pressable onPress={()=> Linking.openURL("https://memoryaiapp.pxxl.click")} className="flex-row items-center gap-2 w-full py-3 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-3">
-                <Feather name="play-circle" size={24} className="text-Accent" />
+                <Feather name="play-circle" size={22} className="text-Accent" />
                 <Text className="ext-Primary-text dark:text-dark-Primary-text text-[1rem]">Get Started</Text>
               </Pressable>
             </View>
@@ -24,15 +24,15 @@ function Help() {
           <Text className="font-medium text-Primary-text dark:text-dark-Primary-text text-lg">Feedback</Text>
             <View className="my-4">
               <Pressable onPress={()=> Linking.openURL("https://wa.me/2348101836183")} className="flex-row items-center gap-2 w-full py-3 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-3">
-                <Octicons name="bug" size={24} className="text-Accent" />
+                <Octicons name="bug" size={22} className="text-Accent" />
                 <Text className="ext-Primary-text dark:text-dark-Primary-text text-[1rem]">Report a problem</Text>
               </Pressable>
                <Pressable onPress={()=> Linking.openURL("https://wa.me/2348101836183")} className="flex-row items-center gap-2 w-full py-3 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-3">
-                  <MaterialIcons name="chat" size={24} className="text-Accent" />
+                  <MaterialIcons name="chat" size={22} className="text-Accent" />
                   <Text className="ext-Primary-text dark:text-dark-Primary-text text-[1rem]">Send feedback</Text>
               </Pressable>
                <Pressable onPress={()=> Linking.openURL("https://wa.me/2348101836183")} className="flex-row items-center gap-2 w-full py-3 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-3">
-                  <AntDesign name="bulb" size={24} className="text-Accent" />
+                  <AntDesign name="bulb" size={22} className="text-Accent" />
                   <Text className="ext-Primary-text dark:text-dark-Primary-text text-[1rem]">Suggest a feature</Text>
               </Pressable>
             </View>

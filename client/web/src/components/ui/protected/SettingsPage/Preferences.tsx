@@ -13,8 +13,8 @@ function Preferences() {
 
   return (
     <Layout>
-         <div className="flex justify-between mb-8">
-                <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">Preferences</h1>
+         <div className="flex justify-between mb-12">
+                <h1 className="text-xl md:text-xl font-medium leading-wider">Preferences</h1>
                 <BackButton />
           </div>
           <main className="mt-8 overflow-y-auto max-h-[78dvh] no-scrollbar">

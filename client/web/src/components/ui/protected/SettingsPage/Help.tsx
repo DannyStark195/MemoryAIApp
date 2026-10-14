@@ -5,7 +5,7 @@ import Layout from "../Layout.tsx"
 function Help() {
   return (
      <Layout>
-      <div className="flex justify-between mb-8">
+      <div className="flex justify-between mb-12">
         <h1 className="text-xl md:text-xl font-medium leading-wider">Help & FeedBack</h1>
         <BackButton />
       </div>

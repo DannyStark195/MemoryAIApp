@@ -14,8 +14,8 @@ function Preferences() {
 
   return (
     <ScreenLayout>
-         <View className="flex-row justify-between mb-8">
-                <Text className="text-xl md:text-xl font-medium text-[1rem] text-Primary-text dark:text-dark-Primary-text leading-wider mb-2">Preferences</Text>
+         <View className="flex-row justify-between mb-12">
+                <Text className="text-xl md:text-xl font-medium text-Primary-text dark:text-dark-Primary-text leading-wider mb-2">Preferences</Text>
                 <BackButton />
           </View>
           <View className="no-scrollbar">
