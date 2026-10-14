@@ -3,8 +3,9 @@ import AccountInfo from "../../../components/ui/SettingsScreen/AccountInfo";
 import About from "../../../components/ui/SettingsScreen/About";
 import Preferences from "@/components/ui/SettingsScreen/Preferences";
 import ImportExport from "@/components/ui/SettingsScreen/ImportExport";
-// import BackupData from "../../../components/ui/SettingsScreen/BackupData";
 import Help from "@/components/ui/SettingsScreen/Help"; 
+import PasswordSecurity from "@/components/ui/SettingsScreen/PasswordSecurity";
+import BackUpData from "@/components/ui/SettingsScreen/BackUpData";
 
 function SettingsName() {
   const { name } = useLocalSearchParams<{ name: string }>()
@@ -12,9 +13,9 @@ function SettingsName() {
   return (
     <>
         {name === "account-info" && <AccountInfo />}
-        {name === "password-security" && <div>Password & Security</div>}
+        {name === "password-security" && <PasswordSecurity />}
         {name === "preferences" && <Preferences/>}
-        {/* {name === "backup-data" && <BackupData />} */}
+        {name === "backup-data" && <BackUpData />}
         {name === "import-export" && <ImportExport/>}
         {name === "help" && <Help />}
         {name === "about" && <About />}

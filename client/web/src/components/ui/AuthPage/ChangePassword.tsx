@@ -1,4 +1,4 @@
-import { LockIcon, EnvelopeIcon, CodeIcon } from "@phosphor-icons/react"
+import { LockIcon, EnvelopeIcon, PasswordIcon } from "@phosphor-icons/react"
 
 function ChangePassword({email}:{email:string}) {
   return (
@@ -11,7 +11,7 @@ function ChangePassword({email}:{email:string}) {
         </div>
          <div className="relative">
             <div className="absolute top-3 left-3">
-            <CodeIcon size={18}/>
+            <PasswordIcon size={18} />
             </div>
             <input type="text" placeholder="Code" className="w-full py-2 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0"/>
         </div>
