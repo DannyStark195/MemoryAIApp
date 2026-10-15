@@ -23,29 +23,29 @@ function Auth() {
           <View className="lg:w-[50%] lg:flex items-center justify-center mb-4">
             <View className="flex flex-col items-center">
               <View>
-                <Logo classname="!w-[80px] !h-[80px] lg:w-50"/>
+                <Logo classname="!w-[80px] !h-[80px]"/>
               </View>
-              <Text className="text-xl lg:text-5xl font-semibold mt-1 lg:mb-2">Memorii</Text>
-              <Text className="lg:text-lg">Your memories organized beautifully.</Text>
+              <Text className="base-text text-2xl lg:text-5xl font-semibold lg:mb-2">Memorii</Text>
+              <Text className="lg:text-lg base-text text-[1rem]">Your memories organized beautifully.</Text>
             </View>
           </View>
-          <View className="lg:flex-1 flex-row items-center justify-center ">
-            <View>
-              <View className="relative mb-8 flex-row justify-between gap-5 rounded-lg border border-Border dark:border-dark-Border py-3 px-16 lg:border-0">
+          <View className="flex-row items-center justify-center ">
+            <View className="w-full">
+              <View className="mb-8 mx-3 flex-row justify-between gap-5 rounded-lg border border-Border dark:border-dark-Border py-3 px-16 lg:border-0">
                 <Pressable
                   onPress={openLoginTab}
-                  className={`text-lg lg:text-2xl font-medium cursor-pointer relative z-1 ${loginTabOpen?'text-dark-Primary-text':'text-Primary-text dark:text-dark-Primary-text'} lg:text-Primary-text dark:lg:text-dark-Primary-text`}
+                  className={`cursor-pointer !z-[100]`}
                 >
-                  <Text>Log in</Text>
+                  <Text className={`relative z-[100] text-lg font-medium  ${loginTabOpen?'text-dark-Primary-text':'text-Primary-text dark:text-dark-Primary-text'}`}>Log in</Text>
                 </Pressable>
                
                 <Pressable
                   onPress={closeLoginTab}
-                  className={`text-lg lg:text-2xl font-medium cursor-pointer relative z-1 ${loginTabOpen?'text-Primary-text dark:text-dark-Primary-text':'text-dark-Primary-text'} lg:text-Primary-text dark:lg:text-dark-Primary-text`}
+                  className={`cursor-pointer relative !z-[100]`}
                 >
-                  <Text>Sign up</Text>
+                  <Text className={`text-lg font-medium  ${loginTabOpen?'text-Primary-text':'text-dark-Primary-text'}`}>Sign up</Text>
                 </Pressable>
-                <View className={` h-13 w-45 lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'} transition-all duration-900`}>
+                <View className={`h-[52px] w-[185px] lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'} transition-all duration-900`}>
                 </View>
               </View>
               <View className="w-100">
