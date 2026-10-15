@@ -28,7 +28,7 @@ function ChangePassword({email}:{email:string}) {
             </View>
             <TextInput secureTextEntry={true} placeholder="Confirm New password" className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
         </View>
-        <Pressable className="bg-dark-Background dark:bg-Background  py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
+        <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
             <Text className="text-dark-Primary-text dark:text-Primary-text font-semibold text-center text-[1rem]">
                 Change password
             </Text>

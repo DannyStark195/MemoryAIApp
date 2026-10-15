@@ -2,7 +2,7 @@ import ScreenLayout from "../ScreenLayout"
 import { View, Image, Pressable, Text, TextInput } from "react-native"
 import BackButton from "../BackButton"
 import { FontAwesome6 } from "@expo/vector-icons"
-// import LogoutButton from "../LogoutButton"
+import LogoutButton from "../LogoutButton"
 import React, { useEffect, useState } from "react"
 function AccountInfo() {
     const [accountNameInput, setAccountNameInput] = useState('Daniel Okafor')
@@ -79,6 +79,9 @@ function AccountInfo() {
                             >
                                 <Text className="text-dark-Primary-text dark:text-Primary-text text-sm font-semibold">Save</Text>
                         </Pressable>
+                    </View>
+                    <View className="cursor-pointer border border-Surface2 dark:border-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface w-[320px] p-3 rounded-lg transition-all duration-300">
+                        <LogoutButton/>
                     </View>
                 </View>
             </View>
