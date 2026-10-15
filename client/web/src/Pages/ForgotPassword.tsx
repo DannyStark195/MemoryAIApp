@@ -20,7 +20,7 @@ function ForgotPassword() {
               <div>
                 <Logo classname="w-20 lg:w-50"/>
               </div>
-              <h2 className="text-xl lg:text-5xl font-semibold mt-1 lg:mb-2">Memorii</h2>
+              <h2 className="text-2xl lg:text-5xl font-semibold mt-1 lg:mb-2">Memorii</h2>
               <p className="lg:text-lg">Your memories organized beautifully.</p>
             </div>
           </div>
@@ -31,7 +31,7 @@ function ForgotPassword() {
                 {forgotPasswordTab? (
                   <div>
                     <h2 className="text-3xl font-bold mb-2 ">Reset Password</h2>
-                    <p className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter your email and we'll send you a reset link.</p>
+                    <p className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter your email and we'll send you a reset code.</p>
 
                      <form action="" className="w-full">
                       <div className="flex flex-col gap-4 mb-4">
@@ -42,14 +42,14 @@ function ForgotPassword() {
                           <input type="email" placeholder="Email" className="w-full py-2 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0"/>
                         </div>
                       </div>
-                      <button type="button" onClick={sendCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Send Link</button>
+                      <button type="button" onClick={sendCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">Send Code</button>
                     </form>
                     <p className="mt-4 text-sm">Remember your password? <Link to={"/auth"} className="text-Accent font-medium">Log in</Link></p>
                   </div>
                 ):(
                   <div>
                     <h2 className="text-3xl font-bold mb-2">Change password</h2>
-                    <p className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter a new password</p>
+                    <p className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter rest code and a new password</p>
                     <div>
                       <ChangePassword email="dannystark195@gmail.com"/>
                     </div>
