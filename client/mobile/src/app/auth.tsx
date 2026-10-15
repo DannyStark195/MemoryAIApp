@@ -43,7 +43,7 @@ function Auth() {
                   onPress={closeLoginTab}
                   className={`cursor-pointer relative !z-[100]`}
                 >
-                  <Text className={`text-lg font-medium  ${loginTabOpen?'text-Primary-text':'text-dark-Primary-text'}`}>Sign up</Text>
+                  <Text className={`text-lg font-medium  ${loginTabOpen?'text-Primary-text dark:text-dark-Primary-text':'text-dark-Primary-text'}`}>Sign up</Text>
                 </Pressable>
                 <View className={`h-[52px] w-[185px] lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'} transition-all duration-900`}>
                 </View>
@@ -53,7 +53,7 @@ function Auth() {
                  <View className="my-4 relative before:absolute before:top-[50%] before:left-0 before:w-[35%] before:h-0.5 before:bg-Surface2 dark:before:bg-dark-Surface2 before:content-[''] after:absolute after:top-[50%] after:right-0 after:w-[35%] after:h-0.5 after:bg-Surface2 dark:after:bg-dark-Surface2 after:content-['']">
                     <Text className="text-center text-sm text-Secondary-text">or continue with</Text>
                   </View>
-                  <View className="flex justify-center gap-2">
+                  <View className="flex-row justify-center gap-2">
                     <GoogleButton/>
                     <FacebookButton />
                     <AppleButton />

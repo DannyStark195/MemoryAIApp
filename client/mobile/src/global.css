@@ -15,4 +15,7 @@
   .base-text{
     @apply text-Primary-text dark:text-dark-Primary-text;
   }
+  .base-text-reverse{
+    @apply text-dark-Primary-text dark:text-Primary-text;
+  }
 }

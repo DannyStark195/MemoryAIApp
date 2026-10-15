@@ -18,13 +18,13 @@ function ChangePassword({email}:{email:string}) {
         </View>
         <View className="relative">
             <View className="absolute top-2.5 left-3">
-                <SimpleLineIcons name="lock" size={18} className="text-Primary-text dark:text-dark-Primary-text" />
+                <SimpleLineIcons name="lock" size={17} className="text-Primary-text dark:text-dark-Primary-text" />
             </View>
             <TextInput secureTextEntry={true} placeholder="New password" className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
         </View>
         <View className="relative">
             <View className="absolute top-2.5 left-3">
-                <SimpleLineIcons name="lock" size={18} className="text-Primary-text dark:text-dark-Primary-text" />
+                <SimpleLineIcons name="lock" size={17} className="text-Primary-text dark:text-dark-Primary-text" />
             </View>
             <TextInput secureTextEntry={true} placeholder="Confirm New password" className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
         </View>
