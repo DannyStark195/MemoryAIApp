@@ -1,13 +1,18 @@
 import {EvilIcons, FontAwesome6, SimpleLineIcons} from "@expo/vector-icons"
 import { Pressable, TextInput, View, Text } from "react-native"
-// import { useToast } from "../../../context/ToastContext.tsx"
+import Toast from "react-native-toast-message"
 import { router } from 'expo-router'
 
 function Signup() {
-  // const {showToast} = useToast()
+
   function handleSignUp(){
     router.push('/verify-otp')
-    // showToast({type:"success", message: "A verification link has been sent to your email!"})
+    Toast.show(
+      {
+        type:"success", 
+        text1: "A verification code has been sent to your email!",
+      }
+    )
   }
   return (
     <View className="">
