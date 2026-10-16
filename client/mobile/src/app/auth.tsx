@@ -36,7 +36,7 @@ function Auth() {
                   onPress={openLoginTab}
                   className={`cursor-pointer !z-[100]`}
                 >
-                  <Text className={`relative z-[100] text-lg font-medium  ${loginTabOpen?'text-dark-Primary-text':'text-Primary-text dark:text-dark-Primary-text'}`}>Log in</Text>
+                  <Text className={`relative text-lg font-medium  ${loginTabOpen?'text-dark-Primary-text':'text-Primary-text dark:text-dark-Primary-text'}`}>Log in</Text>
                 </Pressable>
                
                 <Pressable

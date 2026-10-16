@@ -7,6 +7,7 @@ import { type FolderType } from "@/types/model"
 import { getFolders } from "@/api/getFolders";
 import LoadingState from "../../components/ui/LoadingState";
 import ErrorState from "../../components/ui/ErrorState";
+import NewFolderOptions from "@/components/ui/LibraryScreen/NewFolderOptions";
 
 function library() {
   const categories = ["All", "Favourites"];
@@ -29,7 +30,7 @@ function library() {
       }
       catch(error){
         console.log(error)
-        setError(true)
+        // setError(true)
       }
       finally{
         setLoading(false)
@@ -63,12 +64,12 @@ function library() {
       </View>
       <View className="flex-row justify-between mb-6">
           <Text className="flex-1 text-Primary-text dark:text-dark-Primary-text text-[1rem] font-medium">Folders</Text>
-                        <div className="relative">
-                          <Pressable ><Text className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm font-medium">+ New Folder</Text></Pressable>
-                          {/* <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/> */}
-                        </div>
+                        <View className="relative">
+                          <Pressable onPress={toggleNewFolderOptions}><Text className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm font-medium">+ New Folder</Text></Pressable>
+                          <NewFolderOptions style={newFolderOptionsOpen? 'flex-row':'hidden'}/>
+                        </View>
       </View>
-      <View className="flex-col gap-4 h-[300px]">
+      <View className="flex-col gap-4 h-[300px] ">
        <FlatList 
           className="flex-1"
           data={folders}
