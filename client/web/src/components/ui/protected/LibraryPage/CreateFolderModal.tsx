@@ -15,7 +15,7 @@ function createFolderModal({ onClose }: createFolderModalProps) {
         <div onClick={(event) => event.stopPropagation()} className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-8 w-[90%] lg:w-180">
           <div className="mb-6 text-center relative">
             <h3 className="text-xl" id="create-new-memory-folder">Create Folder</h3>
-            <button type="button" onClick={onClose} aria-label="Close create memory folder modal" className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></button>
+            <button type="button" onClick={onClose} aria-label="Close create memory folder modal" className="absolute -top-4 -right-8 cursor-pointer"><XIcon size={14}/></button>
           </div>
           <form action="">
              <div className="relative mb-4">

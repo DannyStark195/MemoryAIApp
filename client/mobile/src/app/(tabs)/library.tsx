@@ -62,14 +62,14 @@ function library() {
           </Pressable>
         ))}
       </View>
-      <View className="flex-row justify-between mb-6">
+      <View className="flex-row justify-between mb-6" style={{ zIndex: 10, elevation: 10 }}>
           <Text className="flex-1 text-Primary-text dark:text-dark-Primary-text text-[1rem] font-medium">Folders</Text>
-                        <View className="relative">
+                        <View className="relative" style={newFolderOptionsOpen ? { zIndex: 11, elevation: 11 } : undefined}>
                           <Pressable onPress={toggleNewFolderOptions}><Text className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm font-medium">+ New Folder</Text></Pressable>
                           <NewFolderOptions style={newFolderOptionsOpen? 'flex-row':'hidden'}/>
                         </View>
       </View>
-      <View className="flex-col gap-4 h-[300px] ">
+      <View className="flex-col gap-4 h-[300px]">
        <FlatList 
           className="flex-1"
           data={folders}
