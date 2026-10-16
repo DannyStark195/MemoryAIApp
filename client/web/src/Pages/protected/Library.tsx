@@ -14,6 +14,11 @@ function Library() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [folders, setFolders] = useState<FolderType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [newFolderOptionsOpen, setNewFolderOptionsOpen] = useState(false)
+  
+  function toggleNewFolderOptions(){
+    setNewFolderOptionsOpen(prev => !prev)
+  }
   const [error, setError] =useState(false)
   useEffect(()=>{
       try{
@@ -31,10 +36,6 @@ function Library() {
       }
   }, [])
 
-  const [newFolderOptionsOpen, setNewFolderOptionsOpen] = useState(false)
-  function toggleNewFolderOptions(){
-    setNewFolderOptionsOpen(prev => !prev)
-  }
   return (
     <>
       

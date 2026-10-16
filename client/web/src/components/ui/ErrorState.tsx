@@ -25,7 +25,7 @@ function ErrorState({errorProps}:{errorProps:errorProps}) {
                     Go back
                 </button>
                 <button onClick={errorProps.action} className="flex gap-2 bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-3 px-4 rounded-lg cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-                    <RefreshCwIcon />
+                    <RefreshCwIcon size={23}/>
                     Try Again
                 </button>
             </div>

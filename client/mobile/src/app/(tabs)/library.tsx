@@ -5,12 +5,21 @@ import { FlatList, Pressable, Text, View } from "react-native"
 import Folder from "@/components/ui/LibraryScreen/Folder"
 import { type FolderType } from "@/types/model"
 import { getFolders } from "@/api/getFolders";
+import LoadingState from "../../components/ui/LoadingState";
+import ErrorState from "../../components/ui/ErrorState";
+
 function library() {
   const categories = ["All", "Favourites"];
   const [activeCategory, setActiveCategory] = useState("All");
   const [folders, setFolders] = useState<FolderType[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] =useState(false)
+  const [newFolderOptionsOpen, setNewFolderOptionsOpen] = useState(false)
+ 
+  function toggleNewFolderOptions(){
+    setNewFolderOptionsOpen(prev => !prev)
+    console.log("Do something")
+  }
   useEffect(()=>{
       try{
         getFolders().then(setFolders)
@@ -27,6 +36,15 @@ function library() {
       }
   }, [])
   return (
+    <>
+      
+      {
+        error? <ErrorState errorProps={{
+          title: "Error",
+          error: "Folders not found!",
+          action: toggleNewFolderOptions
+        }} />: loading? <LoadingState />
+        :
     <ScreenLayout>
       <Header>
         <Text className="text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Library</Text>
@@ -60,6 +78,8 @@ function library() {
        />
       </View>
     </ScreenLayout>
+    }
+    </>
   )
 }
 
