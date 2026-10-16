@@ -1,0 +1,37 @@
+import { Feather } from '@expo/vector-icons'
+import { router } from 'expo-router'
+import BackButton from "./BackButton"
+import { Ionicons } from "@expo/vector-icons"
+import { Pressable, View, Text } from "react-native"
+
+type errorProps = {
+    title: string,
+    error: string,
+    action: ()=> void
+}
+
+function ErrorState({errorProps}:{errorProps:errorProps}) {
+  return (
+    <View className='flex items-center justify-center fixed top-0 w-full h-screen bg-Background dark:bg-dark-Background'>
+        <View className="flex flex-col items-center w-100">
+            <View>
+                <Ionicons name="warning" size={24} className="text-red-600"/>
+            </View>
+            <Text className="text-3xl mb-1 base-text">{errorProps.title}</Text>
+            <Text className="text-lg base-text">{errorProps.error}</Text>
+            <View className="flex-row gap-6 mt-6 items-center">
+                <Pressable className="flex gap-2 px-4 py-3 rounded-lg transition-all duration-300 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface" onPress={()=> router.push('/')}>
+                    <BackButton/>
+                    
+                </Pressable>
+                <Pressable onPress={()=> errorProps.action()} className="flex-row gap-2 bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-3 px-4 rounded-lg cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
+                    <Feather name="refresh-cw" size={24} color="black" />
+                    <Text className="base-text text-[1rem]">Try Again</Text>
+                </Pressable>
+            </View>
+        </View>
+    </View>
+  )
+}
+
+export default ErrorState
