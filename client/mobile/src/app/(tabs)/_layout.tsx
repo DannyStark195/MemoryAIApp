@@ -21,18 +21,19 @@ export default function TabLayout() {
           bottom: "8%",
           left: 8,
           right: 8,
-          height: 80,
+          height: 75,
           borderRadius: 32,
           borderWidth: 1,
           borderColor: theme.Border,
           backgroundColor: theme.Background,
           elevation: 0,
           // justifyContent: "flex-start",
-          // gap:50,
+          gap:50,
           // paddingInline: 16,
           // paddingBlock: 16,
-          // display: "flex",
-          // justifyContent: "space-between",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         },
 
         tabBarActiveTintColor: theme["Accent"],
@@ -42,11 +43,11 @@ export default function TabLayout() {
           fontSize: 16,
           fontWeight: 400,
         },
-          // tabBarItemStyle: {
-          //   // borderRadius: 20,
-          //   // paddingBlock: 3,
-          //   // display:"flex"
-          // },
+          tabBarItemStyle: {
+            // borderRadius: 20,
+            // paddingBlock: 3,
+            // display:"flex"
+          },
         
       }}
     >
