@@ -36,7 +36,7 @@ export default function index() {
                         <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
                           <AntDesign name="open-ai" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
-                        <Pressable className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
+                        <Pressable onPress={()=> console.log("home pressed")} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
                           <StyledFontAwesome6 name="circle-plus" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
