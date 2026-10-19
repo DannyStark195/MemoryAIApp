@@ -8,7 +8,7 @@ type settingsCardPProps ={
 }
 function SettingsCard({icon, text, link}:settingsCardPProps) {
   return (
-    <View className="">
+    // <View className="">
         <Pressable onPress={()=>router.push(`/settings/${link}`)}>
             <View className="flex-row justify-between w-full cursor-pointer hover:bg-Surface dark:hover:bg-dark-Surface duration-300 transition-all py-4 px-1 rounded-md">
                 <View className="flex-row gap-2">
@@ -24,7 +24,7 @@ function SettingsCard({icon, text, link}:settingsCardPProps) {
                 </View>
             </View>
         </Pressable>
-    </View>
+    // </View>
   )
 }
 
