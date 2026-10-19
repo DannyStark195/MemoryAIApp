@@ -62,7 +62,7 @@ function AccountInfo() {
                         </View>
                         <TextInput 
                             placeholder={`Daniel Okafor`} 
-                            className="w-full py-2 px-2 pl-10 rounded-md text-[1.05rem]"
+                            className="w-full py-2 px-2 pl-10 rounded-md text-[1.05rem] base-text"
                             value={accountNameInput}
                             onChangeText={(text) => {
                                 setAccountNameInput(text);
@@ -72,7 +72,7 @@ function AccountInfo() {
                             }}
                         />
                         <Pressable
-                            className={`${isChangingName? '':'hidden'} bg-dark-Background dark:bg-Background px-4 py-2 !rounded-[40px] cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300`}
+                            className={`${isChangingName? '':'hidden'} bg-dark-Background dark:bg-Background px-4 py-2 !rounded-[40px] cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text`}
                             style={({ pressed }) => ({
                                 backgroundColor: pressed ? "#F3EAF7" : "#6A1B9A",
                             })}
