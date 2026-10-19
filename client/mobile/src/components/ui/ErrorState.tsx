@@ -11,7 +11,7 @@ type errorProps = {
 
 function ErrorState({errorProps}:{errorProps:errorProps}) {
   return (
-    <View className='flex items-center justify-center fixed top-0 w-full h-screen bg-Background dark:bg-dark-Background'>
+    <View className='flex-1 items-center justify-center fixed top-0 w-full h-screen bg-Background dark:bg-dark-Background'>
         <View className="flex flex-col items-center w-100">
             <View>
                 <Ionicons name="warning-outline" size={70} className="text-red-600"/>

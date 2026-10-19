@@ -21,14 +21,14 @@ function settings() {
                 <Text className="text-[1rem] text-Primary-text dark:text-dark-Primary-text font-medium">Account</Text>
                 <View className="rounded-lg my-4 ">
                  <SettingsCard text="Account Information" link="account-info" icon={
-                    <FontAwesome6 name="user" size={18}  />
+                    <FontAwesome6 name="user" size={18} className="text-Accent"  />
                  }
                  />
                  <SettingsCard text="Password & Security" link="password-security" icon={
-                    <SimpleLineIcons name="lock" size={18} />
+                    <SimpleLineIcons name="lock" size={18} className="text-Accent" />
                  }/>
                  <SettingsCard text="Preferences" link="preferences" icon={
-                    <EvilIcons name="gear" size={24} />
+                    <EvilIcons name="gear" size={24} className='text-Accent'/>
                  }/>
                 </View>     
           </View>
@@ -36,10 +36,10 @@ function settings() {
                 <Text className="text-[1rem] text-Primary-text dark:text-dark-Primary-text font-medium">Data</Text>
                 <View className="rounded-lg my-4 ">
                  <SettingsCard text="Back up data" link="backup-data" icon={
-                    <Feather name="upload" size={18} />
+                    <Feather name="upload" size={18} className="text-Accent" />
                  }/>
                  <SettingsCard text="Import & Export" link="import-export" icon={
-                    <Entypo name="export" size={18} />
+                    <Entypo name="export" size={18} className="text-Accent" />
                  }/>
                 </View>
               </View>
@@ -47,10 +47,10 @@ function settings() {
                 <Text className="text-[1rem] text-Primary-text dark:text-dark-Primary-text font-medium">Support</Text>
                 <View className="rounded-lg my-4 ">
                  <SettingsCard text="Help & Feedback" link="help" icon={
-                    <FontAwesome5 name="question-circle" size={18} />
+                    <FontAwesome5 name="question-circle" size={18} className="text-Accent" />
                  }/>
                  <SettingsCard text="About" link="about" icon={
-                    <AntDesign name="info-circle" size={18} />
+                    <AntDesign name="info-circle" size={18} className="text-Accent" />
                  }/>
                 </View>
               </View>

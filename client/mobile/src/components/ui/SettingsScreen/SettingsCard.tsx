@@ -12,6 +12,7 @@ function SettingsCard({icon, text, link}:settingsCardPProps) {
         <Pressable onPress={
             ()=>{
             console.log("Settings pressed:", link);
+            alert(`Pressed: ${link}`);
             router.push({
               pathname: "/setting/[name]",
               params: { name: link },
