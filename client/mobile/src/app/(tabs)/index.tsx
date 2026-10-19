@@ -22,7 +22,7 @@ export default function index() {
         </View>
         </Header>
         <View className="">
-                <View className="overflow-y-scroll max-h-[84dvh]">
+                <View className="flex-1">
                   <View className="flex flex-col justify-center items-center">
                       <Image source={require("../../../assets/images/profile.png")} className="!w-[340px] !h-[480px] rounded-lg object-center overflow-hidden" />
                     {/* <View className="relative">
