@@ -2,6 +2,7 @@ import Layout from "../../components/ui/protected/Layout.tsx"
 import Header from "../../components/ui/protected/Header.tsx"
 import { getHourOfDay } from "../../utils/helpers.ts"
 // import NewFolderOptions from "../../components/ui/protected/LibraryPage/NewFolderOptions.tsx"
+import profile from '../../assets/profile.png'
 import { 
   // BellIcon,
   CaretLeftIcon, CaretRightIcon, OpenAiLogoIcon, PlusCircleIcon, ShareNetworkIcon, 
@@ -38,9 +39,7 @@ function Home() {
       <main className="overflow-y-scroll max-h-[84dvh]">
         <div className="grid justify-center">
           <div className="relative">
-            <div className="w-82 xl:w-180 md:w-150 h-120 md:h-[80dvh] lg:h-[70dvh]  rounded-lg bg-Surface2 dark:bg-dark-Surface2">
-              
-            </div>
+            <img src={profile} className="w-82 xl:w-180 md:w-150 h-120 md:h-[80dvh] lg:h-[70dvh]  rounded-lg object-center overflow-hidden" />
             {/* <div className="relative">
               <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
               <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
