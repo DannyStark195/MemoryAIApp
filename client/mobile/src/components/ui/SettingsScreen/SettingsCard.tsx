@@ -11,11 +11,8 @@ function SettingsCard({icon, text, link}:settingsCardPProps) {
     // <View className="">
         <View className="flex-row justify-between w-full cursor-pointer duration-300 transition-all py-4 px-1 rounded-md">
             <Pressable 
-                onPressIn={() => Alert.alert("Touch detected", text)}
                 onPress={
                 ()=>{
-                console.log("Settings pressed:", link);
-                alert(`Pressed: ${link}`);
                 router.push({
                   pathname: "/setting/[name]",
                   params: { name: link },
