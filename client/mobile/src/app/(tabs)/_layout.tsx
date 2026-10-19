@@ -31,8 +31,8 @@ export default function TabLayout() {
           gap:50,
           // paddingInline: 16,
           // paddingBlock: 16,
-          display: "flex",
-          justifyContent: "space-between",
+          // display: "flex",
+          // justifyContent: "space-between",
         },
 
         tabBarActiveTintColor: theme["Accent"],
