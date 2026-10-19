@@ -4,12 +4,16 @@ import { View, Text, Pressable } from "react-native"
 type settingsCardPProps ={
     icon: React.ReactElement
     text: string,
-    link?: string
+    link: string
 }
 function SettingsCard({icon, text, link}:settingsCardPProps) {
   return (
     // <View className="">
-        <Pressable onPress={()=>router.push(`/setting/${link}`)}>
+        <Pressable onPress={
+            ()=>  router.push({
+              pathname: "/setting/[name]",
+              params: { name: link },
+            })}>
             <View className="flex-row justify-between w-full cursor-pointer hover:bg-Surface dark:hover:bg-dark-Surface duration-300 transition-all py-4 px-1 rounded-md">
                 <View className="flex-row gap-2">
                     <View className="text-Accent">
