@@ -1,5 +1,5 @@
 import { Link, router } from "expo-router"
-import { View, Text, Pressable } from "react-native"
+import { View, Text, Pressable,  Alert} from "react-native"
 
 type settingsCardPProps ={
     icon: React.ReactElement
@@ -9,7 +9,9 @@ type settingsCardPProps ={
 function SettingsCard({icon, text, link}:settingsCardPProps) {
   return (
     // <View className="">
-        <Pressable onPress={
+        <Pressable 
+            onPressIn={() => Alert.alert("Touch detected", text)}
+            onPress={
             ()=>{
             console.log("Settings pressed:", link);
             alert(`Pressed: ${link}`);
