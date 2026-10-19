@@ -29,12 +29,12 @@ function library() {
         }
       }
       catch(error){
-        console.log(error)
-        // setError(true)
+        console.log("Error:", error)
+      //   // setError(true)
       }
-      finally{
-        setLoading(false)
-      }
+      // finally{
+      //   setLoading(false)
+      // }
   }, [])
   return (
     <>
