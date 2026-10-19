@@ -62,7 +62,7 @@ function AccountInfo() {
                         </View>
                         <TextInput 
                             placeholder={`Daniel Okafor`} 
-                            className="w-full py-2 px-2 pl-10 rounded-md text-[1.05rem] base-text"
+                            className="w-[85%] py-2 px-2 pl-10 rounded-md text-[1.05rem] base-text"
                             value={accountNameInput}
                             onChangeText={(text) => {
                                 setAccountNameInput(text);
