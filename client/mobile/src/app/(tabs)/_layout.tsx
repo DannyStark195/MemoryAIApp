@@ -21,7 +21,7 @@ export default function TabLayout() {
           bottom: "8%",
           left: 8,
           right: 8,
-          height: 70,
+          height: 80,
           borderRadius: 32,
           borderWidth: 1,
           borderColor: theme.Border,
