@@ -28,7 +28,7 @@ export default function TabLayout() {
           backgroundColor: theme.Background,
           elevation: 0,
           // justifyContent: "flex-start",
-          gap:50,
+          // gap:50,
           // paddingInline: 16,
           // paddingBlock: 16,
           // display: "flex",
@@ -42,11 +42,11 @@ export default function TabLayout() {
           fontSize: 16,
           fontWeight: 400,
         },
-          tabBarItemStyle: {
-            borderRadius: 20,
-            // paddingBlock: 3,
-            // display:"flex"
-          },
+          // tabBarItemStyle: {
+          //   // borderRadius: 20,
+          //   // paddingBlock: 3,
+          //   // display:"flex"
+          // },
         
       }}
     >
