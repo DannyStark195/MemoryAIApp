@@ -1,4 +1,4 @@
-import {EvilIcons, SimpleLineIcons} from "@expo/vector-icons"
+import { EvilIcons, SimpleLineIcons } from "@/components/icons";
 import { Pressable, TextInput, View, Text } from "react-native"
 import { Link } from "expo-router"
 

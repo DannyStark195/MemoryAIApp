@@ -1,7 +1,7 @@
 import AddFolderModal from "./AddFolderModal";
 import CreateFolderModal from "./CreateFolderModal";
 import { useState } from "react";
-import { Feather } from "@expo/vector-icons";
+import { Feather } from "@/components/icons";
 import { Pressable, Text, View } from "react-native";
 
 type NewFolderOptionsProps = {

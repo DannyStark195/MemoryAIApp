@@ -1,7 +1,7 @@
 import ScreenLayout from "../ScreenLayout"
 import { View, Image, Pressable, Text, TextInput } from "react-native"
 import BackButton from "../BackButton"
-import { FontAwesome6 } from "@expo/vector-icons"
+import { FontAwesome6 } from "@/components/icons";
 import LogoutButton from "../LogoutButton"
 import React, { useEffect, useState } from "react"
 function AccountInfo() {

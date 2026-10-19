@@ -1,4 +1,4 @@
-import {EvilIcons, FontAwesome6, SimpleLineIcons} from "@expo/vector-icons"
+import { EvilIcons, FontAwesome6, SimpleLineIcons } from "@/components/icons";
 import { Pressable, TextInput, View, Text } from "react-native"
 import Toast from "react-native-toast-message"
 import { router } from 'expo-router'

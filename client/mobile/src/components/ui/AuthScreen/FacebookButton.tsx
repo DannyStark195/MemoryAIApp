@@ -1,4 +1,4 @@
-import {FontAwesome5} from "@expo/vector-icons/"
+import { FontAwesome5 } from "@/components/icons";
 import { Pressable } from "react-native"
 
 function FacebookButton() {

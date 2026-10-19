@@ -1,6 +1,6 @@
 import {ToastConfigParams} from 'react-native-toast-message'
 import { View, Text } from "react-native";
-import { Octicons, Ionicons, Feather } from "@expo/vector-icons";
+import { Feather, Ionicons, Octicons } from "@/components/icons";
 const toastConfig = {
   success: ({ text1 }: ToastConfigParams<any>) => (
     <View

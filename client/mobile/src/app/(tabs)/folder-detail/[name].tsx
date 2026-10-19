@@ -3,7 +3,7 @@ import { useLocalSearchParams } from "expo-router";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import { useEffect, useState } from "react";
 import { Memory } from "@/types/model";
-import Octicons from "@expo/vector-icons/build/Octicons";
+import { Octicons } from "@/components/icons";
 import BackButton from "@/components/ui/BackButton";
 import File from "@/components/ui/LibraryScreen/File";
 function FolderDetail() {

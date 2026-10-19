@@ -1,4 +1,4 @@
-import {FontAwesome} from "@expo/vector-icons"
+import { FontAwesome } from "@/components/icons";
 import { Pressable } from "react-native"
 
 function GoogleButton() {

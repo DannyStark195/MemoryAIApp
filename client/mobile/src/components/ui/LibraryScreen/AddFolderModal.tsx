@@ -1,5 +1,5 @@
 
-import { Feather } from "@expo/vector-icons";
+import { Feather } from "@/components/icons";
 import {Modal, Pressable, Text, View} from "react-native"
 type AddFolderModalProps = {
   onClose: () => void;

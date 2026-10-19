@@ -1,7 +1,6 @@
-import { Feather } from '@expo/vector-icons'
+import { Feather, Ionicons } from "@/components/icons";
 import { router } from 'expo-router'
 import BackButton from "./BackButton"
-import { Ionicons } from "@expo/vector-icons"
 import { Pressable, View, Text } from "react-native"
 
 type errorProps = {

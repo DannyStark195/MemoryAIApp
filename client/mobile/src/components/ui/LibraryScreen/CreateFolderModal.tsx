@@ -1,5 +1,5 @@
 
-import { Feather } from "@expo/vector-icons";
+import { Feather } from "@/components/icons";
 import {Modal, Pressable, Text, TextInput, View} from "react-native"
 import Toast
  from "react-native-toast-message";

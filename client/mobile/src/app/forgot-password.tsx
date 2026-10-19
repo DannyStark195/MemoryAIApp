@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Logo from "../components/ui/Logo"
-import {EvilIcons, MaterialIcons, SimpleLineIcons} from "@expo/vector-icons"
+import { EvilIcons, MaterialIcons, SimpleLineIcons } from "@/components/icons";
 import ScreenLayout from "../components/ui/ScreenLayout"
 import ChangePassword from "../components/ui/AuthScreen/ChangePassword"
 import { Link } from "expo-router"

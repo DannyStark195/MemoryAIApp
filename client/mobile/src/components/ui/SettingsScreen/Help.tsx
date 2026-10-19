@@ -1,7 +1,13 @@
 import BackButton from "@/components/ui/BackButton"
 import ScreenLayout from "../ScreenLayout"
 import { Linking, Pressable, Text, View } from "react-native"
-import {AntDesign, EvilIcons, Feather, MaterialIcons, Octicons} from "@expo/vector-icons"
+import {
+  AntDesign,
+  EvilIcons,
+  Feather,
+  MaterialIcons,
+  Octicons,
+} from "@/components/icons";
 
 function Help() {
   return (

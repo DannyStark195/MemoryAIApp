@@ -1,8 +1,7 @@
 import { View, Text, TextInput, Pressable, Image, ScrollView, FlatList } from "react-native";
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import Header from "@/components/ui/Header";
-import {Ionicons, AntDesign, FontAwesome6} from '@expo/vector-icons';
-import {StyledFontAwesome6} from "@/components/ui/icons";
+import { AntDesign, Ionicons, StyledFontAwesome6 } from "@/components/icons";
 import {useTheme} from "@/context/ThemeContext";
 export default function index() {
   const {changeTheme} = useTheme()

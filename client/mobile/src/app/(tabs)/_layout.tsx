@@ -1,5 +1,10 @@
 import { Tabs } from "expo-router";
-import { Foundation,  AntDesign, FontAwesome6, EvilIcons} from "@expo/vector-icons";
+import {
+  AntDesign,
+  EvilIcons,
+  FontAwesome6,
+  Foundation,
+} from "@/components/icons";
 import { useColorScheme } from "nativewind";
 import { colors } from "@/theme/colors";
 

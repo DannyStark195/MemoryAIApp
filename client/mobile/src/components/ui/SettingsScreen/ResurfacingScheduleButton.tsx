@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Pressable, View, Text } from "react-native";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons } from "@/components/icons";
 
 function ResurfacingScheduleButton() {
     const [resurfacingModalOPen, setresurfacingModalOPen] = useState(false);

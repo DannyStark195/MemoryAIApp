@@ -1,5 +1,5 @@
 import { type FolderType } from "@/types/model"
-import {MaterialIcons} from "@expo/vector-icons"
+import { MaterialIcons } from "@/components/icons";
 import { View, Text, Pressable } from "react-native"
 import {router, Link} from "expo-router"
 

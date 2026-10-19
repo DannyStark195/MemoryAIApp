@@ -3,7 +3,7 @@ import Logo from "../components/ui/Logo"
 import ScreenLayout from "../components/ui/ScreenLayout"
 import ChangePassword from "../components/ui/AuthScreen/ChangePassword"
 // import { useToast } from "../context/ToastContext"
-import {EvilIcons, FontAwesome6, SimpleLineIcons} from "@expo/vector-icons"
+import { EvilIcons, FontAwesome6, SimpleLineIcons } from "@/components/icons";
 import { Pressable, View, Text, TextInput } from "react-native"
 
 function VerifyOtp() {

@@ -1,4 +1,4 @@
-import {MaterialIcons} from "@expo/vector-icons"
+import { MaterialIcons } from "@/components/icons";
 import { Pressable, Text } from "react-native"
 function LogoutButton() {
     function logOut(){

@@ -1,7 +1,15 @@
 import ScreenLayout from '@/components/ui/ScreenLayout'
 import { ScrollView, Text, View } from 'react-native'
 import SettingsCard from "@/components/ui/SettingsScreen/SettingsCard"
-import { AntDesign, Entypo, EvilIcons, Feather, FontAwesome5, FontAwesome6, SimpleLineIcons } from '@expo/vector-icons'
+import {
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome5,
+  FontAwesome6,
+  SimpleLineIcons,
+} from "@/components/icons";
 
 function settings() {
   return (

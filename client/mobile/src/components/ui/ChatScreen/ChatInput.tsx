@@ -1,5 +1,5 @@
 import { Pressable, TextInput, View } from "react-native"
-import { Ionicons } from "@expo/vector-icons"
+import { Ionicons } from "@/components/icons";
 import { useRef, useState } from "react"
 function ChatInput() {
     const textareaRef = useRef<TextInput>(null)

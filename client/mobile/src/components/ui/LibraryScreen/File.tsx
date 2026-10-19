@@ -1,6 +1,6 @@
 
 import { type Memory } from "@/types/model"
-import {Feather, MaterialIcons} from "@expo/vector-icons"
+import { Feather, MaterialIcons } from "@/components/icons";
 import { Text, View } from "react-native"
 
 function File({fileProps}: {fileProps:Memory}) {

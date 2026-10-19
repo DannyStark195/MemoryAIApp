@@ -1,4 +1,4 @@
-import {EvilIcons, MaterialIcons, SimpleLineIcons} from "@expo/vector-icons"
+import { EvilIcons, MaterialIcons, SimpleLineIcons } from "@/components/icons";
 import { Pressable, TextInput, View, Text } from "react-native"
 
 function ChangePassword({email}:{email:string}) {
