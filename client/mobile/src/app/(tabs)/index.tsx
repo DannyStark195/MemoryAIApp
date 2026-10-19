@@ -2,6 +2,7 @@ import { View, Text, TextInput, Pressable, Image, ScrollView, FlatList } from "r
 import ScreenLayout from "@/components/ui/ScreenLayout";
 import Header from "@/components/ui/Header";
 import {Ionicons, AntDesign, FontAwesome6} from '@expo/vector-icons';
+import {StyledFontAwesome6} from "@/components/ui/icons";
 import {useTheme} from "@/context/ThemeContext";
 export default function index() {
   const {changeTheme} = useTheme()
@@ -37,7 +38,7 @@ export default function index() {
                           <AntDesign name="open-ai" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         <Pressable className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
-                          <FontAwesome6 name="circle-plus" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
+                          <StyledFontAwesome6 name="circle-plus" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
                     </View>
