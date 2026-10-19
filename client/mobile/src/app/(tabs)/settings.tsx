@@ -27,8 +27,14 @@ function settings() {
          <Text style={{ color: "white" }}>TEST TOUCH</Text>
        </Pressable>
       <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Settings</Text>
-      <View className="mt-8 max-h-[78dvh] no-scrollbar">
+      <View className="mt-8">
         <ScrollView>
+           <Pressable
+             onPress={() => Alert.alert("Working", "ScrollView receives touches")}
+             style={{ backgroundColor: "blue", padding: 20 }}
+           >
+             <Text style={{ color: "white" }}>TEST INSIDE SCROLLVIEW</Text>
+           </Pressable>
           <View className="mb-6">
                 <Text className="text-[1rem] text-Primary-text dark:text-dark-Primary-text font-medium">Account</Text>
                 <View className="rounded-lg my-4 ">
