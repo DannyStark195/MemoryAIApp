@@ -30,7 +30,7 @@ export default function TabLayout() {
           // justifyContent: "flex-start",
           gap:50,
           // paddingInline: 16,
-          paddingBlock: 16,
+          // paddingBlock: 16,
           display: "flex",
           justifyContent: "space-between",
         },
