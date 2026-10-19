@@ -36,6 +36,12 @@ function settings() {
              <Text style={{ color: "white" }}>TEST INSIDE SCROLLVIEW</Text>
            </Pressable>
           <View className="mb-6">
+             <Pressable
+               onPress={() => Alert.alert("Working", "ScrollView receives touches")}
+               style={{ backgroundColor: "blue", padding: 20 }}
+             >
+               <Text style={{ color: "white" }}>TEST INSIDE VIEW</Text>
+             </Pressable>
                 <Text className="text-[1rem] text-Primary-text dark:text-dark-Primary-text font-medium">Account</Text>
                 <View className="rounded-lg my-4 ">
                  <SettingsCard text="Account Information" link="account-info" icon={

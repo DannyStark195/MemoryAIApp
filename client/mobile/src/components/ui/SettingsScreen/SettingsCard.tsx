@@ -30,6 +30,15 @@ function SettingsCard({icon, text, link}:settingsCardPProps) {
                 </View>
                 <View className="">
                     {/* <CaretRightIcon size={12}/> */}
+                    <Pressable
+                      onPress={() => Alert.alert("Working", text)}
+                      style={{
+                        backgroundColor: "orange",
+                        padding: 20,
+                      }}
+                    >
+                      <Text>{text}</Text>
+                    </Pressable>
                 </View>
             </View>
         </Pressable>
