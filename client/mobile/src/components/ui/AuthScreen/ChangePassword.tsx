@@ -16,7 +16,7 @@ function ChangePassword({ email }: { email: string }) {
                     keyboardType="email-address"
                     placeholder="Email"
                     value={email}
-                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md base-text-reverse text-[1rem] "
+                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md !base-text-reverse text-[1rem] "
                 />
             </View>
             <View className="relative">
