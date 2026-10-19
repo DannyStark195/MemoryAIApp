@@ -6,7 +6,7 @@ function LoadingState() {
 
   return (
 
-        <View className="flex items-center justify-center fixed top-0 w-full h-screen bg-Background dark:bg-dark-Background">
+        <View className="flex-1 items-center justify-center fixed top-0 w-full h-screen bg-Background dark:bg-dark-Background">
             <View className="relative animate-spin" style={{ width: size, height: size }}>
                 {dots.map((deg) => {
                 const rad = (deg - 90) * (Math.PI / 180);
