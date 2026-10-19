@@ -18,7 +18,7 @@ export default function TabLayout() {
         tabBarLabelPosition: "below-icon",
         tabBarStyle: {
           position: "absolute",
-          bottom: "10%",
+          bottom: "8%",
           left: 8,
           right: 8,
           height: 70,
@@ -44,8 +44,8 @@ export default function TabLayout() {
         },
           tabBarItemStyle: {
             borderRadius: 20,
-            paddingBlock: 3,
-            display:"flex"
+            // paddingBlock: 3,
+            // display:"flex"
           },
         
       }}
