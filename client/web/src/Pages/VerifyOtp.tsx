@@ -26,7 +26,7 @@ function VerifyOtp() {
           <div className="lg:flex-1 flex items-center justify-center ">
             <div>
               
-              <div className="w-100">
+              <div className="w-85 md:w-100">
                 {forgotPasswordTab? (
                   <div>
                     <h2 className="text-3xl font-bold mb-2 ">Verify Code</h2>
