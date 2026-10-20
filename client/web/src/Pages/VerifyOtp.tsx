@@ -41,16 +41,6 @@ function VerifyOtp() {
                     </form>
                     <p className="mt-4 text-sm">Didn't recieve code? <button onClick={()=>{showToast({type:"success", message:"Verification code resent!"})}} className="text-Accent font-medium cursor-pointer">Resend code</button></p>
                   </div>
-                ):(
-                  <div>
-                    <h2 className="text-3xl font-bold mb-2">Change password</h2>
-                    <p className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter a new password</p>
-                    <div>
-                      <ChangePassword email={"dannystark195@gmail.com"}/>
-                    </div>
-                  </div>
-                
-                 
               </div>
             </div>
           </div>
