@@ -76,7 +76,6 @@ function VerifyOtp() {
             </View>
           </View>
         </View>
-      </View>
     </ScreenLayout>
   )
 }
