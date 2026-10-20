@@ -53,7 +53,7 @@ It could show you something you saved weeks or months ago, give you a short summ
 
 The goal is to help you actually revisit and get value from the things you already chose to save.`}/>
 
-              <div className="fixed bottom-30 right-6 left-6 md:bottom-40 md:right-20 md:left-20 lg:bottom-10 lg:right-30 lg:left-80 xl:right-60 xl:left-110">
+              <div className="fixed bottom-25 right-6 left-6 md:bottom-40 md:right-20 md:left-20 lg:bottom-10 lg:right-30 lg:left-80 xl:right-60 xl:left-110">
                 <ChatInput />
               </div>
             </div>

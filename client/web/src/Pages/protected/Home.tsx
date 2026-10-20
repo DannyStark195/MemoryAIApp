@@ -39,7 +39,7 @@ function Home() {
       <main className="overflow-y-scroll max-h-[84dvh]">
         <div className="grid justify-center">
           <div className="relative">
-            <img src={profile} className="w-82 xl:w-180 md:w-150 h-120 md:h-[80dvh] lg:h-[70dvh]  rounded-lg object-center overflow-hidden" />
+            <img src={profile} className="w-82 xl:w-180 md:w-150 h-[65dvh] md:h-[80dvh] lg:h-[70dvh]  rounded-lg object-center overflow-hidden" />
             {/* <div className="relative">
               <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
               <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
