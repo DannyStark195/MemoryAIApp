@@ -21,7 +21,7 @@ function About() {
                   </div>
                   <div className="md:px-0">
                     <p className="text-center mb-10">Memorii helps you rediscover the things you've saved by bringing meaningful memories to you at the right time.</p>
-                    <div className="overflow-y-auto max-h-[60dvh] no-scrollbar">
+                    <div className="overflow-y-scroll max-h-[30dvh] no-scrollbar">
                         <div>
                           <Link to={"/privacy-policy"}>
                             <div  className="flex items-center justify-between w-full py-3 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-4">Privacy Policy</div>
