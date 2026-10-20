@@ -77,11 +77,11 @@ function ChangePassword({ email }: { email: string }) {
                     style={{ color: inputTextColor }}
                 />
             </View>
-            <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-                <Text style={{ color: inputTextColor }} className="text-dark-Primary-text dark:text-Primary-text font-semibold text-center text-[1rem] active:text-dark-Primary-text">
+            {/* <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full "> */}
+                <Text className="text-dark-Primary-text dark:text-Primary-text font-semibold text-center text-[1rem] ">
                     Change password
                 </Text>
-            </Pressable>
+            {/* </Pressable> */}
         </View>
     );
 }
