@@ -59,7 +59,7 @@ function ChangePassword({ email }: { email: string }) {
                     secureTextEntry={true}
                     placeholder="Confirm New password"
                     /* placeholderTextColor={""} */
-                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem]"dark:text-[#F5F5F3]
+                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem] dark:text-[#F5F5F3]"
                 />
             </View>
             <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
