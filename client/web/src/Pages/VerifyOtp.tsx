@@ -1,7 +1,6 @@
 import Logo from "../components/ui/Logo"
 import { PasswordIcon} from "@phosphor-icons/react"
 import Layout from "../components/ui/Layout.tsx"
-import ChangePassword from "../components/ui/AuthPage/ChangePassword.tsx"
 import { useToast } from "../context/ToastContext.tsx"
 function VerifyOtp() {
   const {showToast} = useToast()
