@@ -15,7 +15,7 @@ function ChangePassword({ email }: { email: string }) {
                 <TextInput
                     keyboardType="email-address"
                     placeholder="Email"
-                    value={email}
+                    /* value={email} */
                     className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem] dark:text-[#F5F5F3]"
                 />
             </View>
