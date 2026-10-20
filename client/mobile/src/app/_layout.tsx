@@ -7,7 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-Background dark:bg-dark-Background">
       <ThemeProvider>
         <Stack
           screenOptions={{
