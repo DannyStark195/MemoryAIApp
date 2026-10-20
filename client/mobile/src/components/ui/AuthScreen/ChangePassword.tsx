@@ -1,7 +1,15 @@
 import { EvilIcons, MaterialIcons, SimpleLineIcons } from "@/components/icons";
+import { colors } from "@/theme/colors";
+import { useColorScheme } from "nativewind";
 import { Pressable, TextInput, View, Text } from "react-native";
 
 function ChangePassword({ email }: { email: string }) {
+    const { colorScheme } = useColorScheme();
+    const inputTextColor =
+        colorScheme === "dark"
+            ? colors.dark["Primary-text"]
+            : colors.light["Primary-text"];
+
     return (
         <View className="my-4 flex flex-col gap-4">
             <View className="relative">
@@ -15,8 +23,10 @@ function ChangePassword({ email }: { email: string }) {
                 <TextInput
                     keyboardType="email-address"
                     placeholder="Email"
+                    placeholderTextColor={inputTextColor}
                     /* value={email} */
-                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem] dark:text-[#F5F5F3]"
+                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
+                    style={{ color: inputTextColor }}
                 />
             </View>
             <View className="relative">
@@ -30,7 +40,9 @@ function ChangePassword({ email }: { email: string }) {
                 <TextInput
                     secureTextEntry={true}
                     placeholder="Code"
-                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem] dark:text-[#F5F5F3]"
+                    placeholderTextColor={inputTextColor}
+                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
+                    style={{ color: inputTextColor }}
                 />
             </View>
             <View className="relative">
@@ -44,7 +56,9 @@ function ChangePassword({ email }: { email: string }) {
                 <TextInput
                     secureTextEntry={true}
                     placeholder="New password"
-                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem] dark:text-[#F5F5F3]"
+                    placeholderTextColor={inputTextColor}
+                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
+                    style={{ color: inputTextColor }}
                 />
             </View>
             <View className="relative">
@@ -58,8 +72,9 @@ function ChangePassword({ email }: { email: string }) {
                 <TextInput
                     secureTextEntry={true}
                     placeholder="Confirm New password"
-                    /* placeholderTextColor={""} */
-                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[#1C1A18] text-[1rem] dark:text-[#F5F5F3]"
+                    placeholderTextColor={inputTextColor}
+                    className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
+                    style={{ color: inputTextColor }}
                 />
             </View>
             <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
