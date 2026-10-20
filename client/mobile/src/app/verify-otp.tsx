@@ -1,15 +1,19 @@
 import { useState } from "react"
 import Logo from "../components/ui/Logo"
 import ScreenLayout from "../components/ui/ScreenLayout"
-import ChangePassword from "../components/ui/AuthScreen/ChangePassword"
 // import { useToast } from "../context/ToastContext"
-import { EvilIcons, FontAwesome6, SimpleLineIcons } from "@/components/icons";
+import {MaterialICons } from "@/components/icons";
 import { Pressable, View, Text, TextInput } from "react-native"
 
 function VerifyOtp() {
+   const { colorScheme } = useColorScheme();
+    const inputTextColor =
+        colorScheme === "dark"
+            ? colors.dark["Primary-text"]
+            : colors.light["Primary-text"];
   const [forgotPasswordTab, setforgotPasswordTab] = useState(true)
   // const {showToast} = useToast()
-  function sendCode(){
+  function verifyCode(){
     setforgotPasswordTab(false)
   }
   return (
@@ -28,22 +32,30 @@ function VerifyOtp() {
           <View className="lg:flex-1 flex items-center justify-center ">
             <View className="w-full">
               <View className="w-100">
-                {forgotPasswordTab? (
                   <View>
                     <Text className="text-3xl font-bold mb-2.5 base-text">Verify Code</Text>
-                    <Text className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">Enter your email and we'll send you a reset code.</Text>
+                    <Text className="mb-10 text-Secondary-text dark:text-dark-Secondary-text">We sent a code your email.</Text>
 
                     <View className="w-full">
-                      <View className="flex flex-col gap-4 mb-4">
                         <View className="relative">
-                          <View className="absolute top-2.5 left-3">
-                            <EvilIcons name="envelope" size={22} className="base-text"/>
-                          </View>
-                          <TextInput keyboardType="email-address" placeholder="Email" className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
+                            <View className="absolute top-2.5 left-3">
+                                <MaterialIcons
+                                    name="password"
+                                    size={24}
+                                    className="base-text"
+                                />
+                            </View>
+                            <TextInput
+                                secureTextEntry={true}
+                                placeholder="Code"
+                                placeholderTextColor={inputTextColor}
+                                className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
+                                style={{ color: inputTextColor }}
+                            />
                         </View>
                       </View>
-                         <Pressable onPress={sendCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-                          <Text className="base-text-reverse font-semibold text-[1rem] text-center">Send Code</Text>
+                         <Pressable onPress={verifyCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
+                          <Text className="base-text-reverse font-semibold text-[1rem] text-center">Verify</Text>
                         </Pressable>
                     </View>
                     <Text className="mt-4 text-sm base-text">
@@ -60,16 +72,6 @@ function VerifyOtp() {
                         </Text>
                     </Text>
                   </View>
-                ):(
-                  <View>
-                    <Text className="text-3xl font-bold mb-2 base-text">Change password</Text>
-                    <Text className="mb-10 text-Secondary-text dark:text-dark-Secondary-text text-[1rem]">Enter a new password</Text>
-                    <View>
-                      <ChangePassword email={"dannystark195@gmail.com"}/>
-                    </View>
-                  </View>
-                )}
-                 
               </View>
             </View>
           </View>
