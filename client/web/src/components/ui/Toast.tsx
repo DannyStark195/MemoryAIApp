@@ -14,7 +14,7 @@ function Toast({toastProps}: {toastProps:toastProps}) {
         initial={{opacity: 0, y: isMobile? -20:20}}
         animate={{opacity: 1, y:0}}
         exit={{opacity: 0,  y: isMobile? -20:20}}
-        className="fixed z-1000 bottom-[90%] right-[5%] left-[5%] md:bottom-10 md:right-20 md:left-[90%] flex gap-1 items-center bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none rounded-lg px-6 py-2 text-Primary-text dark:text-dark-Primary-text">
+        className="fixed z-1000 bottom-[90%] right-[5%] left-[5%] md:bottom-10 md:right-20 md:left-[60%] flex gap-1 items-center bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none rounded-lg px-6 py-2 text-Primary-text dark:text-dark-Primary-text">
         {toastProps.type==="success" && (
             <div className="text-Accent"><CheckCircleIcon size={30} weight="fill"/></div>
         )}
