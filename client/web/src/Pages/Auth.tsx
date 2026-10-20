@@ -30,7 +30,7 @@ function Auth() {
           </div>
           <div className="lg:flex-1 flex items-center justify-center ">
             <div>
-              <div className="relative mb-8 flex justify-between gap-5 mx-4 md:mx-auto rounded-lg border border-Border dark:border-dark-Border py-3 px-16 lg:border-0">
+              <div className="relative mb-8 flex justify-between gap-6 mx-4 md:mx-auto rounded-lg border border-Border dark:border-dark-Border py-3 px-16 lg:border-0">
                 <h2
                   onClick={openLoginTab}
                   className={`text-lg lg:text-2xl font-medium cursor-pointer relative z-1 ${loginTabOpen?'text-dark-Primary-text':'text-Primary-text dark:text-dark-Primary-text'} lg:text-Primary-text dark:lg:text-dark-Primary-text`}

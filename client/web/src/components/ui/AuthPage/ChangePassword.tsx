@@ -13,7 +13,7 @@ function ChangePassword({email}:{email:string}) {
             <div className="absolute top-3 left-3">
             <PasswordIcon size={18} />
             </div>
-            <input type="text" placeholder="Code" className="w-full py-2 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0"/>
+            <input type="password" placeholder="Code" className="w-full py-2 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0"/>
         </div>
         <div className="relative">
             <div className="absolute top-3 left-3">
