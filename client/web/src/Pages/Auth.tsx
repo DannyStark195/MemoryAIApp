@@ -47,7 +47,7 @@ function Auth() {
                 <div className={` h-13 w-46 lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'} transition-all duration-900`}>
                 </div>
               </div>
-              <div className="w-100">
+              <div className="w-full md:w-100">
                 {loginTabOpen? <Login />:<Signup/>}
                  <div className="text-center text-sm text-Secondary-text my-4 relative before:absolute before:top-[50%] before:left-0 before:w-[35%] before:h-0.5 before:bg-Surface2 dark:before:bg-dark-Surface2 before:content-[''] after:absolute after:top-[50%] after:right-0 after:w-[35%] after:h-0.5 after:bg-Surface2 dark:after:bg-dark-Surface2 after:content-['']">
                     or continue with
