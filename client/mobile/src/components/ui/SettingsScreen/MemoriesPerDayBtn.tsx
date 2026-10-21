@@ -13,7 +13,7 @@ function MemoriesPerDayBtn() {
     setMemoiresPerDay(prev => prev-1)
   }
   return (
-    <View className="flex-row items-center text-xl gap-2">
+    <View className="flex-row items-center justify-between text-xl gap-2">
         <Pressable aria-label="decrease memories per day" onPress={() => decreaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">
           <Text className="text-Primary-text dark:text-dark-Primary-text">-</Text>
         </Pressable>

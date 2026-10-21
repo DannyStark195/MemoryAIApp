@@ -32,7 +32,7 @@ export  function ThemeProvider({children}:{children:ReactNode}){
     
     function changeTheme(theme:ThemePreference){
         setTheme(theme)
-        console.log(theme, systemTheme)
+        // console.log(theme, systemsTheme)
         return theme
     }
 

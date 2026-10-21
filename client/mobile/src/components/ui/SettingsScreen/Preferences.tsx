@@ -45,8 +45,8 @@ function Preferences() {
             <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Memories per day</Text>
               <View className="my-4">
-                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text className="text-Primary-text dark:text-dark-Primary-text leading-6">Number of memories to resurface daily</Text>
+                <View className="w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="mb-2 text-Primary-text dark:text-dark-Primary-text leading-6">Number of memories to resurface daily</Text>
                   <MemoriesPerDayBtn />
                 </View>
               </View>
@@ -63,8 +63,8 @@ function Preferences() {
              <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Notifications</Text>
               <View className="my-4">
-                <View className="w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
-                  <Text className="mb-2 text-Primary-text dark:text-dark-Primary-text">Resurfacing reminders</Text>
+                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                  <Text className="text-Primary-text dark:text-dark-Primary-text">Resurfacing reminders</Text>
                   <View className="flex-row items-center gap-4">
                     <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">{resurfacingOn? 'on' : 'off'}</Text>
                     <Pressable onPress={()=> setResurfacingOn(prev => !prev)}>
