@@ -17,7 +17,7 @@ export default function TabLayout() {
         headerShown: false,
         tabBarLabelPosition: "below-icon",
         tabBarStyle: {
-          // position: "absolute",
+          position: "absolute",
           // bottom: "5%",
           left: 10,
           right: 10,

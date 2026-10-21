@@ -1,6 +1,6 @@
 import { Feather } from "@/components/icons";
 import {View, Text, Image, Pressable, TextInput} from "react-native";
-
+import {useState} from "react"
 
 type searchProps ={
   placeHolder: string, 
