@@ -19,7 +19,7 @@ export default function index() {
           </View> 
         </Header>
         <View className="">
-                <View className="flex-1">
+                <View className="">
                   <View className="flex flex-col justify-center items-center">
                       <Image source={require("../../../assets/images/profile.png")} className="!w-[340px] !h-[420px] rounded-lg object-center overflow-hidden" resizeMode="contain"/>
                     {/* <View className="relative">
