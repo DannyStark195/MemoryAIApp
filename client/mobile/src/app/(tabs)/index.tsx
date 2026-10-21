@@ -9,13 +9,13 @@ export default function index() {
   return (
     <ScreenLayout>
         <Header>
-          <View>
+          <View className="flex-row gap-2">
             <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">
               Good evening,
-              <Text className="text-Accent ml-1.5">
-              Daniel
-              </Text> 
             </Text>
+            <Text className="text-Accent">
+              Daniel
+            </Text> 
           </View> 
         </Header>
         <View className="">
@@ -23,7 +23,7 @@ export default function index() {
                       <Image source={require("../../../assets/images/profile.png")} className="" resizeMode="contain" style={
                       {width: "100%",
                        height:"90%",
-                       borderRadius: 20,
+                       borderRadius: 50,
                       }
                       } />
                     {/* <View className="relative">
