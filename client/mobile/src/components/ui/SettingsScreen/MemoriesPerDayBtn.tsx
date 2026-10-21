@@ -18,7 +18,7 @@ function MemoriesPerDayBtn() {
           <Text className="text-Primary-text dark:text-dark-Primary-text">-</Text>
         </Pressable>
             <Text className="text-Primary-text dark:text-dark-Primary-text">{memoriesPerDay}</Text>
-        <Pressable aria-label="increase memories per day" onPress={() => increaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 ro">
+        <Pressable aria-label="increase memories per day" onPress={() => increaseMemoriesPerDay()} className="py-2 px-4 bg-Surface2 dark:bg-dark-Surface2 rounded-xl">
           <Text className="text-Primary-text dark:text-dark-Primary-text">+</Text>
         </Pressable>
     </View>

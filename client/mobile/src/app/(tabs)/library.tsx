@@ -50,7 +50,7 @@ function library() {
       <Header>
         <Text className="text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Library</Text>
       </Header>
-      <View className="mb-4 flex flex-row gap-2  flex-wrap">
+      <View className="mb-4 flex flex-row gap-2 flex-wrap">
         {categories.map((category) =>(
           <Pressable className={`px-5 py-2 rounded-lg border cursor-pointer 
             ${activeCategory===category?'bg-Accent dark:bg-Accent border-Accent text-dark-Primary-text':'border-Surface2 dark:border-dark-Surface2'}
@@ -69,9 +69,9 @@ function library() {
                           <NewFolderOptions style={newFolderOptionsOpen? 'flex-row':'hidden'}/>
                         </View>
       </View>
-      <View className="flex-col gap-4 h-[300px]">
+      <View className="flex-col gap-4 h-[95%]">
        <FlatList 
-          className="flex-1"
+          className=""
           data={folders}
           renderItem={({item}) => <Folder name={item.name} files={item.files}/>}
           keyExtractor={(item) => item.name}

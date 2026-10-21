@@ -54,7 +54,7 @@ function Preferences() {
             <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Resurfacing Schedule</Text>
               <View className="my-4">
-                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <View className="flex- items-center justify-between gap-4 w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
                   <Text className="text-Primary-text dark:text-dark-Primary-text leading-6">When you'd like to receive reminders</Text>
                   <ResurfacingScheduleButton />
                 </View>
