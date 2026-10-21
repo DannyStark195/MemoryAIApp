@@ -13,14 +13,14 @@ export default function index() {
             <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">
               Good evening,
             </Text>
-            <Text className="text-Accent">
+            <Text className="text-Accent text-xl">
               Daniel
             </Text> 
           </View> 
         </Header>
         <View className="">
             <View className="">
-                      <Image source={require("../../../assets/images/profile.png")} className="!rounded-[20%]" resizeMode="contain" style={
+                      <Image source={require("../../../assets/images/profile.png")} className="!rounded-[20px]" resizeMode="contain" style={
                       {width: "100%",
                        height:"90%",
                        // borderRadius: 50,
