@@ -23,7 +23,7 @@ export default function index() {
                       <Image source={require("../../../assets/images/profile.png")} className="" resizeMode="contain" style={
                       {width: "100%",
                        height:"90%",
-                       borderRadius: "20%"
+                       borderRadius: 20,
                       }
                       } />
                     {/* <View className="relative">
