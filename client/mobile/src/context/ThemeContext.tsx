@@ -16,7 +16,6 @@ export  function ThemeProvider({children}:{children:ReactNode}){
     const systemTheme = systemsTheme();
      useEffect(() => {
         if(theme==="system"){
-            console.log(systemsTheme)
             if(systemTheme==='dark'){
                 setColorScheme('dark')
             }
@@ -28,11 +27,11 @@ export  function ThemeProvider({children}:{children:ReactNode}){
             setColorScheme(theme)
         }
         // localStorage.setItem("memorii-theme" , theme);
-    }, [theme, setColorScheme]);
+    }, [theme]);
     
     function changeTheme(theme:ThemePreference){
         setTheme(theme)
-        // console.log(theme, systemsTheme)
+        console.log(theme, systemsTheme)
         return theme
     }
 
