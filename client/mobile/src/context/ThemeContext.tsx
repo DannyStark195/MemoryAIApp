@@ -16,6 +16,7 @@ export  function ThemeProvider({children}:{children:ReactNode}){
     const systemTheme = systemsTheme();
      useEffect(() => {
         if(theme==="system"){
+            console.log(systemsTheme)
             if(systemTheme==='dark'){
                 setColorScheme('dark')
             }
