@@ -19,9 +19,8 @@ export default function index() {
           </View> 
         </Header>
         <View className="">
-                <View className="">
-                  <View className="flex flex-col justify-center items-center">
-                      <Image source={require("../../../assets/images/profile.png")} className="!w-[80%] !h-[70%] !rounded-lg object-center overflow-hidden" resizeMode="contain"/>
+            <View className="">
+                      <Image source={require("../../../assets/images/profile.png")} className="!w-[100%] !h-[70%] !rounded-lg object-center" resizeMode="contain"/>
                     {/* <View className="relative">
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
@@ -39,7 +38,6 @@ export default function index() {
                         {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
                     </View>
                   </View>
-                </View>
               </View>
     </ScreenLayout>
   );
