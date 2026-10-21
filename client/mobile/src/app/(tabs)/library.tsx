@@ -30,7 +30,7 @@ function library() {
       }
       catch(error){
         console.log("Error:", error)
-          setError(true)
+          setError(false)
       }
       finally{
         setLoading(false)

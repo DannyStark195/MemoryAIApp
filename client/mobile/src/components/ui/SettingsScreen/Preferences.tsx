@@ -69,7 +69,7 @@ function Preferences() {
                     <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">{resurfacingOn? 'on' : 'off'}</Text>
                     <Pressable onPress={()=> setResurfacingOn(prev => !prev)}>
                       <View className={`relative !w-[46px] !h-[24px] rounded-full ${resurfacingOn? 'bg-Accent':'bg-Surface2 dark:bg-dark-Surface2'}`} >
-                        <View className={`absolute top-1 ${resurfacingOn?'right-1 left-auto': 'left-1 right-auto'} p-2 bg-Background rounded-full`}></View>
+                        <View className={`absolute top-1 ${resurfacingOn?'right-1 left-auto': 'left-1 right-auto'} p-2.5 bg-Background rounded-full`}></View>
                       </View>
                     </Pressable>
                   </View> 

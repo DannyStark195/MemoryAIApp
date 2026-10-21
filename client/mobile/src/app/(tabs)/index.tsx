@@ -20,7 +20,7 @@ export default function index() {
         </Header>
         <View className="">
             <View className="">
-                      <Image source={require("../../../assets/images/logo.png")} className="" resizeMode="contain" style={
+                      <Image source={require("../../../assets/images/profile.png")} className="" resizeMode="contain" style={
                       {width: "100%",
                        height:"90%"
                       }
