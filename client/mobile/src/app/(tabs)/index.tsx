@@ -9,11 +9,11 @@ export default function index() {
   return (
     <ScreenLayout>
         <Header>
-          <View className="flex-row gap-2">
+          <View className="flex-row gap-1">
             <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">
               Good evening,
             </Text>
-            <Text className="text-Accent text-xl">
+            <Text className="text-Accent text-xl font-medium">
               Daniel
             </Text> 
           </View> 
@@ -31,7 +31,7 @@ export default function index() {
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
                     <View className="flex flex-col gap-5 absolute top-[30%] right-7 md:right-1 lg:-right-20">
-                          <Pressable onPress={() => changeTheme("dark")} className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
+                          <Pressable onPress={() => changeTheme("system")} className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
                             <Ionicons name="share-social" size={25} color="" className="text-Primary-text dark:text-dark-Primary-text"/>
                           </Pressable>
                         <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">

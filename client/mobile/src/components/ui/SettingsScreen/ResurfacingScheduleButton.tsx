@@ -8,8 +8,8 @@ function ResurfacingScheduleButton() {
             setresurfacingModalOPen(prev => !prev)
         }
   return (
-    <Pressable className="flex-row items-center bg-Accent py-2 px-2 rounded-lg relative" onPress={toggleResurfacingModal}>
-       <View className="flex-row items-center gap-2">
+    <Pressable className="bg-Accent py-2 px-2 rounded-lg relative" onPress={toggleResurfacingModal}>
+       <View className="flex-row items-center justify-between">
             <Text className="text-dark-Primary-text  leading-6">Automatic (AI mode)</Text>
             <MaterialIcons name="keyboard-arrow-right" size={24} className="text-dark-Primary-text"/>
         </View>
