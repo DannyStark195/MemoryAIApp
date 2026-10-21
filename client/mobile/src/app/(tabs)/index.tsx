@@ -20,7 +20,11 @@ export default function index() {
         </Header>
         <View className="">
             <View className="">
-                      <Image source={require("../../../assets/images/profile.png")} className="!w-[100%] !h-[70%] !rounded-lg object-center" resizeMode="contain"/>
+                      <Image source={require("../../../assets/images/profile.png")} className="" resizeMode="contain" style={
+                      {width: "100%",
+                       height:"100%"
+                      }
+                      } />
                     {/* <View className="relative">
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>

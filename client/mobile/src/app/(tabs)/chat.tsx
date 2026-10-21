@@ -61,9 +61,9 @@ The goal is to help you actually revisit and get value from the things you alrea
           keyExtractor={(item) => item.id}
           className="flex-1 mb-100"
         />
-            <View className="absolute bottom-90% right-6 left-6 md:bottom-40 md:right-20 md:left-20 lg:bottom-10 lg:right-30 lg:left-80 xl:right-60 xl:left-110">
-                  <ChatInput />
-            </View>
+            {/* <View className="absolute bottom-90% right-6 left-6 md:bottom-40 md:right-20 md:left-20 lg:bottom-10 lg:right-30 lg:left-80 xl:right-60 xl:left-110">
+            </View> */}
+        <ChatInput />
      </View>
     </ScreenLayout>
   )
