@@ -8,9 +8,7 @@ export default function index() {
   // changeTheme("system")
   return (
     <ScreenLayout>
-      {/* <View> */}
         <Header>
-          <View className="flex flex-1 justify-between">
           <View>
             <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">
               Good evening,
@@ -19,7 +17,6 @@ export default function index() {
               </Text> 
             </Text>
           </View> 
-        </View>
         </Header>
         <View className="">
                 <View className="flex-1">
@@ -44,7 +41,6 @@ export default function index() {
                   </View>
                 </View>
               </View>
-      {/* </View> */}
     </ScreenLayout>
   );
 }
