@@ -24,7 +24,7 @@ export default function index() {
         <View className="">
                 <View className="flex-1">
                   <View className="flex flex-col justify-center items-center">
-                      <Image source={require("../../../assets/images/profile.png")} className="!w-[340px] !h-[480px] rounded-lg object-center overflow-hidden" />
+                      <Image source={require("../../../assets/images/profile.png")} className="!w-[340px] !h-[480px] rounded-lg object-center overflow-hidden" resizeMode="contain"/>
                     {/* <View className="relative">
                       <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
