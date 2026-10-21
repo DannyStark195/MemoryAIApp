@@ -15,17 +15,23 @@ export  function ThemeProvider({children}:{children:ReactNode}){
     })
     const systemTheme = systemsTheme();
     useEffect(() => {
-        let resolvedTheme: "light" | "dark";
-        if (theme === "system") {
-            resolvedTheme = systemTheme === "dark" ? "dark" : "light";
-        } else {
-            resolvedTheme = theme;
+        if(theme==="system"){
+            if(systemTheme==='dark'){
+                setColorScheme('dark')
+            }
+            else{
+                    setColorScheme(theme)
+                }
+                // localStorage.setItem("memorii-theme" , theme);
         }
-        setColorScheme(resolvedTheme);
-    }, [theme, systemTheme, setColorScheme]);
+        else{
+            setColorScheme(theme)
+        }
+            }, [theme]);
     
     function changeTheme(theme:ThemePreference){
         setTheme(theme)
+        console.log(theme, systemTheme)
         return theme
     }
 
