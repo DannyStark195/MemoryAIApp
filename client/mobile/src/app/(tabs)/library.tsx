@@ -30,11 +30,11 @@ function library() {
       }
       catch(error){
         console.log("Error:", error)
-      //   // setError(true)
+          setError(true)
       }
-      // finally{
-      //   setLoading(false)
-      // }
+      finally{
+        setLoading(false)
+      }
   }, [])
   return (
     <>

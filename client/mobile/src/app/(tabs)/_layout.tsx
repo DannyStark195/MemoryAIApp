@@ -18,10 +18,10 @@ export default function TabLayout() {
         tabBarLabelPosition: "below-icon",
         tabBarStyle: {
           position: "absolute",
-          // bottom: "5%",
+          bottom: "1%",
           left: 10,
           right: 10,
-          height: 80,
+          // height: 80,
           borderRadius: 32,
           borderWidth: 1,
           borderColor: theme.Border,
