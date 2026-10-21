@@ -20,10 +20,10 @@ export default function index() {
         </Header>
         <View className="">
             <View className="">
-                      <Image source={require("../../../assets/images/profile.png")} className="" resizeMode="contain" style={
+                      <Image source={require("../../../assets/images/profile.png")} className="!rounded-[20%]" resizeMode="contain" style={
                       {width: "100%",
                        height:"90%",
-                       borderRadius: 50,
+                       // borderRadius: 50,
                       }
                       } />
                     {/* <View className="relative">
