@@ -50,7 +50,7 @@ The goal is to help you actually revisit and get value from the things you alrea
 ]
   return (
   <ScreenLayout>
-    <View className="flex-1">
+    <View className="h-full">
       <Text className="text-xl font-medium leading-wider mb-4 text-Primary-text dark:text-dark-Primary-text">
         Chat
       </Text>
