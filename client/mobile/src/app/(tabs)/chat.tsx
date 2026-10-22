@@ -50,7 +50,7 @@ The goal is to help you actually revisit and get value from the things you alrea
 ]
   return (
   <ScreenLayout>
-    <View className="h-full">
+    <View className="">
       <Text className="text-xl font-medium leading-wider mb-4 text-Primary-text dark:text-dark-Primary-text">
         Chat
       </Text>
@@ -61,7 +61,7 @@ The goal is to help you actually revisit and get value from the things you alrea
           <ChatBox role={item.role} text={item.text} />
         )}
         keyExtractor={(item) => item.id}
-        className="flex-1"
+        className=""
         contentContainerStyle={{
           paddingBottom: 16,
         }}
