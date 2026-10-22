@@ -49,23 +49,30 @@ The goal is to help you actually revisit and get value from the things you alrea
   }
 ]
   return (
-    <ScreenLayout>
-     <View className="!h-[80%] relative">
-              <View className="flex gap-2 ">
-                <Text className="text-xl font-medium leading-wider mb-4 text-Primary-text dark:text-dark-Primary-text">Chat</Text>
-                {/* <OpenAiLogoIcon size={30}/> */}
-              </View>
-        <FlatList
-          data={chats}
-          renderItem={({ item }) => <ChatBox role={item.role} text={item.text}/>}
-          keyExtractor={(item) => item.id}
-          className="flex-1 mb-100"
-        />
-          <View className="absolute top-100% right-6 left-6 md:bottom-40 md:right-20 md:left-20 lg:bottom-10 lg:right-30 lg:left-80 xl:right-60 xl:left-110">
-              <ChatInput />
-            </View> 
-     </View>
-    </ScreenLayout>
+  <ScreenLayout>
+    <View className="flex-1">
+      <Text className="text-xl font-medium leading-wider mb-4 text-Primary-text dark:text-dark-Primary-text">
+        Chat
+      </Text>
+
+      <FlatList
+        data={chats}
+        renderItem={({ item }) => (
+          <ChatBox role={item.role} text={item.text} />
+        )}
+        keyExtractor={(item) => item.id}
+        className="flex-1"
+        contentContainerStyle={{
+          paddingBottom: 16,
+        }}
+        keyboardShouldPersistTaps="handled"
+      />
+
+      <View className="pt-2">
+        <ChatInput />
+      </View>
+    </View>
+  </ScreenLayout>
   )
 }
 
