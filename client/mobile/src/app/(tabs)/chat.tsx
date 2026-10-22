@@ -61,7 +61,7 @@ The goal is to help you actually revisit and get value from the things you alrea
           <ChatBox role={item.role} text={item.text} />
         )}
         keyExtractor={(item) => item.id}
-        className="h-[90%]"
+        className="h-[70%]"
         contentContainerStyle={{
           paddingBottom: 16,
         }}
