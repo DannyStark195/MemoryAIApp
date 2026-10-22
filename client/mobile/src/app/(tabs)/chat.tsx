@@ -61,8 +61,8 @@ export default function ChatScreen() {
   return (
     <ScreenLayout>
       <KeyboardAvoidingView
-        className="flex-1"
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : "position"}
       >
         <View className="flex-1">
           <Text className="mb-4 text-xl font-medium leading-wider text-Primary-text dark:text-dark-Primary-text">
