@@ -15,6 +15,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarHideOnKeyboard: true,
         tabBarLabelPosition: "below-icon",
         tabBarStyle: {
           position: "absolute",
