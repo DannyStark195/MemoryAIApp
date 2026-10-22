@@ -1,5 +1,5 @@
 import ScreenLayout from "@/components/ui/ScreenLayout"
-import { View, Text, TextInput, Pressable, Image, ScrollView, FlatList } from "react-native";
+import { View, Text, FlatList, Platform, KeyboardAvoidingView } from "react-native";
 import ChatInput from "@/components/ui/ChatScreen/ChatInput";
 import ChatBox from "@/components/ui/ChatScreen/ChatBox";
 function chat() {
@@ -55,6 +55,8 @@ The goal is to help you actually revisit and get value from the things you alrea
         Chat
       </Text>
 
+    <KeyboardAvoidingView className="flex-1" behavior={Platform.OS === "ios" ? "padding" : "height"}>
+
       <FlatList
         data={chats}
         renderItem={({ item }) => (
@@ -65,12 +67,14 @@ The goal is to help you actually revisit and get value from the things you alrea
         contentContainerStyle={{
           paddingBottom: 16,
         }}
-        keyboardShouldPersistTaps="handled"
+       keyboardShouldPersistTaps="handled"
+        automaticallyAdjustKeyboardInsets={Platform.OS === "ios"}
       />
 
       <View className="pt-2">
         <ChatInput />
       </View>
+    </KeyboardAvoidingView>
     </View>
   </ScreenLayout>
   )
