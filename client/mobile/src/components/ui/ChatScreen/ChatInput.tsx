@@ -6,16 +6,16 @@ type ChatInputProps = {
   onSend: (message: string) => void;
 };
 
-export default function ChatInput({ onSend }: ChatInputProps) {
+export default function ChatInput() {
   const [input, setInput] = useState("");
   const [inputHeight, setInputHeight] = useState(40);
   const canSend = input.trim().length > 0;
 
-  function send() {
-    if (!canSend) return;
-    onSend(input);
-    setInput("");
-  }
+  // function send() {
+  //   if (!canSend) return;
+  //   onSend(input);
+  //   setInput("");
+  // }
 
   return (
     <View className="flex-row items-end rounded-[26px] border border-Border bg-Surface px-2 py-2 dark:border-dark-Surface2 dark:bg-dark-Surface">
@@ -27,7 +27,7 @@ export default function ChatInput({ onSend }: ChatInputProps) {
         onContentSizeChange={(event) =>
           setInputHeight(Math.min(Math.max(event.nativeEvent.contentSize.height, 40), 112))
         }
-        onSubmitEditing={send}
+        // onSubmitEditing={send}
         placeholder="Message Memory AI..."
         placeholderTextColor="#99958D"
         returnKeyType="send"
@@ -40,13 +40,9 @@ export default function ChatInput({ onSend }: ChatInputProps) {
         accessibilityRole="button"
         className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-Accent/40"}`}
         disabled={!canSend}
-        onPress={send}
+        // onPress={send}
       >
-        <Ionicons
-          name="arrow-up"
-          size={20}
-          className="text-dark-Primary-text"
-        />
+        <Ionicons name="paper-plane" size={14} className="text-dark-Primary-text rotate-[-45deg] mt-1"/>
       </Pressable>
     </View>
   );

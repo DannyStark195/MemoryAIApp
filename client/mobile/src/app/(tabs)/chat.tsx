@@ -1,3 +1,6 @@
+import ScreenLayout from "@/components/ui/ScreenLayout";
+import ChatInput from "@/components/ui/ChatScreen/ChatInput";
+import ChatBox from "@/components/ui/ChatScreen/ChatBox";
 import { useEffect, useState } from "react";
 import {
   FlatList,
@@ -7,10 +10,6 @@ import {
   Text,
   View,
 } from "react-native";
-import { Ionicons } from "@/components/icons";
-import ChatBox from "@/components/ui/ChatScreen/ChatBox";
-import ChatInput from "@/components/ui/ChatScreen/ChatInput";
-import ScreenLayout from "@/components/ui/ScreenLayout";
 
 type ChatMessage = {
   id: string;
@@ -18,31 +17,33 @@ type ChatMessage = {
   text: string;
 };
 
-const initialMessages: ChatMessage[] = [
+const chats: ChatMessage[] = [
   {
     id: "1",
     role: "user",
-    text: "What is this memory about?",
+    text: "What is this memory about.",
   },
   {
     id: "2",
     role: "ai",
-    text: "It’s about using a personal memory app to save useful things—like notes, links, screenshots, and PDFs—and revisit them later. The goal is to make saved information easier to remember and use.",
+    text: `Imagine this:
+You have an app where you can save screenshots, notes, PDFs, links, images and other useful information. Instead of everything sitting there forgotten, the app periodically brings selected items back to you — for example, once in the morning and once later in the day. It could show you something you saved weeks or months ago, give you a short summary of a longer piece of information, or turn useful material into small learning/review cards.
+The goal is to help you actually revisit and get value from the things you already chose to save.`,
   },
+  { id: "3", role: "user", text: "Summarize this memory." },
+  { id: "4", role: "user", text: "Summarize this memory." },
+  { id: "5", role: "user", text: "Summarize this memory." },
+  { id: "6", role: "user", text: "Summarize this memory." },
   {
-    id: "3",
-    role: "user",
-    text: "Can you give me the short version?",
-  },
-  {
-    id: "4",
+    id: "7",
     role: "ai",
-    text: "Save useful things now, then let the app bring them back when they can help you.",
+    text: `Imagine this:
+You have an app where you can save screenshots, notes, PDFs, links, images and other useful information. Instead of everything sitting there forgotten, the app periodically brings selected items back to you — for example, once in the morning and once later in the day. It could show you something you saved weeks or months ago, give you a short summary of a longer piece of information, or turn useful material into small learning/review cards.
+The goal is to help you actually revisit and get value from the things you already chose to save.`,
   },
 ];
 
 export default function ChatScreen() {
-  const [messages, setMessages] = useState(initialMessages);
   const [keyboardVisible, setKeyboardVisible] = useState(false);
 
   useEffect(() => {
@@ -57,62 +58,30 @@ export default function ChatScreen() {
     };
   }, []);
 
-  function sendMessage(text: string) {
-    const message = text.trim();
-    if (!message) return;
-
-    setMessages((current) => [
-      ...current,
-      { id: `${Date.now()}`, role: "user", text: message },
-    ]);
-  }
-
   return (
     <ScreenLayout>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        behavior={Platform.OS === "ios" ? "padding" : "position"}
+        contentContainerStyle={{ flex: 1 }}
       >
         <View className="flex-1">
-          <View className="flex-row items-center border-b border-Border pb-4 dark:border-dark-Surface2">
-            <View className="mr-3 h-11 w-11 items-center justify-center rounded-2xl bg-Accent">
-              <Ionicons name="sparkles" size={22} className="text-dark-Primary-text" />
-            </View>
-            <View className="flex-1">
-              <Text className="text-base font-semibold text-Primary-text dark:text-dark-Primary-text">
-                Memory AI
-              </Text>
-              <View className="mt-1 flex-row items-center">
-                <View className="mr-1.5 h-2 w-2 rounded-full bg-emerald-500" />
-                <Text className="text-xs text-Secondary-text dark:text-dark-Secondary-text">
-                  Ready to help with your memories
-                </Text>
-              </View>
-            </View>
-            <View className="h-10 w-10 items-center justify-center rounded-full bg-Surface dark:bg-dark-Surface">
-              <Ionicons name="ellipsis-horizontal" size={20} className="text-Secondary-text dark:text-dark-Secondary-text" />
-            </View>
-          </View>
-
+          <Text className="mb-4 text-xl font-medium leading-wider text-Primary-text dark:text-dark-Primary-text">
+            Chat
+          </Text>
           <FlatList
-            className="flex-1"
-            data={[...messages].reverse()}
-            inverted
-            keyExtractor={(item) => item.id}
+            data={chats}
             renderItem={({ item }) => <ChatBox role={item.role} text={item.text} />}
-            contentContainerStyle={{ paddingTop: 20, paddingBottom: 20 }}
+            keyExtractor={(item) => item.id}
+            className="flex-1"
+            contentContainerStyle={{ paddingBottom: 16 }}
             keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
           />
-
           <View
-            className="pt-3"
+            className="px-2 md:px-4"
             style={{ marginBottom: keyboardVisible ? 12 : 72 }}
           >
-            <ChatInput onSend={sendMessage} />
-            <Text className="mt-2 text-center text-[11px] text-Tertiary-text dark:text-dark-Tertiary-text">
-              Answers are based on the memories you’ve saved
-            </Text>
+            <ChatInput />
           </View>
         </View>
       </KeyboardAvoidingView>
