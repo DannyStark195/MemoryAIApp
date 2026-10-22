@@ -55,8 +55,6 @@ The goal is to help you actually revisit and get value from the things you alrea
         Chat
       </Text>
 
-    <KeyboardAvoidingView className="flex-1" behavior={Platform.OS === "ios" ? "padding" : "height"}>
-
       <FlatList
         data={chats}
         renderItem={({ item }) => (
@@ -67,10 +65,11 @@ The goal is to help you actually revisit and get value from the things you alrea
         contentContainerStyle={{
           paddingBottom: 16,
         }}
-       keyboardShouldPersistTaps="handled"
+        keyboardShouldPersistTaps="handled"
         automaticallyAdjustKeyboardInsets={Platform.OS === "ios"}
       />
 
+    <KeyboardAvoidingView className="flex-1" behavior={Platform.OS === "ios" ? "padding" : "height"}>
       <View className="pt-2">
         <ChatInput />
       </View>
