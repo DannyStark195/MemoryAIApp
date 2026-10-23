@@ -27,7 +27,7 @@ export default function index() {
                       }
                       } />
                     {/* <View className="relative">
-                      <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
+                      <Text className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</Text>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
                     <View className="flex flex-col gap-5 absolute top-[30%] right-7 md:right-1 lg:-right-20">
@@ -40,7 +40,7 @@ export default function index() {
                         <Pressable onPress={()=> console.log("home pressed")} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
                           <StyledFontAwesome6 name="circle-plus" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
-                        {/* <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} /> */}
+                        <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} />
                     </View>
                   </View>
               </View>
