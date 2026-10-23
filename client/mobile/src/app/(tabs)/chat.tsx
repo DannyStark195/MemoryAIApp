@@ -79,7 +79,7 @@ export default function ChatScreen() {
           />
           <View
             className="px-2 md:px-4"
-            style={{ marginBottom: keyboardVisible ? 12 : 72 }}
+            style={{ marginBottom: keyboardVisible ? 50 : 72 }}
           >
             <ChatInput />
           </View>

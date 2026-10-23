@@ -1,7 +1,7 @@
 import ScreenLayout from "../../../components/ui/ScreenLayout"
 import BackButton from "../../../components/ui/BackButton"
 import Logo from "../../../components/ui/Logo"
-import { Linking, Pressable,View, Text } from "react-native";
+import { Linking, Pressable,View, Text, ScrollView } from "react-native";
 
 function About() {
   return (
@@ -20,24 +20,20 @@ function About() {
                   </View>
                   <View className="md:px-0">
                     <Text className="text-center mb-10 text-Primary-text dark:text-dark-Primary-text text-[1rem] leading-6">Memorii helps you rediscover the things you've saved by bringing meaningful memories to you at the right time.</Text>
-                    <View className="overflow-y-auto max-h-[40dvh] no-scrollbar">
-                        <View>
+                    <ScrollView className="h-[70%] no-scrollbar">
                           <Pressable onPress={() => {Linking.openURL('https://memoryaiapp.pxxl.click/privacy-policy')}}>
                             <View  className="w-full py-3.5 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-4"><Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Privacy Policy</Text></View>
                           </Pressable>
                           <Pressable onPress={() => {Linking.openURL('https://memoryaiapp.pxxl.click/terms-of-service')}} >
                             <View  className="w-full py-3.5 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-4"><Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Terms of service</Text></View>
                           </Pressable>
-                        </View>
-                        <View>
                           <Pressable onPress={() => {Linking.openURL('https://memoryaiapp.pxxl.click/')}}>
                             <View  className="w-full py-3.5 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-4"><Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Website</Text></View>
                           </Pressable>
                           <Pressable onPress={() => {Linking.openURL('https://memoryaiapp.pxxl.click/contact')}}>
                             <View  className="w-full py-3.5 px-3 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer mb-4"><Text className="text-Primary-text dark:text-dark-Primary-text text-[1rem]">Contact support</Text></View>
                           </Pressable>
-                        </View>
-                    </View>
+                    </ScrollView>
                   </View>
               </View>
     </ScreenLayout>

@@ -15,7 +15,7 @@ function settings() {
   return (
     <ScreenLayout>
       <Text className="text-xl md:text-xl font-medium leading-wider mb-2 text-Primary-text dark:text-dark-Primary-text">Settings</Text>
-      <View className="mt-8 max-h-[78dvh] no-scrollbar">
+      <View className="mt-8 no-scrollbar">
         <ScrollView>
           <View className="mb-6">
                 <Text className="text-[1rem] text-Primary-text dark:text-dark-Primary-text font-medium">Account</Text>
