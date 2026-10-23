@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { Pressable, View, Text, TextInput, Modal} from "react-native"
 import { useState } from "react";
+import {Feather} from "@expo/vector-icons"
 type AddMemoryModalProps = {
   onClose: () => void;
 };
@@ -11,11 +12,12 @@ function AddMemoryModal({ onClose }: AddMemoryModalProps) {
       const [inputHeight, setInputHeight] = useState(40);
       const canSend = input.trim().length > 0;
   return (
+    <Modal transparent visible animationType="fade" onResponderEnd={onClose}>
      <Pressable onPress={onClose} className="fixed inset-0 z-999 bg-black/80 flex justify-center items-end pb-40 lg:pb-12">
         <Pressable onPress={(event) => event.stopPropagation()} className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-8 w-[90%] lg:w-180">
           <View className="mb-6 relative">
             <Text className="text-xl text-center base-text">New Memorii</Text>
-            <Pressable onPress={onClose} className="absolute -top-2 -right-8 cursor-pointer"><XIcon size={14}/></Pressable>
+            <Pressable onPress={onClose} className="absolute -top-2 -right-8 cursor-pointer"><Feather name="x" className="base-text" size={16}></Feather></Pressable>
           </View>
           <form action="">
             <View className="relative mb-4">
@@ -50,6 +52,7 @@ function AddMemoryModal({ onClose }: AddMemoryModalProps) {
           </form>
         </Pressable>
       </Pressable>
+    </Modal>
   )
 }
 
