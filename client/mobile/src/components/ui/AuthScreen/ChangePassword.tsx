@@ -2,6 +2,7 @@ import { EvilIcons, MaterialIcons, SimpleLineIcons } from "@/components/icons";
 import { colors } from "@/theme/colors";
 import { useColorScheme } from "nativewind";
 import { Pressable, TextInput, View, Text } from "react-native";
+import ActionBtn from "../ActionBtn";
 
 function ChangePassword({ email }: { email: string }) {
     const { colorScheme } = useColorScheme();
@@ -77,11 +78,7 @@ function ChangePassword({ email }: { email: string }) {
                     style={{ color: inputTextColor }}
                 />
             </View>
-            {/* <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full "> */}
-                <Text className="text-dark-Primary-text dark:text-Primary-text font-semibold text-center text-[1rem] ">
-                    Change password
-                </Text>
-            {/* </Pressable> */}
+           <ActionBtn text="Change Password" style="text-[1rem]"/>
         </View>
     );
 }

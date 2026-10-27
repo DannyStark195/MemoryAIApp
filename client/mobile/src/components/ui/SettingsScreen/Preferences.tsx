@@ -22,19 +22,19 @@ function Preferences() {
             <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Appearance</Text>
               <View className="my-4 flex-row gap-4">
-                <Pressable aria-label="light mode"  onPress={()=> changeTheme("light")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <Pressable onPress={()=> changeTheme("light")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg">
                   <Text className="text-Primary-text dark:text-dark-Primary-text">Light</Text>
                   <View>
                       <Ionicons name={`radio-button-${theme === "light" ? "on" : "off"}`} size={24} className="text-Accent" />
                     </View>
                 </Pressable>
-                <Pressable aria-label="dark mode" onPress={()=> changeTheme("dark")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <Pressable onPress={()=> changeTheme("dark")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg">
                   <Text className="text-Primary-text dark:text-dark-Primary-text">Dark</Text>
                   <View>
                       <Ionicons name={`radio-button-${theme === "dark" ? "on" : "off"}`} size={24} className="text-Accent" />
                     </View>
                 </Pressable>
-                <Pressable aria-label="system default" onPress={()=> changeTheme("system")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <Pressable onPress={()=> changeTheme("system")} className="flex-row items-center justify-between flex-1 py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg">
                   <Text className="text-Primary-text dark:text-dark-Primary-text">System</Text>
                   <View>
                       <Ionicons name={`radio-button-${theme === "system" ? "on" : "off"}`} size={24} className="text-Accent" />
@@ -45,7 +45,7 @@ function Preferences() {
             <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Memories per day</Text>
               <View className="my-4">
-                <View className="w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <View className="w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg">
                   <Text className="mb-2 text-Primary-text dark:text-dark-Primary-text leading-6">Number of memories to resurface daily</Text>
                   <MemoriesPerDayBtn />
                 </View>
@@ -54,7 +54,7 @@ function Preferences() {
             <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Resurfacing Schedule</Text>
               <View className="my-4">
-                <View className="w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <View className="w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg">
                   <Text className="mb-2 text-Primary-text dark:text-dark-Primary-text leading-6">When you'd like to receive reminders</Text>
                   <ResurfacingScheduleButton />
                 </View>
@@ -63,7 +63,7 @@ function Preferences() {
              <View className="mb-2">
               <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">Notifications</Text>
               <View className="my-4">
-                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg cursor-pointer">
+                <View className="flex-row items-center justify-between w-full py-2 px-2 border border-Surface2 dark:border-dark-Surface2 rounded-lg">
                   <Text className="text-Primary-text dark:text-dark-Primary-text">Resurfacing reminders</Text>
                   <View className="flex-row items-center gap-4">
                     <Text className="font-medium text-Primary-text dark:text-dark-Primary-text">{resurfacingOn? 'on' : 'off'}</Text>

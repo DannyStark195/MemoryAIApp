@@ -4,6 +4,7 @@ import BackButton from "../BackButton"
 import { FontAwesome6 } from "@/components/icons";
 import LogoutButton from "../LogoutButton"
 import React, { useEffect, useState } from "react"
+import ActionBtn from "../ActionBtn";
 function AccountInfo() {
     const [accountNameInput, setAccountNameInput] = useState('Daniel Okafor')
     const [isChangingName, setIsChangingName] = useState(false);
@@ -71,16 +72,9 @@ function AccountInfo() {
                                 }
                             }}
                         />
-                        <Pressable
-                            className={`${isChangingName? '':'hidden'} bg-dark-Background dark:bg-Background px-4 py-2 !rounded-[40px] cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text`}
-                            style={({ pressed }) => ({
-                                backgroundColor: pressed ? "#F3EAF7" : "#6A1B9A",
-                            })}
-                            >
-                                <Text className="text-dark-Primary-text dark:text-Primary-text text-sm font-semibold">Save</Text>
-                        </Pressable>
+                        <ActionBtn style={`${isChangingName? '':'hidden'}`} text="save"/>
                     </View>
-                    <View className="cursor-pointer border border-Surface2 dark:border-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface w-[320px] p-3 rounded-lg transition-all duration-300">
+                    <View className="border border-Surface2 dark:border-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface w-[320px] p-3 rounded-lg transition-all duration-300">
                         <LogoutButton/>
                     </View>
                 </View>

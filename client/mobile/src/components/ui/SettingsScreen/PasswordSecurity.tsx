@@ -3,6 +3,7 @@ import BackButton from "@/components/ui/BackButton"
 import ChangePassword from "@/components/ui/AuthScreen/ChangePassword"
 import { useState } from "react"
 import { Text, View, Pressable } from "react-native"
+import ActionBtn from "../ActionBtn"
 
 function PasswordSecurity() {
   const [passwordChangeFormOpen, setPasswordChangeFormOpen] = useState(false)
@@ -24,11 +25,7 @@ function PasswordSecurity() {
                 <Text className="my-4 mb-6 text-Secondary-text dark:text-dark-Secondary-text text-[1rem]">
                   A reset code will be sent to our email
                 </Text>
-                <Pressable onPress={sendResetLink} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-                    <Text className="text-dark-Primary-text dark:text-Primary-text font-semibold text-center text-[1rem]">
-                      Send reset code
-                    </Text>
-                </Pressable>
+                <ActionBtn text="Send reset code" style="text-[1rem]" actionFunc={sendResetLink}/>
               </View>
               :
                 <ChangePassword email=""/>

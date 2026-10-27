@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Pressable, View, Text, TextInput, Modal} from "react-native"
 import { useState } from "react";
 import {Feather} from "@expo/vector-icons"
+import ActionBtn from "./ActionBtn";
 type AddMemoryModalProps = {
   onClose: () => void;
 };
@@ -19,7 +20,7 @@ function AddMemoryModal({ onClose }: AddMemoryModalProps) {
             <Text className="text-xl text-center base-text">New Memorii</Text>
             <Pressable onPress={onClose} className="absolute -top-2 -right-8 cursor-pointer"><Feather name="x" className="base-text" size={16}></Feather></Pressable>
           </View>
-          <form action="">
+          {/* <form action=""> */}
             <View className="relative mb-4">
               <TextInput keyboardType="email-address" placeholder="Title (e.g React cheet codes)" className="w-full py-2 px-4 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0"/>
               <Text className="text-sm my-1.5 ml-2 text-Secondary-text dark:text-dark-Secondary-text">Optional (if empty AI chooses automatically)</Text>
@@ -44,12 +45,9 @@ function AddMemoryModal({ onClose }: AddMemoryModalProps) {
 
             </View>
             <View className="flex gap-3">
-              <Pressable
-                accessibilityLabel="Send message"
-                accessibilityRole="button"
-                className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent"><Text className="base-text-reverse">Save Memorii</Text></Pressable>
+             <ActionBtn text="Save Memorii" />
             </View>
-          </form>
+          {/* </form> */}
         </Pressable>
       </Pressable>
     </Modal>
