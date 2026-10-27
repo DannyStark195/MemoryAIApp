@@ -21,19 +21,21 @@ function SearchBar({placeHolder, func}:searchProps){
           {/* <NotificationBell /> */}
       </View>
 
-      <View className="relative text-Tertiary-text flex-1 ml-0.5">
-        <View className="absolute top-2 left-3">
-          <Feather name="search" size={18} className="text-Tertiary-text dark:text-dark-Tertiary-text"/>
-        </View>
-        <TextInput
-                value={search}
-                onChangeText={setSearch}
-                placeholder={placeHolder}
-                placeholderTextColor={inputTextColor}
-                className="text-Tertiary-text dark:text-dark-Tertiary-text px-4 pl-10 py-2 text-sm rounded-lg flex-1 w-[95%] outline-Accent md:w-full"
-                style={{ color: inputTextColor }}
-                />
-      </View>
+     <View className="relative">
+                     <View className="absolute top-2 left-3">
+                                   <Feather name="search" size={18} className="text-Tertiary-text dark:text-dark-Tertiary-text"/>
+
+                     </View>
+                     <TextInput
+                        //  keyboardType="email-address"
+                         placeholder={placeHolder}
+                         placeholderTextColor={inputTextColor}
+                         value={search}
+                         onChangeText={setSearch}
+                         className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-lg text-sm base-text"
+                         style={{ color: inputTextColor }}
+                     />
+                 </View>
       
     </View>
   )
