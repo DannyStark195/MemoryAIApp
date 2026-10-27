@@ -22,8 +22,8 @@ function SearchBar({placeHolder, func}:searchProps){
       </View>
 
      <View className="relative">
-                     <View className="absolute top-2 left-3">
-                                   <Feather name="search" size={18} className="text-Tertiary-text dark:text-dark-Tertiary-text"/>
+                     <View className="absolute top-3 left-3">
+                                   <Feather name="search" size={14} className="text-Tertiary-text dark:text-dark-Tertiary-text"/>
 
                      </View>
                      <TextInput
@@ -32,7 +32,7 @@ function SearchBar({placeHolder, func}:searchProps){
                          placeholderTextColor={inputTextColor}
                          value={search}
                          onChangeText={setSearch}
-                         className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-lg text-sm base-text"
+                         className="w-full py-2 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-full text-sm base-text"
                          style={{ color: inputTextColor }}
                      />
                  </View>
