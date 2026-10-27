@@ -18,7 +18,7 @@ export default function ChatInput() {
   // }
 
   return (
-    <View className="flex-row items-end rounded-[26px] border border-Border bg-Surface px-2 py-2 dark:border-dark-Surface2 dark:bg-dark-Surface">
+    <View className="flex-row items-end rounded-[26px] border border-Border bg-Background dark:bg-dark-Background px-2 py-2 dark:border-dark-Surface2">
       <TextInput
         accessibilityLabel="Message Memory AI"
         className="max-h-[128px] min-h-[40px] flex-1 px-3 py-2 text-[15px] leading-5 text-Primary-text dark:text-dark-Primary-text outline-none"
@@ -28,7 +28,7 @@ export default function ChatInput() {
           setInputHeight(Math.min(Math.max(event.nativeEvent.contentSize.height, 40), 112))
         }
         // onSubmitEditing={send}
-        placeholder="Message Memory AI..."
+        placeholder="Ask me anything..."
         placeholderTextColor="#99958D"
         returnKeyType="send"
         style={{ height: inputHeight }}
