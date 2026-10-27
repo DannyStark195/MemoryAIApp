@@ -14,7 +14,7 @@ function AddMemoryModal({ onClose }: AddMemoryModalProps) {
       const canSend = input.trim().length > 0;
   return (
     <Modal transparent visible animationType="fade" onResponderEnd={onClose}>
-     <Pressable onPress={onClose} className="fixed inset-0 z-999 bg-black/80 flex justify-center items-end pb-40 lg:pb-12">
+     <Pressable onPress={onClose} className="flex-1 flex-row bg-black/80 justify-center items-end pb-40 lg:pb-12">
         <Pressable onPress={(event) => event.stopPropagation()} className="bg-Background dark:bg-dark-Background rounded-lg px-10 py-8 w-[90%] lg:w-180">
           <View className="mb-6 relative">
             <Text className="text-xl text-center base-text">New Memorii</Text>
