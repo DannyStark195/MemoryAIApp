@@ -1,19 +1,21 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import {PaperPlaneIcon } from "@phosphor-icons/react"
 
 function ChatInput() {
     const textareaRef = useRef<HTMLTextAreaElement>(null)
-
+    const [input, setInput] = useState("");
+    const canSend = input.trim().length > 0;
     function handleChatInput (){
         const textarea = textareaRef.current
         if(!textarea) return
-
         textarea.style.height = "auto";
         textarea.style.height = `${Math.min(textarea.scrollHeight, 180)}px`
+        setInput(textarea.value)
     }
+
   return (
     <form action="">
-        <div className="flex border bg-Background dark:bg-dark-Background border-Border dark:border-dark-Surface2 px-2 pt-1 pb-4 rounded-lg min-h-13">
+        <div className="flex items-end rounded-[26px] border border-Border bg-Background dark:bg-dark-Background px-2 py-2 dark:border-dark-Surface2 min-h-13">
             <textarea 
                 name="" id=""
                 placeholder="Ask me anything..."
@@ -21,12 +23,14 @@ function ChatInput() {
                 onInput={handleChatInput}
                 ref={textareaRef}
                 rows={1}
+                value={input}
             >
 
             </textarea>
             <button
                 type="button"
-                className="absolute bottom-1.5 right-2 rounded-lg p-1.5 bg-Accent hover:scale-105 transition-all cursor-pointer text-dark-Primary-text"
+                className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-Accent/40"}`}
+                disabled={!canSend}
             >
                 <PaperPlaneIcon size={12} weight="fill" />
             </button>
