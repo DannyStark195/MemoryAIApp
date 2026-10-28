@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar.tsx"
 
 function Header({children} : {children :ReactNode}) {
   return (
-    <div className="flex flex-col justify-between gap-4 md:flex-row mb-8">
+    <div className="flex flex-col justify-between gap-4 md:flex-row mb-6 md:mb-10">
         {children}
         <SearchBar placeHolder="Search your memories..."/>
     </div>

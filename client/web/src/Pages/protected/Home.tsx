@@ -46,13 +46,13 @@ function Home() {
             </div> */}
             <div className="grid gap-4 absolute top-[30%] right-1 lg:-right-20">
                 <button className="px-2 py-2 rounded-full transition-all duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                  <ShareNetworkIcon size={30} weight="fill"/>
+                  <ShareNetworkIcon size={28} weight="fill"/>
                 </button>
                 <button className="px-2 py-2 rounded-full transition-all duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                  <OpenAiLogoIcon size={30} weight="fill"/>
+                  <OpenAiLogoIcon size={28} weight="fill"/>
                 </button>
                 <button onClick={toggleAddFilePanel} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
-                  <PlusCircleIcon size={30} weight="fill"/>
+                  <PlusCircleIcon size={28} weight="fill"/>
                 </button>
                 <AddMemoryFlow style={addFilePanelOpen ? "flex" : "hidden"} />
             </div>
