@@ -38,7 +38,7 @@ function Home() {
       </Header>
       <main className="overflow-y-scroll max-h-[84dvh]">
         <div className="grid justify-center">
-          <div className="relative md:w-100 lg:w-120 h-[60dvh] md:h-[70dvh]">
+          <div className="relative md:w-100 lg:w-120 h-[65dvh] md:h-[70dvh]">
             <img src={profile} className="w-full h-full rounded-lg  overflow-hidden" />
             {/* <div className="relative">
               <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
