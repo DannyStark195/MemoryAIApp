@@ -44,7 +44,7 @@ export default function ChatInput() {
       <Pressable
         accessibilityLabel="Send message"
         accessibilityRole="button"
-        className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-dark-Accent-hover"}`}
+        className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-Accent/40"}`}
         disabled={!canSend}
         // onPress={send}
       >

@@ -29,7 +29,7 @@ function ChatInput() {
             </textarea>
             <button
                 type="button"
-                className={`mb-0.5 h-10 w-10 flex items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-dark-Accent-hover"} cursor-pointer`}
+                className={`mb-0.5 h-10 w-10 flex items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-Accent/40"} text-dark-Primary-text cursor-pointer`}
                 disabled={!canSend}
             >
                 <PaperPlaneIcon size={18} weight="fill" />
