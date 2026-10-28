@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Pressable, TextInput, View } from "react-native";
 import { Ionicons } from "@/components/icons";
+import { colors } from "@/theme/colors";
+import { useColorScheme } from "nativewind";
 
 type ChatInputProps = {
   onSend: (message: string) => void;
@@ -10,7 +12,11 @@ export default function ChatInput() {
   const [input, setInput] = useState("");
   const [inputHeight, setInputHeight] = useState(40);
   const canSend = input.trim().length > 0;
-
+  const { colorScheme } = useColorScheme();
+  const inputTextColor =
+      colorScheme === "dark"
+          ? colors.dark["Secondary-text"]
+          : colors.light["Secondary-text"];
   // function send() {
   //   if (!canSend) return;
   //   onSend(input);
@@ -29,7 +35,7 @@ export default function ChatInput() {
         }
         // onSubmitEditing={send}
         placeholder="Ask me anything..."
-        placeholderTextColor="#99958D"
+        placeholderTextColor={inputTextColor}
         returnKeyType="send"
         style={{ height: inputHeight }}
         textAlignVertical="center"
@@ -38,7 +44,7 @@ export default function ChatInput() {
       <Pressable
         accessibilityLabel="Send message"
         accessibilityRole="button"
-        className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-Accent/40"}`}
+        className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-dark-Accent-hover"}`}
         disabled={!canSend}
         // onPress={send}
       >

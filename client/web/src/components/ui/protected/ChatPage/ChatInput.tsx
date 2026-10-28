@@ -15,11 +15,11 @@ function ChatInput() {
 
   return (
     <form action="">
-        <div className="flex items-end rounded-[26px] border border-Border bg-Background dark:bg-dark-Background px-2 py-2 dark:border-dark-Surface2 min-h-13">
+        <div className="flex items-end rounded-[26px] border border-Border bg-Background dark:bg-dark-Background px-3 py-2 dark:border-dark-Surface2 min-h-13">
             <textarea 
                 name="" id=""
                 placeholder="Ask me anything..."
-                className="max-h-50 text-sm overflow-y-auto resize-none outline-none w-[95%]"
+                className="max-h-50 self-center text-sm overflow-y-auto resize-none outline-none w-[95%]"
                 onInput={handleChatInput}
                 ref={textareaRef}
                 rows={1}
@@ -29,10 +29,10 @@ function ChatInput() {
             </textarea>
             <button
                 type="button"
-                className={`mb-0.5 h-10 w-10 items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-Accent/40"}`}
+                className={`mb-0.5 h-10 w-10 flex items-center justify-center rounded-full ${canSend ? "bg-Accent" : "bg-dark-Accent-hover"} cursor-pointer`}
                 disabled={!canSend}
             >
-                <PaperPlaneIcon size={12} weight="fill" />
+                <PaperPlaneIcon size={18} weight="fill" />
             </button>
         </div>
     </form>
