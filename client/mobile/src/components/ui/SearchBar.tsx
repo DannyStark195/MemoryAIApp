@@ -32,7 +32,7 @@ function SearchBar({placeHolder, func}:searchProps){
                          placeholderTextColor={inputTextColor}
                          value={search}
                          onChangeText={setSearch}
-                         className="w-full py-2 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-full text-sm base-text"
+                         className="w-full py-2 px-2 pl-10 outline-Accent focus:border-Accent focus:border-2 rounded-full text-sm base-text border border-Surface2 dark:border-dark-Surface2"
                          style={{ color: inputTextColor }}
                      />
                  </View>

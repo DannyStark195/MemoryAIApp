@@ -29,6 +29,9 @@ export default function TabLayout() {
           backgroundColor: theme.Background,
           paddingTop: 6,
           paddingBottom: 6,
+          elevation: 0, // Android
+          shadowOpacity: 0, // iOS
+          shadowColor: "transparent",
         },
 
         tabBarActiveTintColor: theme["Accent"],

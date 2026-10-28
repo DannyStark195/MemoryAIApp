@@ -24,7 +24,7 @@ function Home() {
       <Header>
         <div className="flex flex-1 justify-between">
           <div>
-            <h1 className="text-xl md:text-xl font-medium leading-wider mb-2">
+            <h1 className="text-lg md:text-lg semibold leading-wider mb-2">
               Good {getHourOfDay()},
               <span className="text-Accent ml-1">
               Daniel
@@ -44,7 +44,7 @@ function Home() {
               <span className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</span>
               <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
             </div> */}
-            <div className="grid gap-4 absolute top-[30%] right-0 md:right-1 lg:-right-20">
+            <div className="grid gap-4 absolute top-[30%] right-1 lg:-right-20">
                 <button className="px-2 py-2 rounded-full transition-all duration-200 cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
                   <ShareNetworkIcon size={30} weight="fill"/>
                 </button>
