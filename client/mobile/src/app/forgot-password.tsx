@@ -22,8 +22,8 @@ function ForgotPassword() {
   }
   return (
     <ScreenLayout>
-      <View>
-        <View className="flex flex-col justify-center gap-4 lg:justify-start lg:flex-row min-h-dvh">
+      <View className="flex-1 justify-center">
+        <View className="flex flex-col justify-center gap-4 lg:justify-start lg:flex-row">
           <View className="lg:w-[50%] lg:flex items-center justify-center mb-4">
             <View className="flex flex-col items-center">
               <View>

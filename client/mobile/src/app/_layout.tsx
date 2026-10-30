@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Stack } from "expo-router";
 import "../global.css";
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -9,12 +8,11 @@ import {
   SafeAreaView,
 } from "react-native-safe-area-context";
 import { router } from "expo-router";
-
+import {useEffect} from "react"
 export default function RootLayout() {
-  useEffect(() => {
+   useEffect(() => {
     router.replace("/auth");
   }, []);
-
   return (
     <SafeAreaProvider>
       <SafeAreaView className="flex-1 bg-Background dark:bg-dark-Background">
