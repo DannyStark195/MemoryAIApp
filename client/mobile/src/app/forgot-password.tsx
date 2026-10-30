@@ -1,12 +1,20 @@
 import { useState } from "react"
 import Logo from "../components/ui/Logo"
-import { EvilIcons, MaterialIcons, SimpleLineIcons } from "@/components/icons";
+import { EvilIcons } from "@/components/icons";
 import ScreenLayout from "../components/ui/ScreenLayout"
 import ChangePassword from "../components/ui/AuthScreen/ChangePassword"
+import ActionBtn from "../components/ui/ActionBtn"
 import { Link } from "expo-router"
-import { View, Text, Pressable, TextInput } from "react-native"
+import { View, Text, TextInput } from "react-native"
+import { useColorScheme } from "nativewind"
+import { colors } from "@/theme/colors"
 
 function ForgotPassword() {
+  const { colorScheme } = useColorScheme();
+  const inputTextColor =
+    colorScheme === "dark"
+      ? colors.dark["Secondary-text"]
+      : colors.light["Secondary-text"];
   const [forgotPasswordTab, setforgotPasswordTab] = useState(true)
   
   function sendCode(){
@@ -39,12 +47,10 @@ function ForgotPassword() {
                           <View className="absolute top-2.5 left-3">
                             <EvilIcons name="envelope" size={22} className="base-text"/>
                           </View>
-                          <TextInput keyboardType="email-address" placeholder="Email" className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
+                          <TextInput keyboardType="email-address" placeholder="Email" placeholderTextColor={inputTextColor} className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem] base-text"/>
                         </View>
                       </View>
-                      <Pressable onPress={sendCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-                        <Text className="base-text-reverse font-semibold text-[1rem] text-center">Send Code</Text>
-                      </Pressable>
+                      <ActionBtn text="Send Code" actionFunc={sendCode} style="w-full" />
                     </View>
                     <Text className="mt-4 text-sm base-text">Remember your password? <Link href={"/auth"} className="text-Accent font-medium"><Text>Log in</Text></Link></Text>
                   </View>
