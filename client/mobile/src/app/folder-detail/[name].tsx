@@ -7,6 +7,7 @@ import { Octicons, StyledFontAwesome6 } from "@/components/icons";
 import BackButton from "@/components/ui/BackButton";
 import File from "@/components/ui/LibraryScreen/File";
 import AddMemoryFlow from "@/components/ui/AddMemoryFlow";
+import CustomTabBar from "@/components/ui/CustomTabBar";
 function FolderDetail() {
   const { name } = useLocalSearchParams<{name: string}>();
   const [addFilePanelOpen, setAddFilePanelOpen] = useState(false);
@@ -108,6 +109,7 @@ function FolderDetail() {
           <StyledFontAwesome6 name="plus" size={20} className="text-dark-Primary-text" />
         </Pressable>
         <AddMemoryFlow style={addFilePanelOpen ? "flex-row" : "hidden"}/>
+        <CustomTabBar />
     </ScreenLayout>
   )
 }

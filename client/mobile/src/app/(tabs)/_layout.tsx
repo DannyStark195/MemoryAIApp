@@ -29,6 +29,7 @@ export default function TabLayout() {
           backgroundColor: theme.Background,
           paddingTop: 6,
           paddingBottom: 6,
+          paddingInline: 4,
           elevation: 0, // Android
           shadowOpacity: 0, // iOS
           shadowColor: "transparent",
@@ -103,13 +104,13 @@ export default function TabLayout() {
       <Tabs.Screen
         name="folder-detail/[name]"
         options={{
-          href: null,
+           tabBarButton: () => null,
         }}
       />
       <Tabs.Screen
         name="setting/[name]"
         options={{
-          href: null,
+           tabBarButton: () => null,
         }}
       />
     </Tabs>

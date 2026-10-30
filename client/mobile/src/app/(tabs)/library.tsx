@@ -24,9 +24,9 @@ function library() {
   useEffect(()=>{
       try{
         getFolders().then(setFolders)
-        if(folders){
-          throw new Error("Folders not found!")
-        }
+        // if(folders){
+        //   throw new Error("Folders not found!")
+        // }
       }
       catch(error){
         console.log("Error:", error)
