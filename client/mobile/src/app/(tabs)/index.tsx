@@ -25,32 +25,32 @@ export default function index() {
             </Text> 
           </View> 
         </Header>
-        <View className="">
-            <View className="">
-                      <Image source={require("../../../assets/images/profile.png")} className="!rounded-[20px]" resizeMode="contain" style={
-                      {width: "100%",
-                       height:"90%",
-                       // borderRadius: 50,
-                      }
-                      } />
+            <View>
+                      {/* <View className="overflow-hidden"> */}
+                        <Image source={require("../../../assets/images/profile.png")} className="" resizeMode="contain" style={
+                        {width: "100%",
+                        height:"84%",
+                        // borderRadius: 50,
+                        }
+                        } />
+                      {/* </View> */}
                     {/* <View className="relative">
                       <Text className="text-Secondary-text dark:text-dark-Secondary-text cursor-pointer text-sm" onClick={toggleNewFolderOptions}>+ New Folder</Text>
                       <NewFolderOptions style={newFolderOptionsOpen? 'flex':'hidden'}/>
                     </View> */}
                     <View className="flex flex-col gap-5 absolute top-[30%] right-4 md:right-1 lg:-right-20">
                           <Pressable onPress={() => changeTheme("system")} className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 ">
-                            <Ionicons name="share-social" size={25} color="" className="text-Primary-text dark:text-dark-Primary-text"/>
+                            <Ionicons name="share-social" size={24} color="" className="text-Primary-text dark:text-dark-Primary-text"/>
                           </Pressable>
                         <Pressable className="px-2 py-2 rounded-full  cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2 hover:scale-110">
-                          <AntDesign name="open-ai" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
+                          <AntDesign name="open-ai" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                         <Pressable onPress={toggleAddFilePanelOpen} className="relative px-2 py-2 rounded-full cursor-pointer bg-Surface2 dark:bg-dark-Surface2 shadow-sm shadow-Surface2 dark:shadow-dark-Surface2">
-                          <StyledFontAwesome6 name="circle-plus" size={25} className="text-Primary-text dark:text-dark-Primary-text" />
+                          <StyledFontAwesome6 name="circle-plus" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                       </View>
                       <AddMemoryFlow style={addFilePanelOpen ? "flex-row" : "hidden"} />
                   </View>
-              </View>
     </ScreenLayout>
   );
 }
