@@ -36,10 +36,12 @@ function ErrorState({ errorProps }: { errorProps: errorProps }) {
                         onPress={() => errorProps.action()}
                         className="flex-row items-center gap-2 bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-3 px-4 rounded-lg cursor-pointer hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 "
                     >
-                        <Feather name="refresh-cw" size={21} color="black" />
-                        <Text className="base-text-reverse text-[1rem] font-semibold">
-                            Try Again
-                        </Text>
+                        {({pressed})=>(
+                            <>             
+                                <Feather name="refresh-cw" size={21} className={pressed?'text-white':'text-white dark:text-black'} />
+                                <Text className={`text-dark-Primary-text dark:text-Primary-text text-center ${pressed? 'text-dark-Primary-text dark:text-dark-Primary-text': ''} font-semibold`}>Try Again</Text>
+                            </>
+            )}
                     </Pressable>
                 </View>
             </View>
