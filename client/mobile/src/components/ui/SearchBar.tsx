@@ -4,12 +4,10 @@ import { type Memory } from "@/types/model";
 import { getFolders } from "@/api/getFolders";
 import File from "@/components/ui/LibraryScreen/File";
 import { useColorScheme } from "nativewind";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FlatList,
   Dimensions,
-  Platform,
-  StatusBar,
   Text,
   TextInput,
   View,
@@ -28,9 +26,7 @@ type SearchProps = {
 function SearchBar({ placeHolder, func }: SearchProps) {
   const [search, setSearch] = useState("");
   const [memories, setMemories] = useState<SearchMemory[]>([]);
-  const [overlayTop, setOverlayTop] = useState(0);
   const [inputHeight, setInputHeight] = useState(0);
-  const inputRef = useRef<TextInput>(null);
   const { colorScheme } = useColorScheme();
   const inputTextColor = colorScheme === "dark"
     ? colors.dark["Tertiary-text"]
@@ -52,15 +48,6 @@ function SearchBar({ placeHolder, func }: SearchProps) {
     return () => { isCurrent = false; };
   }, []);
 
-  useEffect(() => {
-    if (!isOpen) return;
-    const input = inputRef.current;
-    input?.measureInWindow((_x, y, _width, height) => {
-      const statusBarOffset = Platform.OS === "android" ? StatusBar.currentHeight ?? 0 : 0;
-      setOverlayTop(y + height + statusBarOffset);
-    });
-  }, [isOpen]);
-
   const normalizedSearch = search.trim().toLocaleLowerCase();
   const results = memories.filter(({ memory, folderName }) =>
     `${memory.name} ${memory.category} ${folderName}`.toLocaleLowerCase().includes(normalizedSearch)
@@ -68,10 +55,9 @@ function SearchBar({ placeHolder, func }: SearchProps) {
 
   function closeSearch() {
     setSearch("");
-    inputRef.current?.blur();
   }
 
-  const overlayHeight = Math.max(0, Dimensions.get("window").height - overlayTop);
+  const overlayHeight = Dimensions.get("window").height;
 
   return (
     <View className="flex gap-2">
@@ -80,7 +66,6 @@ function SearchBar({ placeHolder, func }: SearchProps) {
           <Feather name="search" size={14} className="text-Tertiary-text dark:text-dark-Tertiary-text" />
         </View>
         <TextInput
-          ref={inputRef}
           placeholder={placeHolder}
           placeholderTextColor={inputTextColor}
           value={search}
