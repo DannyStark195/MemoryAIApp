@@ -15,7 +15,7 @@ function NewFolderOptions({ style}: NewFolderOptionsProps) {
 
   return (
     <>
-      <Pressable className={`rounded-lg gap-1 bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none py-3 px-3 !w-[210px] justify-between absolute top-[101%] right-0 lg:right-10 ${style}`}>
+      <Pressable className={`rounded-lg gap-1 bg-Background dark:bg-dark-Surface2 shadow-Border shadow-lg dark:shadow-none py-3 px-3 !w-[210px] justify-between absolute top-[110%] right-0 lg:right-10 ${style}`}>
         {files.map(file =>(
           <View key={file} className={``}>
             {file === "Create Folder" && 

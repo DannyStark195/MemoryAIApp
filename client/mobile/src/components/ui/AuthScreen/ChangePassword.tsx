@@ -8,8 +8,8 @@ function ChangePassword({ email }: { email: string }) {
     const { colorScheme } = useColorScheme();
     const inputTextColor =
         colorScheme === "dark"
-            ? colors.dark["Primary-text"]
-            : colors.light["Primary-text"];
+            ? colors.dark["Secondary-text"]
+            : colors.light["Secondary-text"];
 
     return (
         <View className="my-4 flex flex-col gap-4">
@@ -27,7 +27,6 @@ function ChangePassword({ email }: { email: string }) {
                     placeholderTextColor={inputTextColor}
                     /* value={email} */
                     className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
-                    style={{ color: inputTextColor }}
                 />
             </View>
             <View className="relative">
@@ -43,7 +42,6 @@ function ChangePassword({ email }: { email: string }) {
                     placeholder="Code"
                     placeholderTextColor={inputTextColor}
                     className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
-                    style={{ color: inputTextColor }}
                 />
             </View>
             <View className="relative">
@@ -59,7 +57,6 @@ function ChangePassword({ email }: { email: string }) {
                     placeholder="New password"
                     placeholderTextColor={inputTextColor}
                     className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
-                    style={{ color: inputTextColor }}
                 />
             </View>
             <View className="relative">
@@ -75,7 +72,6 @@ function ChangePassword({ email }: { email: string }) {
                     placeholder="Confirm New password"
                     placeholderTextColor={inputTextColor}
                     className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md text-[1rem] base-text"
-                    style={{ color: inputTextColor }}
                 />
             </View>
            <ActionBtn text="Change Password" style="text-[1rem]"/>

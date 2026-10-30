@@ -105,7 +105,7 @@ function FolderDetail() {
             )}
           />
       </View>
-        <Pressable onPress={toggleAddFilePanel} className="absolute bottom-[18%] right-[5%] bg-Accent px-2.5 py-2 rounded-lg">
+        <Pressable onPress={toggleAddFilePanel} className="absolute bottom-[16%] right-[5%] bg-Accent px-2.5 py-2 rounded-lg">
           <StyledFontAwesome6 name="plus" size={20} className="text-dark-Primary-text" />
         </Pressable>
         <AddMemoryFlow style={addFilePanelOpen ? "flex-row" : "hidden"}/>
