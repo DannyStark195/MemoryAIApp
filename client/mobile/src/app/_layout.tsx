@@ -7,8 +7,13 @@ import {
   SafeAreaProvider,
   SafeAreaView,
 } from "react-native-safe-area-context";
+import { router } from "expo-router";
 
 export default function RootLayout() {
+  const loggedIn = false
+  if(!loggedIn){
+    router.navigate('/auth')
+  }
   return (
     <SafeAreaProvider>
       <SafeAreaView className="flex-1 bg-Background dark:bg-dark-Background">

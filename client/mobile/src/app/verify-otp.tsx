@@ -2,8 +2,10 @@ import { useState } from "react"
 import Logo from "../components/ui/Logo"
 import ScreenLayout from "../components/ui/ScreenLayout"
 // import { useToast } from "../context/ToastContext"
-import {MaterialICons } from "@/components/icons";
+import { MaterialIcons } from "@/components/icons";
 import { Pressable, View, Text, TextInput } from "react-native"
+import {useColorScheme} from "nativewind"
+import {colors} from "@/theme/colors"
 
 function VerifyOtp() {
    const { colorScheme } = useColorScheme();
@@ -54,9 +56,7 @@ function VerifyOtp() {
                             />
                         </View>
                       </View>
-                         <Pressable onPress={verifyCode} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-                          <Text className="base-text-reverse font-semibold text-[1rem] text-center">Verify</Text>
-                        </Pressable>
+                         <ActionBtn text="Verify" actionFunc={verifyCode} style="w-full"/>
                     </View>
                     <Text className="mt-4 text-sm base-text">
                       Didn't recieve code?    
@@ -66,8 +66,8 @@ function VerifyOtp() {
                           onPress={()=>{
                             // showToast({type:"success", message:"Verification code resent!"})
                             }} 
-                            className="text-Accent font-medium cursor-pointer">
-                              <Text>Resend code</Text>
+                            >
+                              <Text className="text-Accent font-medium cursor-pointer">Resend code</Text>
                           </Pressable>
                         </Text>
                     </Text>

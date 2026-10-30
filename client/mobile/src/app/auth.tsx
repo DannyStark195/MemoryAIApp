@@ -45,7 +45,7 @@ function Auth() {
                 >
                   <Text className={`text-lg font-medium  ${loginTabOpen?'text-Primary-text dark:text-dark-Primary-text':'text-dark-Primary-text'}`}>Sign up</Text>
                 </Pressable>
-                <View className={`h-[52px] w-[185px] lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'} transition-all duration-900`}>
+                <View className={`h-[48px] w-[170px] lg:h-0.75 rounded-lg lg:w-45 lg:rounded-full bg-Accent absolute bottom-0 ${loginTabOpen? 'left-0':'right-0'}`}>
                 </View>
               </View>
               <View className="w-100">

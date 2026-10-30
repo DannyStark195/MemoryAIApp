@@ -6,6 +6,7 @@ import {useTheme} from "@/context/ThemeContext";
 import AddMemoryFlow from "@/components/ui/AddMemoryFlow";
 import {useState} from "react";
 export default function index() {
+  
   const {changeTheme} = useTheme()
   // changeTheme("system")
   const [addFilePanelOpen, setAddFilePanelOpen] = useState(false);

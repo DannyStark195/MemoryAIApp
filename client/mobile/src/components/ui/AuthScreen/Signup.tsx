@@ -2,6 +2,7 @@ import { EvilIcons, FontAwesome6, SimpleLineIcons } from "@/components/icons";
 import { Pressable, TextInput, View, Text } from "react-native"
 import Toast from "react-native-toast-message"
 import { router } from 'expo-router'
+import ActionBtn from "@/components/ui/ActionBtn"
 
 function Signup() {
 
@@ -37,9 +38,7 @@ function Signup() {
             <TextInput secureTextEntry={true} placeholder="Password" className="w-full py-2.5 px-2 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
           </View>
         </View>
-        <Pressable onPress={handleSignUp} className="bg-dark-Background dark:bg-Background text-dark-Primary-text dark:text-Primary-text font-semibold py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-          <Text className="base-text-reverse font-semibold text-[1rem] text-center">Create account</Text>
-        </Pressable>
+       <ActionBtn text="Create account" style="w-full" actionFunc={handleSignUp}/>
       </View>
     </View>
   )

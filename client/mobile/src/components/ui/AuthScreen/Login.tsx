@@ -1,7 +1,7 @@
 import { EvilIcons, SimpleLineIcons } from "@/components/icons";
 import { Pressable, TextInput, View, Text } from "react-native"
-import { Link } from "expo-router"
-
+import { router } from "expo-router"
+import ActionBtn from "@/components/ui/ActionBtn"
 function Login() {
   return (
     <View className="">
@@ -20,14 +20,10 @@ function Login() {
             <TextInput secureTextEntry={true} placeholder="Password" className="w-full py-2 px-2.5 pl-10 border border-Surface2 dark:border-dark-Surface2 rounded-md outline-0 text-[1rem]"/>
           </View>
         </View>
-        <Link href={"/forgot-password"} className="text-end mb-2">
-          <Text className="text-end base-text hover:text-Accent transition-colors duration-200 cursor-pointer text-sm">forgot password?</Text>
-        </Link>
-        <Pressable className="bg-dark-Background dark:bg-Background py-2.5 px-4 rounded-lg cursor-pointer w-full hover:bg-Accent active:bg-Accent active:text-dark-Primary-text hover:text-dark-Primary-text hover:scale-102 transition-all duration-300">
-          <Text className="base-text-reverse font-semibold text-[1rem] text-center">
-            Log in
-          </Text>
+        <Pressable onPress={router.push("/forgot-password")} className="text-end mb-4">
+          <Text className="text-end base-text hover:text-Accent text-sm w-full">forgot password?</Text>
         </Pressable>
+       <ActionBtn text="Log In" style="w-full"/>
       </View>
     </View>
   )
