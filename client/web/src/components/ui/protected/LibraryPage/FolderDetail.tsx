@@ -1,4 +1,4 @@
-import { PencilSimpleIcon, PlusIcon } from "@phosphor-icons/react";
+import { PencilSimpleIcon } from "@phosphor-icons/react";
 import Layout from "../Layout.tsx";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
