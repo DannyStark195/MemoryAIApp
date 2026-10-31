@@ -51,7 +51,7 @@ export default function index() {
                         </Pressable>
                       </View>
                       <View className="relative">
-                        <AddMemoryFlow style={addFilePanelOpen ? "flex-row bottom-40" : "hidden"} />
+                        <AddMemoryFlow style={addFilePanelOpen ? "flex-row bottom-16" : "hidden"} />
                       </View>
                   </View>
     </ScreenLayout>
