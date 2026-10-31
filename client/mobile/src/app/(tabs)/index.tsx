@@ -50,7 +50,9 @@ export default function index() {
                           <StyledFontAwesome6 name="circle-plus" size={24} className="text-Primary-text dark:text-dark-Primary-text" />
                         </Pressable>
                       </View>
-                      <AddMemoryFlow style={addFilePanelOpen ? "flex-row" : "hidden"} />
+                      <View className="relative">
+                        <AddMemoryFlow style={addFilePanelOpen ? "flex-row bottom-40" : "hidden"} />
+                      </View>
                   </View>
     </ScreenLayout>
   );

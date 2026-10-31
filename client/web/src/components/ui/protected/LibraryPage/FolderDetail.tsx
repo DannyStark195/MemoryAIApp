@@ -1,4 +1,4 @@
-import { PencilSimpleIcon } from "@phosphor-icons/react";
+import { PencilSimpleIcon, PlusIcon } from "@phosphor-icons/react";
 import Layout from "../Layout.tsx";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -60,9 +60,7 @@ function FolderDetail() {
         <BackButton />
       </div>
       <main>
-          <div className="relative flex justify-end items-center gap-2 my-4">
-            <span onClick={toggleAddFilePanel} className="cursor-pointer text-xl hover:bg-Surface2 dark:hover:bg-dark-Surface2 px-2 py-1 rounded-full">+</span>
-            <AddMemoryFlow style={addFilePanelOpen? 'flex':'hidden'}/>
+          <div className="flex justify-end items-center gap-2 my-4">
             <span className="cursor-pointer text-lg hover:bg-Surface2 dark:hover:bg-dark-Surface2 px-2 py-1 rounded-full">
               <PencilSimpleIcon size={18}/>
             </span>
@@ -73,6 +71,14 @@ function FolderDetail() {
                                       <File fileProps={file} key={file.id}/>
                                     ))}
             </div>
+          </div>
+          <div>
+            <div className="relative">
+              <AddMemoryFlow style={addFilePanelOpen? 'flex -top-4 md:top-20':'hidden'}/>
+            </div>
+            <button onClick={toggleAddFilePanel} className="absolute bottom-[16%] right-[5%] text-dark-Primary-text text-4xl bg-Accent px-4 py-1 cursor-pointer hover:scale-102 rounded-lg">
+              +
+            </button>
           </div>
       </main>
     </Layout>

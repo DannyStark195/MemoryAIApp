@@ -13,7 +13,7 @@ function AddFile({ style, onAddMemory }: AddFileProps) {
   }
   return (
       <View
-       className={`flex-row rounded-lg gap-1 bg-Background dark:bg-dark-Surface shadow-Border shadow-lg dark:shadow-none py-3 px-3 absolute top-[60%] right-8 lg:right-10 z-4 ${style}`}>
+       className={`flex-row rounded-lg gap-1 bg-Background dark:bg-dark-Surface shadow-Border shadow-lg dark:shadow-none py-3 px-3 absolute right-8 lg:right-10 z-4 ${style}`}>
         {files.map(file =>(
           <View key={file} className={``}>
             {file === "Photo" && <Pressable onPress={AddMemory} className="text-md border-Border flex flex-col items-center justify-center gap-2 py-2 px-2 rounded-lg hover:bg-Surface2 dark:hover:bg-dark-Surface"><Feather name="camera" size={24} className="text-blue-500"/><Text className="text-blue-500">{file}</Text></Pressable>}
