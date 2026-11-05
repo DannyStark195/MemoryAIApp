@@ -7,7 +7,7 @@ function LogoutButton() {
     }
   return (
     <Pressable
-        className="flex-row gap-1 items-center justify-center cursor-pointer"
+        className="flex-row gap-1 items-center justify-center border border-Surface2 dark:border-dark-Surface2 active:bg-Surface dark:active:bg-dark-Surface w-[320px] p-3 rounded-lg"
         onPress={logOut}
         aria-label="logout"
     >

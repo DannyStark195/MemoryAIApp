@@ -74,9 +74,7 @@ function AccountInfo() {
                         />
                         <ActionBtn style={`${isChangingName? '':'hidden'}`} text="save"/>
                     </View>
-                    <View className="border border-Surface2 dark:border-dark-Surface2 hover:bg-Surface dark:hover:bg-dark-Surface w-[320px] p-3 rounded-lg transition-all duration-300">
                         <LogoutButton/>
-                    </View>
                 </View>
             </View>
         </View>
