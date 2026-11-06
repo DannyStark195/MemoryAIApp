@@ -96,14 +96,6 @@ async def general_exception_handler(
     )
 
 
-# Health check
-@app.get("/")
-async def root():
-    return {
-        "success": True,
-        "message": "Recall API is running",
-        "data": None
-    }
 
 app.include_router(
     router,
