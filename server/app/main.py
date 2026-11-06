@@ -107,5 +107,5 @@ async def root():
 
 app.include_router(
     router,
-    prefix="/api/v1"
+    prefix="/v1"
 )
