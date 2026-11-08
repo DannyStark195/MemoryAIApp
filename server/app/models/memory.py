@@ -1,13 +1,13 @@
 import uuid
 from datetime import datetime
-
-from server.app.models.category import Category
-from server.app.models.folder import Folder
-from server.app.models.user import User
-from server.app.models.file import File
-from sqlalchemy import String, Boolean, BigInteger, DateTime, ForeignKey, Text, CheckConstraint, func, Uuid
+from sqlalchemy import String, DateTime, ForeignKey, Text, func, Uuid
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
+from app.models.category import Category
+from app.models.folder import Folder
+from app.models.memory_resurfacing_event import MemoryResurfacingEvent
+from app.models.user import User
+from app.models.file import File
 
 class Memory(Base):
     id: Mapped[uuid.UUID] = mapped_column(Uuid(as_uuid=True),primary_key=True, default=uuid.uuid4)
@@ -25,3 +25,4 @@ class Memory(Base):
     file:Mapped["File"] = relationship(backpopulates="memory")
     folder: Mapped["Folder | None"] = relationship(back_populates="memory")
     category: Mapped["Category"] = relationship(back_populates="memory")
+    memory_resurfacing_events: Mapped[list["MemoryResurfacingEvent"]] = relationship(back_populates="memory")

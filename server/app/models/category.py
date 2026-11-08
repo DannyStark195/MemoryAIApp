@@ -1,9 +1,10 @@
 import uuid
 from server.app.models.memory import Memory
 from server.app.models.user import User
-from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint
+from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint, Index, text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
+from datetime import datetime
 
 class Category(Base):
     __table_args__ = (
@@ -11,6 +12,12 @@ class Category(Base):
             "user_id",
             "name",
             name="unique_category_per_user"
+        ),
+        Index(
+            "unique_global_category_name",
+            "name",
+            unique=True,
+            postgresql_where=text("user_id IS NULL")
         ),
     )
 

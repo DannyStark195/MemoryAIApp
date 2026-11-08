@@ -6,6 +6,9 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from app.models.memory import Memory
 from app.models.file import File
+from app.models.folder import Folder
+from app.models.category import Category
+from app.models.memory_resurfacing_event import MemoryResurfacingEvent
 
 class User(Base):
     id: Mapped[uuid.UUID] = mapped_column(Uuid(as_uuid=True), primary_key=True, default=uuid.uuid4)
@@ -17,3 +20,6 @@ class User(Base):
     
     memories: Mapped[list["Memory"]] = relationship(back_populates="user")
     files: Mapped[list["File"]] = relationship(back_populates="user")
+    folders: Mapped[list["Folder"]] = relationship(back_populates="user")
+    categories: Mapped[list["Category"]] = relationship(back_populates="user")
+    memory_resurfacing_events: Mapped[list["MemoryResurfacingEvent"]] = relationship(back_populates="user")

@@ -1,6 +1,5 @@
 import uuid
 from datetime import datetime
-
 from server.app.models.user import User
 from sqlalchemy import String, Boolean, BigInteger, DateTime, ForeignKey, Text, CheckConstraint, func, Uuid
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -13,7 +12,7 @@ class ResurfacingRule(Base):
             "period",
             name="unique_resurfacing_rule_per_user"
         )
-        CheckContsaints(
+        CheckConstraint(
             "period IN ('morning', 'afternoon', 'evening')",
             name="valid_resurfacing_period"
         )
