@@ -1,6 +1,8 @@
 import uuid
 from datetime import datetime
 
+from server.app.models.category import Category
+from server.app.models.folder import Folder
 from server.app.models.user import User
 from server.app.models.file import File
 from sqlalchemy import String, Boolean, BigInteger, DateTime, ForeignKey, Text, CheckConstraint, func, Uuid
@@ -16,7 +18,10 @@ class Memory(Base):
     last_resurfaced_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+    folder_id: Mapped[uuid.UUID | None] = mapped_column(  ForeignKey("folders.id", ondelete="SET NULL"), nullable=True, index=True)
+    category_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("category.id", ondelete="RESTICT"), nullable=False, index=True)
 
     user:Mapped["User"] = relationship(backpopulates="memory")
     file:Mapped["File"] = relationship(backpopulates="memory")
-
+    folder: Mapped["Folder | None"] = relationship(back_populates="memory")
+    category: Mapped["Category"] = relationship(back_populates="memory")
