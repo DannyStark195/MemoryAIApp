@@ -1,8 +1,8 @@
 """create tables user, file, memory, category, folder, resurfacing rule, user preferences, daily feed items, memory resurfacing event
 
-Revision ID: 0f230b451f63
+Revision ID: 6f1d5fba45d7
 Revises: 
-Create Date: 2026-11-10 22:53:02.550635
+Create Date: 2026-11-10 22:57:58.012115
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '0f230b451f63'
+revision: str = '6f1d5fba45d7'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -109,7 +109,7 @@ def upgrade() -> None:
     sa.Column('updated_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=False),
     sa.Column('folder_id', sa.Uuid(), nullable=True),
     sa.Column('category_id', sa.Uuid(), nullable=False),
-    sa.ForeignKeyConstraint(['category_id'], ['category.id'], ondelete='RESTICT'),
+    sa.ForeignKeyConstraint(['category_id'], ['category.id'], ondelete='RESTRICT'),
     sa.ForeignKeyConstraint(['file_id'], ['file.id'], ondelete='RESTRICT'),
     sa.ForeignKeyConstraint(['folder_id'], ['folder.id'], ondelete='SET NULL'),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
