@@ -1,14 +1,13 @@
 import uuid
 
-from traitlets import Integer
-from server.app.models.memory import Memory
-from server.app.models.user import User
-from sqlalchemy import String, Date, ForeignKey, Uuid,DateTime, func, UniqueConstraint
+from sqlalchemy import String, Date, ForeignKey, Uuid,DateTime, func, UniqueConstraint, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from datetime import datetime, date
 
 class DailyFeedItems(Base):
+    __tablename__ = "daily_feed_items"
+
     __table_args__ = (
         UniqueConstraint(
             "user_id",

@@ -4,3 +4,6 @@ from app.models.memory import Memory
 from app.models.category import Category
 from app.models.folder import Folder
 from app.models.resurfacing_rule import ResurfacingRule
+from app.models.user_preferences import UserPreferences
+from app.models.daily_feed_items import DailyFeedItems
+from app.models.memory_resurfacing_event import MemoryResurfacingEvent

@@ -1,14 +1,13 @@
 import uuid
 
-from traitlets import Integer
-from server.app.models.memory import Memory
-from server.app.models.user import User
-from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint, CheckConstraint, Text
+from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint, CheckConstraint, Text, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from datetime import datetime
 
 class MemoryResurfacingEvent(Base):
+    __tablename__ = "memory_resurfacing_event"
+
     __table_args__ = (
         CheckConstraint(
             "period IN ('morning', 'afternoon', 'night')",

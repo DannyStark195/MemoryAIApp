@@ -1,17 +1,18 @@
 import uuid
 from datetime import datetime
-from server.app.models.user import User
-from sqlalchemy import String, Boolean, BigInteger, DateTime, ForeignKey, Text, CheckConstraint, func, Uuid
+from sqlalchemy import String, Boolean, BigInteger, DateTime, ForeignKey, Text, CheckConstraint, UniqueConstraint, func, Uuid
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 
 class ResurfacingRule(Base):
+    __tablename__ = "resurfacing_rule"
+    
     __table_args__ = (
         UniqueConstraint(
             "user_id",
             "period",
             name="unique_resurfacing_rule_per_user"
-        )
+        ),
         CheckConstraint(
             "period IN ('morning', 'afternoon', 'evening')",
             name="valid_resurfacing_period"

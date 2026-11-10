@@ -1,14 +1,13 @@
 import uuid
 
-from traitlets import Integer
-from server.app.models.memory import Memory
-from server.app.models.user import User
-from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint, Boolean
+from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint, Boolean, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from datetime import datetime
 
 class UserPreferences(Base):
+    __tablename__ = "user_preferences"
+
     __table_args__ = (
         UniqueConstraint(
             "user_id",

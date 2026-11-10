@@ -1,12 +1,14 @@
 import uuid
-from server.app.models.memory import Memory
-from server.app.models.user import User
 from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint, Index, text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from datetime import datetime
+from app.models.memory import Memory
+from app.models.user import User
 
 class Category(Base):
+    __tablename__ = "category"
+    
     __table_args__ = (
         UniqueConstraint(
             "user_id",

@@ -4,11 +4,10 @@ from sqlalchemy import String, ForeignKey, Uuid,DateTime, func, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
-from app.models.memory import Memory
-from app.models.user import User
 
 
 class Folder(Base):
+    __tablename__ = "folder"
 
     __table_args__ = (
         UniqueConstraint(
@@ -28,9 +27,8 @@ class Folder(Base):
     description: Mapped[str | None] = mapped_column(Text, nullable=True)
     directory_path: Mapped[str] = mapped_column(Text, nullable=False)
     access_status: Mapped[str] = mapped_column(String(30), nullable=False, default="active", server_default="active")
-    las
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(),onupdate=func.now())
 
-    user: Mapped["User"] = relationship(back_populates="folders")
+    user: Mapped["User"] = relationship(back_populates="folder")
     memories: Mapped[list["Memory"]] = relationship(back_populates="folder")
