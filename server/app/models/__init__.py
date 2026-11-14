@@ -7,3 +7,6 @@ from app.models.resurfacing_rule import ResurfacingRule
 from app.models.user_preferences import UserPreferences
 from app.models.daily_feed_items import DailyFeedItems
 from app.models.memory_resurfacing_event import MemoryResurfacingEvent
+from app.models.subscription import Subscription
+from app.models.payment import Payment
+from app.models.waitlist import Waitlist

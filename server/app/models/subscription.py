@@ -1,8 +1,8 @@
 import uuid
 from datetime import datetime
-from sqlalchemy import String, Boolean, DateTime, func
+from sqlalchemy import String, Boolean, DateTime, func, UniqueConstraint, CheckConstraint
 from sqlalchemy import Uuid
-from sqlalchemy.orm import Mapped, mapped_column, relationship, UniqueConstraint, CheckConstraint
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 
 class Subscription(Base):
@@ -10,13 +10,13 @@ class Subscription(Base):
 
     __table_args__ =(
         UniqueConstraint('user_id', name='unique_subscription_user_id'),
-        CheckConstraint('status IN ("active", "trial", "expired")', name='check_subscription_status'),
-        CheckConstraint('trial_type IN ("standard", "waitlist")', name='check_subscription_trial_type')
+        CheckConstraint("status IN ('active', 'trial', 'expired')", name='check_subscription_status'),
+        CheckConstraint("trial_type IN ('standard', 'waitlist')", name='check_subscription_trial_type')
     )
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid(as_uuid=True), primary_key=True, default=uuid.uuid4)
     user_id: Mapped[uuid.UUID] = mapped_column(Uuid(as_uuid=True), nullable=False, index=True)
-    trail_type: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    trial_type: Mapped[str | None] = mapped_column(String(50), nullable=True)
     status: Mapped[str] = mapped_column(String(50), nullable=False, default="trial")
     trial_start_date: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     trial_end_date: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

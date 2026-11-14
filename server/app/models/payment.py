@@ -1,8 +1,8 @@
 import uuid
 from datetime import datetime
-from sqlalchemy import String, Boolean, DateTime, func
+from sqlalchemy import String, Boolean, DateTime, func, UniqueConstraint, CheckConstraint, Numeric
 from sqlalchemy import Uuid
-from sqlalchemy.orm import Mapped, mapped_column, relationship, UniqueConstraint, CheckConstraint, Numeric
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from decimal import Decimal
 
@@ -10,8 +10,7 @@ class Payment(Base):
     __tablename__ = "payment"
 
     __table_args__ =(
-        UniqueConstraint('subscription_id', name='unique_payment_subscription_id'),
-        CheckConstraint('status IN ("pending", "completed", "failed")', name='check_payment_status')
+        CheckConstraint("status IN ('pending', 'completed', 'failed')", name='check_payment_status'),
     )
 
     id: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True), primary_key=True, default=uuid.uuid4)
