@@ -6,6 +6,10 @@ class Settings(BaseSettings):
     DEBUG: bool
     DATABASE_URL: str
     CORS_ORIGINS: str
+    SECRET_KEY: str
+    ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    REFRESH_TOKEN_EXPIRE_DAYS: int
 
     model_config = SettingsConfigDict(
         env_file=".env",
