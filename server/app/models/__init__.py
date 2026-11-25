@@ -10,3 +10,4 @@ from app.models.memory_resurfacing_event import MemoryResurfacingEvent
 from app.models.subscription import Subscription
 from app.models.payment import Payment
 from app.models.waitlist import Waitlist
+from app.models.user_session import UserSession

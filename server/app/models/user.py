@@ -20,3 +20,4 @@ class User(Base):
     folders: Mapped[list["Folder"]] = relationship(back_populates="user")
     categories: Mapped[list["Category"]] = relationship(back_populates="user")
     memory_resurfacing_events: Mapped[list["MemoryResurfacingEvent"]] = relationship(back_populates="user")
+    sessions: Mapped[list["UserSession"]] = relationship(back_populates="user")
