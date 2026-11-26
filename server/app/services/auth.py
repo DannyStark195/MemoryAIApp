@@ -47,10 +47,10 @@ async def login_user(db: AsyncSession, login_data: LoginRequest) -> dict:
     existing_user = result.scalar_one_or_none()
 
     if not existing_user:
-        raise ValueError("Incorrect email or password")
+        raise ValueError("Invalid email or password")
 
     if not verify_password(login_data.password, existing_user.hashed_password):
-        raise ValueError("Incorrect email or password")
+        raise ValueError("Invalid email or password")
 
     new_access_token = create_access_token(existing_user.id)
     new_refresh_token = create_refresh_token()
@@ -76,7 +76,15 @@ async def login_user(db: AsyncSession, login_data: LoginRequest) -> dict:
         await db.rollback()
         raise
 
-    
+async def rotate_refresh_token(db: AsyncSession, refresh_token: str) -> dict:
+    token_hash = hash_refresh_token(refresh_token)
 
+    result = await db.execute(
+        select(UserSession).where(UserSession.token_hash == token_hash)
+        .with_for_update()
+    )
 
-    
+    old_session = result.scalar_one_or_none()
+
+    if not old_session:
+        raise ValueError("Invalid refresh token")
