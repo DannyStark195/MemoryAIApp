@@ -31,3 +31,4 @@ async def signup_user(db:AsyncSession, user_data: UserBase) -> User:
     except Exception:
         await db.rollback()
         raise
+    
